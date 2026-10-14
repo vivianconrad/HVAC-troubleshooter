@@ -1,0 +1,16 @@
+{
+  "id": "generic-pump-not-running",
+  "title": "Pump not running",
+  "equipment": "Hydronic boilers and systems",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": { "type": "question", "text": "Is there power at the pump terminals when it should be running?", "options": [{ "label": "No power at the pump", "next": "n2" }, { "label": "Power is present", "next": "n3" }] },
+    "n2": { "type": "question", "text": "Is the controller or relay calling for the pump (pump output energized)?", "options": [{ "label": "Yes, output is energized", "next": "r_wiring" }, { "label": "No, no call", "next": "r_nocallp" }] },
+    "r_wiring": { "type": "result", "cause": "The call is present but power is not reaching the pump.", "fix": ["De-energize and lock out before inspecting wiring.", "Check relay contacts, fuses, breaker, disconnect and wiring.", "Re-test with a meter once safely re-energized per your site procedure.", "Electrical checks must follow site lockout/tagout and the equipment manufacturer's procedure."] },
+    "r_nocallp": { "type": "result", "cause": "The control is not calling the pump.", "fix": ["Check control settings such as pump exercise, warm-weather shutdown and pump delay (see the manufacturer manual in the Manuals tab).", "Check thermostat and zone calls.", "Check the control for fault codes (Fault codes tab)."] },
+    "n3": { "type": "question", "text": "Is the pump motor shaft or fan turning?", "options": [{ "label": "Not turning", "next": "r_seize" }, { "label": "Turning", "next": "r_noflow" }] },
+    "r_seize": { "type": "result", "cause": "The motor is energized but not turning.", "fix": ["De-energize and lock out first.", "Check for a seized rotor or bearings, foreign material, and a failed capacitor where applicable, using the pump manufacturer's procedure.", "Replace or repair per the pump manual.", "Electrical checks must follow site lockout/tagout and the equipment manufacturer's procedure, including discharging capacitors where applicable."] },
+    "r_noflow": { "type": "result", "cause": "The pump is turning but there is no flow.", "fix": ["Check the coupling, if the pump is coupled.", "Check for an air lock and bleed the pump per the system procedure.", "Check for closed valves, a damaged impeller, and rotation direction on three-phase pumps."] }
+  }
+}

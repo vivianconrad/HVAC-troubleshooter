@@ -1,0 +1,24 @@
+{
+  "id": "generic-no-heat",
+  "title": "No heat",
+  "equipment": "Hydronic boilers and systems",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": { "type": "question", "text": "Is the thermostat or controller calling for heat (call-for-heat present at the boiler or its control)?", "options": [{ "label": "Yes, call is present", "next": "n2" }, { "label": "No call", "next": "r_nocall" }] },
+    "r_nocall": { "type": "result", "cause": "No call for heat is reaching the boiler.", "fix": ["Check the thermostat or zone controller setpoint, mode and batteries.", "Check zone valve or zone relay operation and 24 V control power.", "Check for a tripped breaker, blown control fuse or an open limit or switch in the call-for-heat circuit.", "Do not jumper any limit, switch or safety device to force a call for heat."] },
+    "n2": { "type": "question", "text": "Does the boiler start its sequence (fan, igniter or burner start)?", "options": [{ "label": "Yes", "next": "n3" }, { "label": "No", "next": "n4" }] },
+    "n4": { "type": "question", "text": "Does the boiler display a lockout, fault or error code?", "options": [{ "label": "Yes", "next": "r_code" }, { "label": "No", "next": "r_nostart" }] },
+    "r_code": { "type": "result", "cause": "The boiler is in a fault or lockout state.", "fix": ["Record the code before resetting anything.", "Look it up in the Fault codes tab or the manufacturer manual (Manuals tab).", "Follow the manufacturer's reset and troubleshooting procedure. Do not bypass safety devices."] },
+    "r_nostart": { "type": "result", "cause": "The start sequence is not beginning even though a call is present.", "fix": ["Verify power to the boiler and that the service switch is on.", "Check the safety string status per the boiler manual: low-water cut-off, limits, flow switch, gas pressure or air pressure switches.", "Check that an outdoor-reset or warm-weather shutdown setting is not blocking the call (see the control's manual).", "Do not jumper any safety device."] },
+    "n3": { "type": "question", "text": "Does the burner light and stay lit?", "options": [{ "label": "Yes", "next": "n5" }, { "label": "No", "next": "r_flame" }] },
+    "r_flame": { "type": "result", "cause": "Ignition or flame problem.", "fix": ["Check the gas supply and shutoff valves.", "Check the flame sensor and igniter using the manufacturer's procedure.", "Check vent and condensate drain for blockage per the manual.", "Gas work must follow the manufacturer's procedure and local code."] },
+    "n5": { "type": "question", "text": "Is the boiler supply temperature rising toward setpoint?", "options": [{ "label": "Yes", "next": "n6" }, { "label": "No", "next": "r_nohi" }] },
+    "r_nohi": { "type": "result", "cause": "The boiler is firing but not producing heat.", "fix": ["Check firing rate and gas pressure against the manual.", "Check for a fouled or dirty heat exchanger.", "Compare the boiler sensor reading with a calibrated thermometer."] },
+    "n6": { "type": "question", "text": "Is the system pump running, with flow through the zone (pipe warming, flow indicated)?", "options": [{ "label": "Yes", "next": "n7" }, { "label": "No", "next": "r_pump" }] },
+    "r_pump": { "type": "result", "cause": "Heat is produced but not delivered.", "fix": ["Check pump power and the relay or controller output that runs it (see the Pump not running tree).", "Check that the zone valve actuator or end switch is opening.", "Check for an air lock, a closed isolation valve or a clogged strainer."] },
+    "n7": { "type": "question", "text": "Is the supply-to-return delta-T far below the design delta-T?", "options": [{ "label": "Yes, much lower", "next": "r_lowdt" }, { "label": "No, about normal", "next": "r_load" }] },
+    "r_lowdt": { "type": "result", "cause": "Heat is flowing but not transferring to the space.", "fix": ["Use the Readings tab delta-T calculator.", "Check for excess flow, an open bypass, air in terminal units or failed zone valves.", "Check terminal units (fan coils, baseboard) for fan or airflow problems."] },
+    "r_load": { "type": "result", "cause": "The plant looks normal; the load may exceed capacity, or setpoints are too low.", "fix": ["Check heating setpoints and the reset curve (Readings tab).", "Check the building side: outside air dampers, air handler coils, envelope problems."] }
+  }
+}

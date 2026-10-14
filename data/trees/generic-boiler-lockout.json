@@ -1,0 +1,17 @@
+{
+  "id": "generic-boiler-lockout",
+  "title": "Boiler lockout",
+  "equipment": "Hydronic boilers and systems",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": { "type": "question", "text": "Can you read a fault or lockout code from the boiler display or control?", "options": [{ "label": "Yes, I have a code", "next": "r_code" }, { "label": "No code available", "next": "n2" }] },
+    "r_code": { "type": "result", "cause": "A fault code identifies the safety or condition that locked out the boiler.", "fix": ["Record the code and time before resetting.", "Look it up in the Fault codes tab, then confirm in the manufacturer manual (Manuals tab).", "Follow the manufacturer's reset procedure. Repeated lockouts mean the cause must be found, not reset away."] },
+    "n2": { "type": "question", "text": "Which safety circuit opened? (Check status indicators per the boiler manual.)", "options": [{ "label": "Flame or ignition failure", "next": "r_ign" }, { "label": "Low water or no flow", "next": "r_water" }, { "label": "High limit or high temperature", "next": "r_limit" }, { "label": "Air pressure, flue or condensate switch", "next": "r_air" }, { "label": "Cannot tell", "next": "r_unknown" }] },
+    "r_ign": { "type": "result", "cause": "Ignition or flame failure.", "fix": ["Check gas supply and shutoffs, igniter and flame sensor per the manufacturer's procedure.", "Check vent and combustion air.", "Gas work follows the manufacturer's procedure and local code."] },
+    "r_water": { "type": "result", "cause": "Low water or no flow.", "fix": ["Check system pressure, water level or low-water cut-off, and look for leaks.", "Check pump operation and flow switch.", "Do not bypass the low-water cut-off or flow switch.", "If the boiler is hot and low on water, let it cool before adding water."] },
+    "r_limit": { "type": "result", "cause": "High limit or high temperature.", "fix": ["Allow the boiler to cool before resetting.", "Check flow, supply sensor accuracy and setpoints.", "Do not raise or bypass the limit."] },
+    "r_air": { "type": "result", "cause": "Air pressure, flue or condensate switch is open.", "fix": ["Check vent and intake for blockage, the condensate drain and trap, and the switch tubing per the manual.", "Do not jumper the switch."] },
+    "r_unknown": { "type": "result", "cause": "The tripped safety cannot be identified from outside.", "fix": ["Check the boiler manual's status indicator or diagnostics section (Manuals tab: search lockout).", "Check the control for stored fault history.", "Contact the manufacturer support line if the cause is still unclear."] }
+  }
+}

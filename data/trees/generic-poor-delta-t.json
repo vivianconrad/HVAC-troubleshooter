@@ -1,0 +1,18 @@
+{
+  "id": "generic-poor-delta-t",
+  "title": "Poor delta-T",
+  "equipment": "Hydronic boilers and systems",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": { "type": "question", "text": "Is the measured delta-T lower or higher than the target? (Calculate it in the Readings tab.)", "options": [{ "label": "Lower than target", "next": "n2" }, { "label": "Higher than target", "next": "n4" }] },
+    "n2": { "type": "question", "text": "Are there open bypasses, over-pumped circuits, or three-way valves stuck in bypass?", "options": [{ "label": "Yes", "next": "r_exc" }, { "label": "No", "next": "n3" }] },
+    "r_exc": { "type": "result", "cause": "Excess flow or a bypass is reducing delta-T.", "fix": ["Check pump speed and balancing valve settings against the design flow.", "Check three-way valve actuators and bypass lines.", "Re-measure delta-T after correcting."] },
+    "n3": { "type": "question", "text": "Is the load very light (few terminal units calling, mild weather)?", "options": [{ "label": "Yes", "next": "r_light" }, { "label": "No", "next": "r_ht" }] },
+    "r_light": { "type": "result", "cause": "Low delta-T from a light load.", "fix": ["Re-check delta-T when more zones are calling or at a colder outdoor temperature.", "Check reset and setpoints for the current weather (Readings tab)."] },
+    "r_ht": { "type": "result", "cause": "Terminal units may not be transferring heat.", "fix": ["Check coils, fins and fans for fouling or failure.", "Check control valves are actually opening.", "Check for air binding in terminal units and bleed per the system procedure."] },
+    "n4": { "type": "question", "text": "Is the pump running at the expected speed, with all isolation and zone valves open?", "options": [{ "label": "Yes", "next": "r_restrict" }, { "label": "No or unsure", "next": "r_valves" }] },
+    "r_valves": { "type": "result", "cause": "Flow is being reduced or blocked.", "fix": ["Check pump speed setting, motor and coupling.", "Open or replace closed or failed isolation and zone valves.", "Check the pump control output."] },
+    "r_restrict": { "type": "result", "cause": "Flow is restricted somewhere in the circuit.", "fix": ["Clean strainers and check differential pressure across them.", "Check balancing valves, air elimination and check valves.", "Check for a partly closed or failed valve and for fouled heat exchangers."] }
+  }
+}

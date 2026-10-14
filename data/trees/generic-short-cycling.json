@@ -1,0 +1,20 @@
+{
+  "id": "generic-short-cycling",
+  "title": "Short cycling",
+  "equipment": "Hydronic boilers and systems",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": { "type": "question", "text": "Does the boiler shut off on a high-limit or high supply temperature, rather than when the setpoint is satisfied?", "options": [{ "label": "Yes, high limit or high temperature", "next": "n2" }, { "label": "No", "next": "n3" }] },
+    "n2": { "type": "question", "text": "Is there good flow while the boiler runs (pump running, valves open, strainer clean)?", "options": [{ "label": "Yes, flow is good", "next": "n2b" }, { "label": "No or unsure", "next": "r_flow" }] },
+    "r_flow": { "type": "result", "cause": "Insufficient flow is overheating the boiler.", "fix": ["Check the pump, isolation and zone valves, strainer and air.", "Confirm the boiler's minimum flow requirement in its manual.", "Do not raise or bypass the high limit."] },
+    "n2b": { "type": "question", "text": "Is the supply setpoint or reset curve higher than the building load needs?", "options": [{ "label": "Yes", "next": "r_setpt" }, { "label": "No", "next": "r_sensor" }] },
+    "r_setpt": { "type": "result", "cause": "The setpoint is too high for the load, so the boiler reaches it quickly and shuts off.", "fix": ["Lower the setpoint or reset curve (Readings tab for a check).", "Review differential and minimum-on-time settings in the control manual.", "Consider the manufacturer's guidance on minimum load or buffer volume."] },
+    "r_sensor": { "type": "result", "cause": "Possible sensor or control problem.", "fix": ["Check supply sensor accuracy against a calibrated thermometer and check its wiring.", "Review control differential and anti-cycle settings per the manual.", "Record any codes and look them up in the Fault codes tab."] },
+    "n3": { "type": "question", "text": "Does it shut off because the call for heat ends (zone or thermostat satisfied quickly)?", "options": [{ "label": "Yes, the call ends", "next": "n4" }, { "label": "No, it stops with the call still present", "next": "r_interlock" }] },
+    "n4": { "type": "question", "text": "Is the heating load small compared with the boiler's minimum output (few zones calling)?", "options": [{ "label": "Yes", "next": "r_oversize" }, { "label": "No", "next": "r_tstat" }] },
+    "r_oversize": { "type": "result", "cause": "Boiler minimum output exceeds the load for the zones currently calling.", "fix": ["Check modulation and minimum-fire settings per the manual.", "Consider buffer volume or zoning changes as recommended by the manufacturer."] },
+    "r_tstat": { "type": "result", "cause": "Thermostat or zone control cycling.", "fix": ["Check thermostat cycle-rate and anticipator settings and its location.", "Check for zone valve end-switch chatter.", "Check for a thermostat or sensor drifting or reading a draft."] },
+    "r_interlock": { "type": "result", "cause": "Cycling is caused by a safety or sensor interlock opening.", "fix": ["Check flame signal, air or flue pressure switch, flow switch and low-water cut-off status per the manual.", "Record any codes and look them up in the Fault codes tab.", "Do not bypass any safety interlock."] }
+  }
+}
