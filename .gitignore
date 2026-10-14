@@ -1,0 +1,5 @@
+node_modules/
+pdfs/
+app/dist/
+build/.cache/
+.superpowers/
