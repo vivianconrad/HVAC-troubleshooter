@@ -12,7 +12,7 @@ Done: the four tabs, the calculators, the build and validation scripts, five gen
 
 Still owed:
 
-1. **Manuals, fault codes and Tekmar trees.** The Tekmar PDFs are on another device. There, copy them to `pdfs/tekmar/`, run `npm run build`, then `npm run find-fault-pages` to locate the fault-code tables. Then transcribe the fault codes into `data/fault-codes/tekmar.json` and the Tekmar decision trees into `data/trees/`. The five generic trees are standard practice and are labelled "generic"; they should still be reviewed by someone qualified.
+1. **Manuals, fault codes and Tekmar trees.** Keep manuals in `pdfs/<manufacturer>/` (for example, `pdfs/tekmar/`); PDFs in `pdfs/` are tracked in git. Run `npm run build`, then `npm run find-fault-pages` to locate the fault-code tables. Then transcribe the fault codes into `data/fault-codes/tekmar.json` and the Tekmar decision trees into `data/trees/`. The five generic trees are standard practice and are labelled "generic"; they should still be reviewed by someone qualified.
 2. **Refrigerant PT tables.** `data/pt/` does not exist yet, so the Readings tab shows "no refrigerant pressure-temperature tables" in the refrigerant card. Generate and verify them (see below).
 3. **Browser checks.** Click through all four tabs in a real browser (Chrome and Edge), with the network disconnected as well.
 4. **package-lock.json.** package-lock.json has no `resolved` URLs, so clones can run `npm ci` from any registry. A later `npm install` on a machine whose .npmrc points at a private registry may re-add private URLs; do not commit that change.
@@ -27,7 +27,7 @@ npm install
 
 ## Using it
 
-1. Put manuals in `pdfs/<manufacturer>/` (for example `pdfs/tekmar/`). Subfolders are fine. The `pdfs` folder is not stored in git.
+1. Put manuals in `pdfs/<manufacturer>/` (for example `pdfs/tekmar/`). Subfolders are fine. PDFs in `pdfs/` are stored in git and available when the repository is cloned.
 2. Run `npm run build`.
 3. Open `app/index.html` in Chrome or Edge (double-click it, or `start app\index.html`). Keep the `pdfs` folder next to `app`; the manual links point to it.
 
