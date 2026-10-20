@@ -27,6 +27,14 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - name: Remove files that must not be published
+        run: |
+          # Runs on the CI checkout only, before indexing, so the search index and site stay consistent.
+          # Only PDFs are published; contacts, spreadsheets, Word files and images are removed.
+          find pdfs -type f ! -iname '*.pdf' -delete
+          # Customer-named rental quotes and the price list.
+          rm -rf "pdfs/XYLEM/FLOW METER RENTAL"
+          rm -f "pdfs/XYLEM/B&G - MASTER PRICE LIST.pdf"
       - run: npm test
       - run: npm run build
       - name: Assemble site

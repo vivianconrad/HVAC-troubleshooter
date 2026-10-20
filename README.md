@@ -37,7 +37,7 @@ Other commands: `npm test` (unit tests), `npm run validate` (check data files), 
 
 ## GitHub Pages
 
-Every push to `main` runs `.github/workflows/pages.yml`, which tests, builds, and publishes `app/` and `pdfs/` to GitHub Pages at https://vivianconrad.github.io/HVAC-troubleshooter/. One-time setup: in the repo, go to Settings > Pages and set Source to "GitHub Actions". Note that the manuals in `pdfs/` are published publicly with the site.
+Every push to `main` runs `.github/workflows/pages.yml`, which tests, builds, and publishes `app/` and `pdfs/` to GitHub Pages at https://vivianconrad.github.io/HVAC-troubleshooter/. One-time setup: in the repo, go to Settings > Pages and set Source to "GitHub Actions". The site publishes only the PDFs in `pdfs/`, publicly. The workflow first removes non-PDF files, `pdfs/XYLEM/FLOW METER RENTAL/` and the B&G price list from the CI checkout (they stay in git and in your local build). To keep another file off the site, add a line to the "Remove files that must not be published" step.
 
 ## Adding a manufacturer
 
