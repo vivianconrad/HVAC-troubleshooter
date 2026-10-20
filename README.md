@@ -35,6 +35,10 @@ Run `npm run build` again whenever you add manuals or change anything in `data/`
 
 Other commands: `npm test` (unit tests), `npm run validate` (check data files), `npm run build:index` (rebuild only the search index), `npm run find-fault-pages` (rank pages likely to hold fault tables).
 
+## GitHub Pages
+
+Every push to `main` runs `.github/workflows/pages.yml`, which tests, builds, and publishes `app/` and `pdfs/` to GitHub Pages at https://vivianconrad.github.io/HVAC-troubleshooter/. One-time setup: in the repo, go to Settings > Pages and set Source to "GitHub Actions". Note that the manuals in `pdfs/` are published publicly with the site.
+
 ## Adding a manufacturer
 
 1. Drop its PDFs in `pdfs/<manufacturer>/` and run `npm run build`. The manuals are searchable immediately.
