@@ -1,0 +1,116 @@
+{
+  "id": "tekmar-outdoor-temp-incorrect",
+  "title": "Tekmar outdoor temperature incorrect or unstable",
+  "equipment": "Tekmar 256 / 274 boiler controls (adapt for other models after checking their manual)",
+  "generic": false,
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Record the control model and current settings first. Does the control display an OUTDOOR SENSOR SHORT CIRCUIT or OPEN CIRCUIT error?",
+      "options": [
+        {
+          "label": "Yes, an outdoor sensor error is displayed",
+          "next": "r_err"
+        },
+        {
+          "label": "No error, but the outdoor reading is wrong or unstable",
+          "next": "n2"
+        }
+      ]
+    },
+    "r_err": {
+      "type": "result",
+      "cause": "The control cannot read the outdoor sensor, so it is assuming an outdoor temperature of 32 F (0 C) and continuing to run on that value.",
+      "fix": [
+        "Short circuit: look for shorted wiring, moisture in the sensor or a defective sensor. Open circuit: look for a broken wire, poor connection or defective sensor.",
+        "Disconnect the sensor wires from the control, measure the actual temperature at the sensor, measure resistance, and compare with the manufacturer resistance chart (256 manual p.12; 274 manual refers to Data Brochure D 070). Do not apply voltage to the sensor.",
+        "On the 256, press the Item button to clear the error after repair. On the 274 the message self clears once the condition is corrected.",
+        "Verify recovery: confirm the outdoor reading is stable and plausible against an independent thermometer, review the reset curve and WWSD settings, then confirm boiler operation with the control's built-in test routine."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 256.pdf",
+        "page": 19
+      }
+    },
+    "n2": {
+      "type": "question",
+      "text": "Compare the displayed outdoor temperature with an independent measurement at the sensor. Is the displayed value steady but wrong, or does it jump around?",
+      "options": [
+        {
+          "label": "Steady but wrong",
+          "next": "n3"
+        },
+        {
+          "label": "Jumps or drifts",
+          "next": "r_jump"
+        },
+        {
+          "label": "Not displayed at all",
+          "next": "r_src"
+        }
+      ]
+    },
+    "n3": {
+      "type": "question",
+      "text": "Is the control set to use the outdoor sensor? (On the 274 the EMS / Demands DIP switch selects the tekmar outdoor sensor 070 or an external 0-10 V input.)",
+      "options": [
+        {
+          "label": "Yes, it uses the outdoor sensor",
+          "next": "r_stable"
+        },
+        {
+          "label": "No, an external signal is selected, or unsure",
+          "next": "r_src"
+        }
+      ]
+    },
+    "r_stable": {
+      "type": "result",
+      "cause": "The sensor, its wiring or its location is giving a consistently wrong value.",
+      "fix": [
+        "Disconnect the sensor from the control. Measure the actual temperature at the sensor, then its resistance, and compare with the resistance chart. The sensor is a 10 kOhm NTC at 77 F; for example the 256 chart lists 13,474 Ohm at 65 F and 8,250 Ohm at 85 F.",
+        "Do not assume other sensor types share this curve; use the chart for the exact sensor model.",
+        "If the sensor reads correctly at the sensor location but not at the control, suspect the wiring between them.",
+        "A falsely high reading can place the control in Warm Weather Shut Down (256 manual p.8); a falsely low reading raises the boiler target.",
+        "Verify recovery: confirm the outdoor reading is stable and plausible against an independent thermometer, review the reset curve and WWSD settings, then confirm boiler operation with the control's built-in test routine."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 256.pdf",
+        "page": 12
+      }
+    },
+    "r_jump": {
+      "type": "result",
+      "cause": "An intermittent sensor or wiring fault.",
+      "fix": [
+        "With the sensor disconnected from the control, resistance that is very high points to a broken wire, poor connection or defective sensor; very low points to shorted wiring, moisture in the sensor or a defective sensor (256 manual p.12).",
+        "Check every splice and terminal between the sensor and control, and the sensor housing for moisture.",
+        "Also check that sensor wiring is routed away from power wiring (general practice, not from the manual).",
+        "Verify recovery: confirm the outdoor reading is stable and plausible against an independent thermometer, review the reset curve and WWSD settings, then confirm boiler operation with the control's built-in test routine."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 256.pdf",
+        "page": 12
+      }
+    },
+    "r_src": {
+      "type": "result",
+      "cause": "The control may not be using the outdoor sensor you expect, or no value is being supplied.",
+      "fix": [
+        "Check which outdoor input the control is configured to use. On the 274, the EMS / Demands DIP switch selects the tekmar outdoor sensor 070 or an external 0-10 or 2-10 V (dc) signal on terminals 2 and 3.",
+        "Check that the outdoor sensor is wired to the Com and Out terminals (274: terminals 2 and 3).",
+        "If an external signal is used, measure it at the terminals and confirm the source.",
+        "Verify recovery: confirm the outdoor reading is stable and plausible against an independent thermometer, review the reset curve and WWSD settings, then confirm boiler operation with the control's built-in test routine."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 25
+      }
+    }
+  }
+}
