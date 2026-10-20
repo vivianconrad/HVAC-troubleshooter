@@ -1,0 +1,143 @@
+1. Recommended troubleshooting modules
+Based on your previous conversations, I'd prioritize these modules.
+
+1. Tekmar controls and outdoor reset
+Priority 1
+- Tekmar 256: outdoor temperature readings jumping from 65°F to 82–85°F.
+- Tekmar 274: four-boiler system showing 62°F when actual outdoor temperature was 54°F.
+- Tekmar 671: outdoor sensor open-circuit alarm, Internet weather configuration, missing time, and weather data not displaying.
+- Warm Weather Shutdown (WWSD), sensor inputs, and boiler firing test behavior.
+
+2. B&G Ecocirc pump faults
+Priority 1
+- E02: high motor current, pump restart attempts, and repeat faults.
+- E06: incoming voltage imbalance beyond the reported ±10% operating range.
+- Pump will not restart automatically or requires manual resetting.
+- Distinguishing an electrical supply issue from a pump or motor failure.
+
+3. Danfoss VFD commissioning and programming
+- Identifying the drive model and confirming the actual parameter number.
+- Sensorless data entry and commissioning.
+- Pressure-setpoint verification before modifying control settings.
+- Startup, motor data, fault diagnosis, and safe test procedures.
+
+
+4. AERCO BME boiler controls
+- External interlock alarms despite apparent electrical continuity.
+- Controller parameter backups, resets, and restoration.
+- Distinguishing programming problems from wiring, interlock, and BMS issues.
+- Verifying operation after configuration changes.
+
+
+
+2. Initial decision-tree drafts
+These are based on your documented cases. They are field-derived drafts, not substitutes for manufacturer troubleshooting procedures.
+Tree A — Tekmar outdoor temperature incorrect or unstable
+Applies initially to the 256 and 274; adapt after checking each model's manual.
+START: Displayed outdoor temperature is incorrect
+
+
+1. Identify the sensor source
+- Is the controller configured for a physical outdoor sensor or an external/network weather source?
+- Compare the displayed reading with an independent outdoor temperature measurement.
+- Record the exact controller model and settings.
+
+
+2. Inspect the reading over time
+- Stable but incorrect: verify sensor specifications, resistance-versus-temperature values, configuration, and sensor placement.
+- Rapid jumps: inspect wiring connections, moisture, shorts, intermittent opens, and electrical interference.
+- Missing or invalid reading: verify the selected input or configured weather source.
+
+
+3. Test against the manufacturer's sensor chart
+
+Measure resistance only with the circuit isolated as directed by the manual. Compare the measurement at the measured sensor temperature with the correct model's resistance chart. Do not assume all Tekmar sensors share the same resistance curve.
+
+
+4. Verify recovery
+
+Confirm the outdoor reading is stable and plausible, review the reset curve and WWSD settings, and verify boiler operation using the approved test procedure.
+
+Related case: Tekmar 256, October 5, 2026. The outdoor reading changed from approximately 65°F to 82–85°F. The UP-button firing behavior was also reported; verify its intended test-mode behavior in the exact manual.
+
+Tree B — B&G Ecocirc E02 / E06 faults
+START: Pump stops or requires manual reset
+
+
+1. Record the fault before resetting
+
+Record the exact model, full displayed code, operating conditions, supply voltage, and whether the fault occurs during startup or normal operation.
+
+E02
+High motor current
+- Isolate power before inspection.
+- Check for mechanical obstruction or binding according to the service manual.
+- Inspect motor/pump condition and supply conditions.
+- If the fault persists, follow the manufacturer's service and replacement criteria.
+
+
+E06
+Reported voltage imbalance
+- Measure the incoming supply using qualified electrical procedures.
+- Check all applicable phases, connections, and supply conditions.
+- Compare measurements with the exact model's allowable limits.
+- Investigate the power source if the fault correlates with generator operation.
+
+
+
+3. Confirm the cause before returning to service
+
+Correct the identified issue, clear the fault only as instructed, and observe the pump through startup and normal operation. Do not treat a successful power cycle as proof that the underlying fault is resolved.
+
+E02 and E06 are based on the cases you described. Exact fault descriptions, reset instructions, and electrical limits need citations from the applicable Ecocirc manual.
+
+Tree C — AERCO BME external interlock alarm
+START: Boiler reports an external interlock alarm
+
+
+1. Establish the alarm state
+
+Record the exact alarm text, boiler designation, controller revision, operating state, and any active BMS commands. Determine whether the alarm is active, latched, or historical according to the controller documentation.
+
+
+2. Verify the interlock circuit
+
+A continuity reading alone may not establish correct operation under operating conditions.
+- Follow the unit-specific wiring diagram.
+- Verify the prescribed signal and circuit state using approved electrical procedures.
+- Inspect field wiring, terminals, external contacts, and BMS logic.
+- Compare controller configuration with the documented installation.
+
+
+3. Investigate configuration only when justified
+
+Back up existing parameters before any authorized reset or restoration. Compare settings with the approved configuration and investigate whether a reset is appropriate under AERCO's procedure.
+
+4. Verify restoration
+
+Confirm the interlock operates correctly, alarms clear through the prescribed procedure, and the boiler operates normally with all safety circuits intact. Never bypass the interlock to force operation.
+
+Related case: BME boiler tagged 2A, October 20, 2026. The controller program was backed up, parameters reset and restored, and the uncleared interlock alarms subsequently cleared. That sequence is an observed outcome, not proof that every similar alarm is a programming fault.
+
+3. Fault-code database: proposed starter records
+For the JSON database, I recommend keeping documented field observations separate from verified manufacturer definitions. This prevents an unverified diagnosis from appearing as an official fault-code explanation.
+Manufacturer / equipment	Code or symptom	Initial investigation
+B&G Ecocirc	E02	High motor current; investigate mechanical, motor, and electrical causes.
+B&G Ecocirc	E06	Investigate incoming supply and voltage imbalance.
+Tekmar 671	Outdoor sensor open-circuit alarm	Verify selected outdoor-source configuration, network/time settings, and sensor-source validity.
+AERCO BME	External interlock alarm	Verify interlock circuit, BMS interface, and configuration.
+Danfoss VLT HVAC Drive	FA04 parameter question	Confirm the exact drive model and whether FA04 is a drive parameter, displayed code, or external documentation reference before diagnosing.
+The Tekmar 671 case is especially useful because the outdoor sensor source was set to Internet, the time was initially missing, and changing the time setting to AUTO coincided with the alarm clearing and an update starting. The database should record that sequence without assuming the time setting alone was the root cause.
+
+These should remain provisional until matched with manuals. I would not add manufacturer citation fields with guessed page numbers.
+4. What I recommend building next
+To produce actual drop-in files for your application, I need the project's existing file structure and data schemas. Your description specifies the fault-code structure, but not the required decision-tree JSON schema or the exact validator rules.
+
+Please upload the HVAC Troubleshooter project as a ZIP file, including data/, build/, src/, package.json, and any existing example JSON files. Include any manuals you already have under pdfs/, especially Tekmar, B&G Ecocirc, Danfoss VLT HVAC Drive, and AERCO BME documentation.
+
+With that, I can build the next set of materials around your actual project:
+- data/trees/ — structured, model-specific troubleshooting trees where documentation supports them, plus clearly labelled generic trees.
+- data/fault-codes/ — fault-code records matching your schema and backed by manual citations.
+- data/ reference material — field-derived symptoms, observed causes, corrective actions, and verification steps.
+- Validation-ready files — checked against your existing schema and build process, without fabricated manual references.
+I'd start with Tekmar, B&G Ecocirc, and AERCO BME, since your prior cases already provide useful real-world diagnostic patterns for all three.
