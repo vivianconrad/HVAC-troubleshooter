@@ -4,6 +4,7 @@
 import json
 import os
 import sys
+import CoolProp.CoolProp as CP
 
 from CoolProp.CoolProp import PropsSI
 

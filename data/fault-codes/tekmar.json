@@ -1,0 +1,250 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "256",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "Control cannot read the outdoor sensor due to a short circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation. Clear after repair by pressing the Item button.",
+    "causes": [
+      "Short circuit in the sensor wiring",
+      "Moisture in the sensor",
+      "Defective sensor"
+    ],
+    "checks": [
+      "Disconnect the sensor wires from the control before testing; never apply voltage to a sensor.",
+      "Measure the actual temperature at the sensor, then measure the sensor resistance and compare with the resistance chart (256 manual p.12; 274 manual refers to Data Brochure D 070). 10 kOhm NTC at 77 F.",
+      "Very high resistance: broken wire, poor connection or defective sensor. Very low resistance: shorted wiring, moisture in the sensor or defective sensor.",
+      "Measure directly at the sensor location to isolate the sensor from the wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 256.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "256",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "Control cannot read the outdoor sensor due to an open circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation. Clear after repair by pressing the Item button.",
+    "causes": [
+      "Broken wire",
+      "Poor wiring connection",
+      "Defective sensor"
+    ],
+    "checks": [
+      "Disconnect the sensor wires from the control before testing; never apply voltage to a sensor.",
+      "Measure the actual temperature at the sensor, then measure the sensor resistance and compare with the resistance chart (256 manual p.12; 274 manual refers to Data Brochure D 070). 10 kOhm NTC at 77 F.",
+      "Very high resistance: broken wire, poor connection or defective sensor. Very low resistance: shorted wiring, moisture in the sensor or defective sensor.",
+      "Measure directly at the sensor location to isolate the sensor from the wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 256.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "256",
+    "code": "BOILER SENSOR SHORT CIRCUIT",
+    "meaning": "Control cannot read the boiler sensor due to a short circuit. If BOIL MIN is OFF the Boiler contact is not operated; otherwise, with a demand present, it operates up to 10 minutes of a 20 minute cycle. Clear by pressing the Item button after repair.",
+    "causes": [
+      "Short circuit in the sensor wiring",
+      "Moisture in the sensor",
+      "Defective sensor"
+    ],
+    "checks": [
+      "Disconnect the sensor wires from the control before testing; never apply voltage to a sensor.",
+      "Measure the actual temperature at the sensor, then measure the sensor resistance and compare with the resistance chart (256 manual p.12; 274 manual refers to Data Brochure D 070). 10 kOhm NTC at 77 F.",
+      "Very high resistance: broken wire, poor connection or defective sensor. Very low resistance: shorted wiring, moisture in the sensor or defective sensor.",
+      "Measure directly at the sensor location to isolate the sensor from the wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 256.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "256",
+    "code": "BOILER SENSOR OPEN CIRCUIT",
+    "meaning": "Control cannot read the boiler sensor due to an open circuit. If BOIL MIN is OFF the Boiler contact is not operated; otherwise, with a demand present, it operates up to 10 minutes of a 20 minute cycle. Clear by pressing the Item button after repair.",
+    "causes": [
+      "Broken wire",
+      "Poor wiring connection",
+      "Defective sensor"
+    ],
+    "checks": [
+      "Disconnect the sensor wires from the control before testing; never apply voltage to a sensor.",
+      "Measure the actual temperature at the sensor, then measure the sensor resistance and compare with the resistance chart (256 manual p.12; 274 manual refers to Data Brochure D 070). 10 kOhm NTC at 77 F.",
+      "Very high resistance: broken wire, poor connection or defective sensor. Very low resistance: shorted wiring, moisture in the sensor or defective sensor.",
+      "Measure directly at the sensor location to isolate the sensor from the wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 256.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "256",
+    "code": "EEPROM ERROR",
+    "meaning": "Control could not read a piece of information from its EEPROM. It loads factory defaults and stops operation until all settings are verified.",
+    "causes": [
+      "Noisy power source"
+    ],
+    "checks": [
+      "Verify all settings in the Adjust menu.",
+      "Check the quality of the 24 V power supply."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 256.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "Control failed to read the outdoor sensor due to a short circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation. The message self clears once the condition is corrected.",
+    "causes": [
+      "Short circuit in the sensor wiring",
+      "Moisture in the sensor",
+      "Defective sensor"
+    ],
+    "checks": [
+      "Disconnect the sensor wires from the control before testing; never apply voltage to a sensor.",
+      "Measure the actual temperature at the sensor, then measure the sensor resistance and compare with the resistance chart (256 manual p.12; 274 manual refers to Data Brochure D 070). 10 kOhm NTC at 77 F.",
+      "Very high resistance: broken wire, poor connection or defective sensor. Very low resistance: shorted wiring, moisture in the sensor or defective sensor.",
+      "Measure directly at the sensor location to isolate the sensor from the wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 42
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "Control failed to read the outdoor sensor due to an open circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation. The message self clears once the condition is corrected.",
+    "causes": [
+      "Broken wire",
+      "Poor wiring connection",
+      "Defective sensor"
+    ],
+    "checks": [
+      "Disconnect the sensor wires from the control before testing; never apply voltage to a sensor.",
+      "Measure the actual temperature at the sensor, then measure the sensor resistance and compare with the resistance chart (256 manual p.12; 274 manual refers to Data Brochure D 070). 10 kOhm NTC at 77 F.",
+      "Very high resistance: broken wire, poor connection or defective sensor. Very low resistance: shorted wiring, moisture in the sensor or defective sensor.",
+      "Measure directly at the sensor location to isolate the sensor from the wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 42
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "BOILER SUPPLY SENSOR SHORT CIRCUIT",
+    "meaning": "Control failed to read the boiler supply sensor due to a short circuit. With a call for heat it no longer controls the boiler(s); it provides a boiler enable to the boiler aquastat or control until repaired. It will not operate the boiler contact if Boil Minimum is below 100 F (38 C). Self clears when corrected.",
+    "causes": [
+      "Short circuit in the sensor wiring",
+      "Moisture in the sensor",
+      "Defective sensor"
+    ],
+    "checks": [
+      "Disconnect the sensor wires from the control before testing; never apply voltage to a sensor.",
+      "Measure the actual temperature at the sensor, then measure the sensor resistance and compare with the resistance chart (256 manual p.12; 274 manual refers to Data Brochure D 070). 10 kOhm NTC at 77 F.",
+      "Very high resistance: broken wire, poor connection or defective sensor. Very low resistance: shorted wiring, moisture in the sensor or defective sensor.",
+      "Measure directly at the sensor location to isolate the sensor from the wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 42
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "BOILER SUPPLY SENSOR OPEN CIRCUIT",
+    "meaning": "Control failed to read the boiler supply sensor due to an open circuit. It no longer controls the boiler; it provides a boiler enable to the boiler aquastat or control until repaired. It will not operate the boiler contact if Boil Minimum is below 100 F (38 C). Self clears when corrected.",
+    "causes": [
+      "Broken wire",
+      "Poor wiring connection",
+      "Defective sensor"
+    ],
+    "checks": [
+      "Disconnect the sensor wires from the control before testing; never apply voltage to a sensor.",
+      "Measure the actual temperature at the sensor, then measure the sensor resistance and compare with the resistance chart (256 manual p.12; 274 manual refers to Data Brochure D 070). 10 kOhm NTC at 77 F.",
+      "Very high resistance: broken wire, poor connection or defective sensor. Very low resistance: shorted wiring, moisture in the sensor or defective sensor.",
+      "Measure directly at the sensor location to isolate the sensor from the wiring.",
+      "If the supply sensor was removed deliberately, power the control down for 10 seconds, then restart it."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 42
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "TN4 BUS ERROR",
+    "meaning": "Communication lost on the Boiler Bus due to a short or open circuit.",
+    "causes": [
+      "Short or open circuit on the tN4 bus",
+      "Reversed C and R polarity",
+      "Loose or broken wires"
+    ],
+    "checks": [
+      "Check the tN4, C and R wires for each tN4 device.",
+      "Check the polarity of the C and R wires.",
+      "Check for loose or broken wires."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "CONTROL ERROR ADJUST",
+    "meaning": "Control failed to read the Adjust Menu settings and reloaded factory defaults. Operation stops until all Adjust Menu settings are checked.",
+    "causes": [],
+    "checks": [
+      "Set the access level to Advanced and check all settings in the Adjust menu to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "SCHEDULE MASTER ERROR",
+    "meaning": "More than one tN4 device has been assigned the same master number.",
+    "causes": [
+      "Duplicate schedule master number on the network"
+    ],
+    "checks": [
+      "Reassign master numbers so each tN4 device has a unique one."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 42
+    }
+  }
+]
