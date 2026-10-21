@@ -1,0 +1,111 @@
+{
+  "id": "danfoss-vlt-unknown-code-fa04",
+  "title": "Danfoss VLT: unknown code or setting (e.g. \"FA04\")",
+  "manufacturer": "Danfoss",
+  "equipment": "Danfoss VLT HVAC Drive (field-derived draft; FA04 meaning unconfirmed)",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Read the drive nameplate for exact model, voltage and application. Where does the identifier appear?",
+      "options": [
+        {
+          "label": "Drive display or alarm record",
+          "next": "r_code"
+        },
+        {
+          "label": "Parameter list",
+          "next": "n2"
+        },
+        {
+          "label": "Skid or other documentation",
+          "next": "r_doc"
+        },
+        {
+          "label": "Not sure",
+          "next": "r_clarify"
+        }
+      ]
+    },
+    "r_clarify": {
+      "type": "result",
+      "cause": "The source of the identifier is not known, so its meaning cannot be determined.",
+      "fix": [
+        "Get a photo or the exact text and where it was seen.",
+        "Do not guess what it means from the identifier alone."
+      ]
+    },
+    "r_code": {
+      "type": "result",
+      "cause": "It may be a fault or alarm code, not a parameter.",
+      "fix": [
+        "Do not treat it as a parameter or try to enter it.",
+        "Look up the exact code in the manual for this drive.",
+        "Record the alarm and clear it only as the manual describes."
+      ]
+    },
+    "r_doc": {
+      "type": "result",
+      "cause": "It may be a reference in skid or project documentation.",
+      "fix": [
+        "Look it up in the skid documentation, not the drive manual.",
+        "Ask the skid supplier or integrator what it refers to."
+      ]
+    },
+    "n2": {
+      "type": "question",
+      "text": "Have you confirmed the parameter name, units, range, access level and effect in the manual for this exact drive and firmware?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "n3"
+        },
+        {
+          "label": "No",
+          "next": "r_manual"
+        }
+      ]
+    },
+    "r_manual": {
+      "type": "result",
+      "cause": "Parameter details are unconfirmed.",
+      "fix": [
+        "Open the manual for the exact drive and confirm them before editing anything."
+      ]
+    },
+    "n3": {
+      "type": "question",
+      "text": "Is it a pressure-related setting?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_pressure"
+        },
+        {
+          "label": "No",
+          "next": "r_change"
+        }
+      ]
+    },
+    "r_pressure": {
+      "type": "result",
+      "cause": "A wrong pressure setting can affect the whole system.",
+      "fix": [
+        "Record current values and confirm the required setpoint with the responsible engineer or customer.",
+        "Check transducer range, scaling and system design.",
+        "Do not lower pressure settings until the required setpoint and consequences are confirmed.",
+        "Then make only an authorized, documented change; record old value, new value, reason and approver.",
+        "Verify the drive starts, controls correctly, shows no new alarms and matches the approved setpoint."
+      ]
+    },
+    "r_change": {
+      "type": "result",
+      "cause": "The change is a routine parameter edit.",
+      "fix": [
+        "Apply only an authorized, documented change; record old value, new value, reason and approver.",
+        "Verify the drive starts, controls the process correctly and shows no new alarms."
+      ]
+    }
+  }
+}

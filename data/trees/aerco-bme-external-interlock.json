@@ -1,0 +1,79 @@
+{
+  "id": "aerco-bme-external-interlock",
+  "title": "AERCO BME: external interlock alarm",
+  "manufacturer": "AERCO",
+  "equipment": "AERCO BME boiler controller (field-derived draft; verify against the AERCO manual)",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Record the exact alarm text, boiler tag, controller revision, operating state and BMS command. Is the alarm active, or latched/historical?",
+      "options": [
+        {
+          "label": "Active",
+          "next": "n2"
+        },
+        {
+          "label": "Latched or historical",
+          "next": "r_hist"
+        }
+      ]
+    },
+    "r_hist": {
+      "type": "result",
+      "cause": "The alarm may only be a stored record or not cleared yet.",
+      "fix": [
+        "Check the alarm history and how the manual says the alarm clears.",
+        "Confirm the interlock now responds correctly before clearing it."
+      ]
+    },
+    "n2": {
+      "type": "question",
+      "text": "Using the unit-specific wiring diagram, is the interlock circuit in the state the manual requires under operating conditions? Continuity alone may not prove this.",
+      "options": [
+        {
+          "label": "No, wrong state",
+          "next": "r_trace"
+        },
+        {
+          "label": "Appears correct",
+          "next": "n3"
+        }
+      ]
+    },
+    "r_trace": {
+      "type": "result",
+      "cause": "The external circuit or BMS sequence is holding the interlock open.",
+      "fix": [
+        "Trace the external circuit, contacts, terminals and BMS logic to find the actual cause.",
+        "Repair the cause. Never jumper or bypass the interlock to force operation.",
+        "Do not infer terminals or voltage from another model."
+      ]
+    },
+    "n3": {
+      "type": "question",
+      "text": "Does the signal change correctly during the approved functional test, and do alarm history and related permissives match the manual?",
+      "options": [
+        {
+          "label": "No",
+          "next": "r_trace"
+        },
+        {
+          "label": "Yes, all correct",
+          "next": "r_cfg"
+        }
+      ]
+    },
+    "r_cfg": {
+      "type": "result",
+      "cause": "Wiring looks right, so a controller configuration problem is possible.",
+      "fix": [
+        "Only if justified and authorized, back up the current parameter set first.",
+        "Follow the AERCO reset/restore procedure exactly and restore the approved configuration.",
+        "Field note: on BME boiler 2A, backing up and restoring parameters was followed by the alarms clearing. That is an observed sequence, not proof that a reset is the right first response.",
+        "Confirm the interlock responds, the alarm clears by the prescribed method and the boiler runs normally with all safety devices working."
+      ]
+    }
+  }
+}

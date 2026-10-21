@@ -1,0 +1,123 @@
+{
+  "id": "tekmar-671-outdoor-sensor-open-circuit",
+  "title": "Tekmar 671: outdoor sensor open circuit alarm",
+  "manufacturer": "Tekmar",
+  "equipment": "Tekmar 671 (field-derived draft; verify against the 671 manual)",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Record the exact alarm text and the Outdoor Sensor source setting. Is the control meant to use a physical outdoor sensor or Internet weather data?",
+      "options": [
+        {
+          "label": "Physical sensor",
+          "next": "n2"
+        },
+        {
+          "label": "Internet weather data",
+          "next": "n3"
+        },
+        {
+          "label": "Unsure",
+          "next": "r_confirm"
+        }
+      ]
+    },
+    "r_confirm": {
+      "type": "result",
+      "cause": "The intended outdoor source is not known, so the alarm cannot be diagnosed.",
+      "fix": [
+        "Check the installation records or ask the owner or controls contractor what the outdoor source is meant to be.",
+        "Record the current setting before changing anything."
+      ]
+    },
+    "n2": {
+      "type": "question",
+      "text": "Are the sensor terminals, cable and connections intact, and does the sensor resistance match the manufacturer chart at the measured outdoor temperature?",
+      "options": [
+        {
+          "label": "Yes, resistance matches",
+          "next": "r_cfg"
+        },
+        {
+          "label": "No, or open/short found",
+          "next": "r_wiring"
+        }
+      ]
+    },
+    "r_wiring": {
+      "type": "result",
+      "cause": "Open circuit, loose or corroded connection, damaged cable or a failed sensor.",
+      "fix": [
+        "Isolate the circuit as the manual directs, then check terminals, cable and the sensor for opens, shorts and moisture.",
+        "Do not infer terminals from wire colours; use the manual for this control.",
+        "Repair or replace only as the test results support, then confirm the alarm clears."
+      ]
+    },
+    "r_cfg": {
+      "type": "result",
+      "cause": "The sensor is healthy, so the control may be configured for a different source than the one installed.",
+      "fix": [
+        "Check that the Outdoor Sensor setting matches the sensor actually wired.",
+        "Record the original setting before changing it.",
+        "Confirm the alarm status and outdoor temperature after the change."
+      ]
+    },
+    "n3": {
+      "type": "question",
+      "text": "Is the control receiving weather data? Check network connection, IP/network settings and whether the weather fields show values or dashes.",
+      "options": [
+        {
+          "label": "Valid data shown",
+          "next": "r_verify"
+        },
+        {
+          "label": "Dashes or no data",
+          "next": "n4"
+        }
+      ]
+    },
+    "n4": {
+      "type": "question",
+      "text": "Is the date and time set correctly on the control?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_net"
+        },
+        {
+          "label": "Missing or wrong",
+          "next": "r_time"
+        }
+      ]
+    },
+    "r_time": {
+      "type": "result",
+      "cause": "Missing or incorrect time can stop the Internet weather source from updating.",
+      "fix": [
+        "Set the time following the manual. If AUTO is a documented time setting, record the original setting first.",
+        "Allow the documented update interval, then check the alarm, current outdoor temperature and forecast data.",
+        "Field note: in one case, setting time to AUTO coincided with the alarm clearing and an update starting. That is a correlation, not proof of root cause; do not treat it as a universal fix."
+      ]
+    },
+    "r_net": {
+      "type": "result",
+      "cause": "The Internet source is not delivering data.",
+      "fix": [
+        "Check the network cable, router/firewall, IP configuration and the weather source settings against the manual.",
+        "Do not diagnose a physical sensor while the control is set to Internet.",
+        "Allow the update interval, then confirm data is updating."
+      ]
+    },
+    "r_verify": {
+      "type": "result",
+      "cause": "Weather data is arriving, so the alarm may be stale or the source setting inconsistent.",
+      "fix": [
+        "Check whether the alarm is active or historical and clear it only as the manual describes.",
+        "Confirm the intended source is updating and the outdoor reading is plausible against an independent measurement.",
+        "Review reset curve and WWSD settings, then verify boiler operation with the approved test procedure."
+      ]
+    }
+  }
+}

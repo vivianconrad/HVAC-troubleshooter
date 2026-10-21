@@ -1,0 +1,100 @@
+{
+  "id": "mm-wfe-uni-match-fails-to-feed",
+  "generic": false,
+  "title": "WFE Uni-Match electric water feeder: fails to feed water",
+  "manufacturer": "McDONNELL & MILLER",
+  "equipment": "McDonnell & Miller Series WFE Uni-Match electric water feeder",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Ask the tech to recheck all wiring against the instructions. Is the wiring correct?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "n2"
+        },
+        {
+          "label": "No, found a problem",
+          "next": "r_wire"
+        }
+      ]
+    },
+    "r_wire": {
+      "type": "result",
+      "cause": "Wiring does not match the instructions.",
+      "fix": [
+        "Correct the wiring as specified in the manual, then retest."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "series-wfe-uni-match-electric-water-feeder-iom-mm-211163-rev-9.pdf",
+        "page": 7
+      }
+    },
+    "n2": {
+      "type": "question",
+      "text": "Ask the tech to check the integral strainer. Is it clean?",
+      "options": [
+        {
+          "label": "Clean",
+          "next": "n3"
+        },
+        {
+          "label": "Debris or sediment",
+          "next": "r_strainer"
+        }
+      ]
+    },
+    "r_strainer": {
+      "type": "result",
+      "cause": "The integral strainer is blocked.",
+      "fix": [
+        "Have the tech clean the strainer of debris and sediment, then retest."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "series-wfe-uni-match-electric-water-feeder-iom-mm-211163-rev-9.pdf",
+        "page": 7
+      }
+    },
+    "n3": {
+      "type": "question",
+      "text": "Do the low water cut-off controls connected to the feeder work correctly?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_esc"
+        },
+        {
+          "label": "No",
+          "next": "r_lwco"
+        }
+      ]
+    },
+    "r_lwco": {
+      "type": "result",
+      "cause": "The connected low water cut-off is not operating correctly, so the feeder may not be permitted to feed.",
+      "fix": [
+        "Have the tech check the low water cut-off controls and correct or replace as needed. Never bypass them."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "series-wfe-uni-match-electric-water-feeder-iom-mm-211163-rev-9.pdf",
+        "page": 7
+      }
+    },
+    "r_esc": {
+      "type": "result",
+      "cause": "The manual lists only these three checks and all passed.",
+      "fix": [
+        "Escalate to McDonnell & Miller or the Xylem support line with model, wiring photos and what was checked."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "series-wfe-uni-match-electric-water-feeder-iom-mm-211163-rev-9.pdf",
+        "page": 7
+      }
+    }
+  }
+}

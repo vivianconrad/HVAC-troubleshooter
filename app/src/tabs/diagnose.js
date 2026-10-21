@@ -13,15 +13,27 @@ export function renderDiagnose(root, ctx) {
   const body = h('div');
   const pickerHeading = h('h2', { tabindex: '-1' }, 'Diagnose');
   const picker = h('div', { class: 'card' }, pickerHeading, h('p', { class: 'empty' }, 'Pick the problem, then answer each question.'));
+  // Group by brand (alphabetical); trees with no manufacturer are general guidance and go last.
+  const GENERAL = 'General guidance (not brand-specific)';
+  const groups = new Map();
   for (const tree of trees) {
-    // h() skips null badges; every value given to native append() below is a single Node.
-    picker.append(
-      h('button', { type: 'button', class: 'choice', onclick: () => start(tree) },
-        tree.title,
-        tree.generic ? h('span', { class: 'badge' }, 'generic') : null,
-        tree.equipment ? h('span', { class: 'badge' }, tree.equipment) : null,
-      ),
-    );
+    const key = tree.manufacturer || GENERAL;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(tree);
+  }
+  const keys = [...groups.keys()].sort((a, b) => (a === GENERAL) - (b === GENERAL) || a.localeCompare(b));
+  for (const key of keys) {
+    picker.append(h('h3', {}, key));
+    for (const tree of groups.get(key)) {
+      // h() skips null badges; every value given to native append() below is a single Node.
+      picker.append(
+        h('button', { type: 'button', class: 'choice', onclick: () => start(tree) },
+          tree.title,
+          tree.generic ? h('span', { class: 'badge' }, 'generic') : null,
+          tree.equipment ? h('span', { class: 'badge' }, tree.equipment) : null,
+        ),
+      );
+    }
   }
 
   function start(tree) {

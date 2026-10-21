@@ -1,0 +1,65 @@
+{
+  "id": "bg-ecocirc-e02-high-current",
+  "title": "B&G Ecocirc: E02 high motor current",
+  "manufacturer": "B&G (Xylem)",
+  "equipment": "B&G Ecocirc circulator (field-derived draft; E02 meaning is field-reported)",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Record the complete model, fault and operating condition. Has the pump been power-cycled and has E02 returned?",
+      "options": [
+        {
+          "label": "Yes, it returns",
+          "next": "n2"
+        },
+        {
+          "label": "First occurrence",
+          "next": "r_first"
+        }
+      ]
+    },
+    "r_first": {
+      "type": "result",
+      "cause": "A single E02 may be a one-off event, but the cause is not yet known.",
+      "fix": [
+        "Record the code, time and whether it appeared at startup or after running, before resetting.",
+        "Clear it only as the manual instructs and watch startup and normal operation.",
+        "A successful restart does not prove the underlying issue is resolved."
+      ]
+    },
+    "n2": {
+      "type": "question",
+      "text": "After safe shutdown and lockout/tagout per the manufacturer, is there visible or mechanical trouble: binding, obstruction, abnormal noise or damage?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_mech"
+        },
+        {
+          "label": "None found",
+          "next": "r_supply"
+        }
+      ]
+    },
+    "r_mech": {
+      "type": "result",
+      "cause": "Mechanical binding or obstruction is a likely cause of high motor current.",
+      "fix": [
+        "Correct it only as the service manual allows, then retest.",
+        "Do not repeatedly power-cycle a persistent fault."
+      ]
+    },
+    "r_supply": {
+      "type": "result",
+      "cause": "No mechanical cause found; supply, wiring or motor condition remain possible.",
+      "fix": [
+        "Have a qualified person check supply voltage and wiring against the nameplate and manufacturer limits.",
+        "Do not assume the motor is the only cause.",
+        "If the fault persists, follow the exact model manual for service and replacement criteria and escalate rather than guess at an internal failure.",
+        "After correction, confirm the pump completes startup and runs under normal conditions without recurrence; record measurements and test duration."
+      ]
+    }
+  }
+}

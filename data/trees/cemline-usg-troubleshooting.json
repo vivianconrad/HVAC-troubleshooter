@@ -1,0 +1,194 @@
+{
+  "id": "cemline-usg-troubleshooting",
+  "title": "Cemline unfired steam generator: symptom troubleshooting",
+  "manufacturer": "Cemline",
+  "equipment": "Cemline Unfired Steam Generator",
+  "generic": false,
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Which symptom is the tech reporting on the Cemline unfired steam generator?",
+      "options": [
+        {
+          "label": "Does not maintain required pressure at rated capacity",
+          "next": "r1"
+        },
+        {
+          "label": "Feed water level incorrect or inconsistent",
+          "next": "r2"
+        },
+        {
+          "label": "Outlet pressure is too high",
+          "next": "r3"
+        },
+        {
+          "label": "Outlet pressure fluctuates widely",
+          "next": "r4"
+        },
+        {
+          "label": "Excess or insufficient condensate being returned from the unit",
+          "next": "r5"
+        },
+        {
+          "label": "Steam being discharged into the condensate drain",
+          "next": "r6"
+        },
+        {
+          "label": "Pressure relief valve pops",
+          "next": "r7"
+        },
+        {
+          "label": "Shuts down at or too close to the design clean steam outlet pressure",
+          "next": "r8"
+        },
+        {
+          "label": "Loud banging in the generator or piping (not the normal clicking)",
+          "next": "r9"
+        }
+      ]
+    },
+    "r1": {
+      "type": "result",
+      "cause": "Manual troubleshooting table: does not maintain required pressure at rated capacity. Candidate remedies: 1, 2, 3, 6, 7, 9, 10.",
+      "fix": [
+        "Work through these remedies in order with the tech; the manual lists them as probable causes for this symptom.",
+        "Remedy 1: Check clean steam pressure with a gauge known to be correct; replace the pressure gauge if it is not sensing correctly.",
+        "Remedy 2: Check the primary energy source pressure gauge. If low, adjust inlet pressure to design. A restriction in the supply line makes the reading drop sharply at full demand even though it looks normal at light load.",
+        "Remedy 3: Check the condensate/water return piping and check valve: piping must not allow free gravity drain, the drain line must not be restricted, and a leaking or failed check valve must be replaced.",
+        "Remedy 6: Primary/inlet pressure control valve is not opening properly. Follow the adjustment and test instructions for the installed valve; replace it if necessary.",
+        "Remedy 7: Energy source pressure control system is not operating properly. Follow the adjustment and test instructions for the installed system; replace the valve if necessary.",
+        "Remedy 9: Possible heat exchanger coil or return-line leak. Shut off the primary energy source and carefully break a connection in the condensate/water return line (the system may still hold energy source under pressure: extreme caution). Flow that stops after a short time is normal; continuing flow means the tank is leaking into the coil, so disassemble, inspect and repair or replace the coil.",
+        "Remedy 10: Heat exchanger coil is heavily scaled or damaged. Call Cemline or an authorized sales agent (800-245-6268) with the model and serial numbers from the nameplate.",
+        "Reference pressure-related remedies to the supplied manuals for the installed control valve. Call Cemline (800-245-6268) if the unit is still not right."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "CEMLINE - Installation, Operation & Maintenance Manual.pdf",
+        "page": 29
+      }
+    },
+    "r2": {
+      "type": "result",
+      "cause": "Manual troubleshooting table: feed water level incorrect or inconsistent. Candidate remedies: 11.",
+      "fix": [
+        "Work through these remedies in order with the tech; the manual lists them as probable causes for this symptom.",
+        "Remedy 11: Level controller not working correctly or floats out of position. Shut the system down per the shutdown procedure, remove the level controller, check float positioning and readjust, or replace the controller if defective.",
+        "Reference pressure-related remedies to the supplied manuals for the installed control valve. Call Cemline (800-245-6268) if the unit is still not right."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "CEMLINE - Installation, Operation & Maintenance Manual.pdf",
+        "page": 29
+      }
+    },
+    "r3": {
+      "type": "result",
+      "cause": "Manual troubleshooting table: outlet pressure is too high. Candidate remedies: 1, 3, 5, 7.",
+      "fix": [
+        "Work through these remedies in order with the tech; the manual lists them as probable causes for this symptom.",
+        "Remedy 1: Check clean steam pressure with a gauge known to be correct; replace the pressure gauge if it is not sensing correctly.",
+        "Remedy 3: Check the condensate/water return piping and check valve: piping must not allow free gravity drain, the drain line must not be restricted, and a leaking or failed check valve must be replaced.",
+        "Remedy 5: Primary/inlet pressure control valve is not closing properly. Follow the adjustment and test instructions for the installed valve; replace it if necessary.",
+        "Remedy 7: Energy source pressure control system is not operating properly. Follow the adjustment and test instructions for the installed system; replace the valve if necessary.",
+        "Reference pressure-related remedies to the supplied manuals for the installed control valve. Call Cemline (800-245-6268) if the unit is still not right."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "CEMLINE - Installation, Operation & Maintenance Manual.pdf",
+        "page": 29
+      }
+    },
+    "r4": {
+      "type": "result",
+      "cause": "Manual troubleshooting table: outlet pressure fluctuates widely. Candidate remedies: 2, 3, 5, 7, 9.",
+      "fix": [
+        "Work through these remedies in order with the tech; the manual lists them as probable causes for this symptom.",
+        "Remedy 2: Check the primary energy source pressure gauge. If low, adjust inlet pressure to design. A restriction in the supply line makes the reading drop sharply at full demand even though it looks normal at light load.",
+        "Remedy 3: Check the condensate/water return piping and check valve: piping must not allow free gravity drain, the drain line must not be restricted, and a leaking or failed check valve must be replaced.",
+        "Remedy 5: Primary/inlet pressure control valve is not closing properly. Follow the adjustment and test instructions for the installed valve; replace it if necessary.",
+        "Remedy 7: Energy source pressure control system is not operating properly. Follow the adjustment and test instructions for the installed system; replace the valve if necessary.",
+        "Remedy 9: Possible heat exchanger coil or return-line leak. Shut off the primary energy source and carefully break a connection in the condensate/water return line (the system may still hold energy source under pressure: extreme caution). Flow that stops after a short time is normal; continuing flow means the tank is leaking into the coil, so disassemble, inspect and repair or replace the coil.",
+        "Reference pressure-related remedies to the supplied manuals for the installed control valve. Call Cemline (800-245-6268) if the unit is still not right."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "CEMLINE - Installation, Operation & Maintenance Manual.pdf",
+        "page": 29
+      }
+    },
+    "r5": {
+      "type": "result",
+      "cause": "Manual troubleshooting table: excess or insufficient condensate being returned from the unit. Candidate remedies: 3.",
+      "fix": [
+        "Work through these remedies in order with the tech; the manual lists them as probable causes for this symptom.",
+        "Remedy 3: Check the condensate/water return piping and check valve: piping must not allow free gravity drain, the drain line must not be restricted, and a leaking or failed check valve must be replaced.",
+        "Reference pressure-related remedies to the supplied manuals for the installed control valve. Call Cemline (800-245-6268) if the unit is still not right."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "CEMLINE - Installation, Operation & Maintenance Manual.pdf",
+        "page": 29
+      }
+    },
+    "r6": {
+      "type": "result",
+      "cause": "Manual troubleshooting table: steam being discharged into the condensate drain. Candidate remedies: 10.",
+      "fix": [
+        "Work through these remedies in order with the tech; the manual lists them as probable causes for this symptom.",
+        "Remedy 10: Heat exchanger coil is heavily scaled or damaged. Call Cemline or an authorized sales agent (800-245-6268) with the model and serial numbers from the nameplate.",
+        "Reference pressure-related remedies to the supplied manuals for the installed control valve. Call Cemline (800-245-6268) if the unit is still not right."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "CEMLINE - Installation, Operation & Maintenance Manual.pdf",
+        "page": 29
+      }
+    },
+    "r7": {
+      "type": "result",
+      "cause": "Manual troubleshooting table: pressure relief valve pops. Candidate remedies: 5, 7, 8.",
+      "fix": [
+        "Work through these remedies in order with the tech; the manual lists them as probable causes for this symptom.",
+        "Remedy 5: Primary/inlet pressure control valve is not closing properly. Follow the adjustment and test instructions for the installed valve; replace it if necessary.",
+        "Remedy 7: Energy source pressure control system is not operating properly. Follow the adjustment and test instructions for the installed system; replace the valve if necessary.",
+        "Remedy 8: Over-pressure limit system is out of adjustment or a component has failed. Check the individual components and repair or replace the failed one.",
+        "Reference pressure-related remedies to the supplied manuals for the installed control valve. Call Cemline (800-245-6268) if the unit is still not right."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "CEMLINE - Installation, Operation & Maintenance Manual.pdf",
+        "page": 29
+      }
+    },
+    "r8": {
+      "type": "result",
+      "cause": "Manual troubleshooting table: shuts down at or too close to the design clean steam outlet pressure. Candidate remedies: 8.",
+      "fix": [
+        "Work through these remedies in order with the tech; the manual lists them as probable causes for this symptom.",
+        "Remedy 8: Over-pressure limit system is out of adjustment or a component has failed. Check the individual components and repair or replace the failed one.",
+        "Reference pressure-related remedies to the supplied manuals for the installed control valve. Call Cemline (800-245-6268) if the unit is still not right."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "CEMLINE - Installation, Operation & Maintenance Manual.pdf",
+        "page": 29
+      }
+    },
+    "r9": {
+      "type": "result",
+      "cause": "Manual troubleshooting table: loud banging in the generator or piping (not the normal clicking). Candidate remedies: 3, 4.",
+      "fix": [
+        "Work through these remedies in order with the tech; the manual lists them as probable causes for this symptom.",
+        "Remedy 3: Check the condensate/water return piping and check valve: piping must not allow free gravity drain, the drain line must not be restricted, and a leaking or failed check valve must be replaced.",
+        "Remedy 4: Check that the primary/inlet steam line is properly trapped (steam as energy source only), with main and drip traps working.",
+        "Reference pressure-related remedies to the supplied manuals for the installed control valve. Call Cemline (800-245-6268) if the unit is still not right."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "CEMLINE - Installation, Operation & Maintenance Manual.pdf",
+        "page": 29
+      }
+    }
+  }
+}

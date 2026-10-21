@@ -1,0 +1,169 @@
+{
+  "id": "mm-probe-lwco-wont-operate",
+  "generic": false,
+  "title": "Probe-type low water cut-off (Guard Dog RB-122E / FPC-1000): will not operate",
+  "manufacturer": "McDONNELL & MILLER",
+  "equipment": "McDonnell & Miller Guard Dog RB-122E and FPC-1000 probe controls",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Which control, and what is the LED doing? Ask the tech to read the LEDs.",
+      "options": [
+        {
+          "label": "Guard Dog RB-122E",
+          "next": "g1"
+        },
+        {
+          "label": "FPC-1000",
+          "next": "f1"
+        }
+      ]
+    },
+    "g1": {
+      "type": "question",
+      "text": "Does the RB-122E green LED blink 13 times, or 1 to 10 times, and the boiler will not start?",
+      "options": [
+        {
+          "label": "13 blinks",
+          "next": "r_g13"
+        },
+        {
+          "label": "1 to 10 blinks",
+          "next": "r_g10"
+        },
+        {
+          "label": "No blinking, control just fails to operate",
+          "next": "g2"
+        }
+      ]
+    },
+    "r_g13": {
+      "type": "result",
+      "cause": "The probe is shorting at power on.",
+      "fix": [
+        "Turn off the boiler and check the probe wiring connection.",
+        "Turn off the boiler, drain it and remove the control to see whether the probe tip touches a metal surface."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "guarddog.pdf",
+        "page": 5
+      }
+    },
+    "r_g10": {
+      "type": "result",
+      "cause": "Internal fault.",
+      "fix": [
+        "Press the test button for more than 1 second until the red LED turns off, or power cycle to reset.",
+        "If it continues, replace the control."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "guarddog.pdf",
+        "page": 5
+      }
+    },
+    "g2": {
+      "type": "question",
+      "text": "Ask the tech to measure voltage at wires H and N of the probe control. Is voltage present?",
+      "options": [
+        {
+          "label": "No voltage",
+          "next": "r_gnov"
+        },
+        {
+          "label": "Voltage present",
+          "next": "r_gprobe"
+        }
+      ]
+    },
+    "r_gnov": {
+      "type": "result",
+      "cause": "No voltage is reaching the probe control.",
+      "fix": [
+        "Make the necessary electrical corrections; check wiring against the installation steps.",
+        "If wiring is right and the problem remains, replace the probe control."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "guarddog.pdf",
+        "page": 5
+      }
+    },
+    "r_gprobe": {
+      "type": "result",
+      "cause": "The probe may be touching the boiler or pipe wall, wrapped in PTFE tape, or sitting in an air pocket.",
+      "fix": [
+        "Check there is a 2 inch minimum width in the boiler section or 1-1/4 inch pipe inner diameter around the probe.",
+        "Remove any PTFE tape and use pipe sealing compound on the threads.",
+        "Purge air around the probe by opening the water feed valve until water flows from the tapping.",
+        "Also look for other wiring or operating control problems."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "guarddog.pdf",
+        "page": 5
+      }
+    },
+    "f1": {
+      "type": "question",
+      "text": "Does the FPC-1000 Green/Yellow LED blink 13 times, or 1 to 10 times, and the boiler will not start?",
+      "options": [
+        {
+          "label": "13 blinks",
+          "next": "r_f13"
+        },
+        {
+          "label": "1 to 10 blinks",
+          "next": "r_f10"
+        },
+        {
+          "label": "No blinking, probe fails to operate",
+          "next": "r_fgen"
+        }
+      ]
+    },
+    "r_f13": {
+      "type": "result",
+      "cause": "The probe is shorting at power on.",
+      "fix": [
+        "Turn off the boiler and check the probe wiring connection.",
+        "Turn off the boiler, drain it and remove the control to see whether the probe tip touches a metal surface."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "fpc-1000.pdf",
+        "page": 7
+      }
+    },
+    "r_f10": {
+      "type": "result",
+      "cause": "Internal fault.",
+      "fix": [
+        "Press the Test/Reset button for more than 1 second until the red LED turns off, or power cycle.",
+        "If the problem continues, replace the control."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "fpc-1000.pdf",
+        "page": 7
+      }
+    },
+    "r_fgen": {
+      "type": "result",
+      "cause": "Probe not sensing correctly.",
+      "fix": [
+        "Check the boiler water level is at or above the probe.",
+        "Recheck wiring against the boiler manufacturer diagrams or the manual.",
+        "Check that PTFE tape was not used on the electrode threads.",
+        "Some foaming is common in certain boilers; follow the boiler manufacturer cleaning recommendations."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "fpc-1000.pdf",
+        "page": 7
+      }
+    }
+  }
+}

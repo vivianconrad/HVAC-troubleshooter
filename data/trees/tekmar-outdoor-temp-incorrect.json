@@ -1,6 +1,7 @@
 {
   "id": "tekmar-outdoor-temp-incorrect",
   "title": "Tekmar outdoor temperature incorrect or unstable",
+  "manufacturer": "Tekmar",
   "equipment": "Tekmar 256 / 274 boiler controls (adapt for other models after checking their manual)",
   "generic": false,
   "start": "n1",

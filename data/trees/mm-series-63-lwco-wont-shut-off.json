@@ -1,0 +1,78 @@
+{
+  "id": "mm-series-63-lwco-wont-shut-off",
+  "generic": false,
+  "title": "Series 63 low water cut-off: burner does not shut off on low water",
+  "manufacturer": "McDONNELL & MILLER",
+  "equipment": "McDonnell & Miller Series 63 low water cut-off",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Safety first: the boiler may be running dry. Ask the tech to confirm the water level in the gauge glass. Is the water level actually below the control?",
+      "options": [
+        {
+          "label": "Yes, level is low and the burner is still on",
+          "next": "n2"
+        },
+        {
+          "label": "No, level is normal",
+          "next": "r_ok"
+        }
+      ]
+    },
+    "r_ok": {
+      "type": "result",
+      "cause": "The control is not being asked to shut off; this is not a cut-off failure.",
+      "fix": [
+        "Have the tech confirm the actual water level before testing further.",
+        "Blow down the control per the maintenance procedure and confirm the burner shuts off when the level falls."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "15012015-mcdonnell-miller_series-63-lwco_instructions.pdf",
+        "page": 7
+      }
+    },
+    "n2": {
+      "type": "question",
+      "text": "With the water level below the control, ask the tech (power isolated per lockout/tagout) to check whether terminals C and N.C. are open. Are they open?",
+      "options": [
+        {
+          "label": "Not open",
+          "next": "r_mud"
+        },
+        {
+          "label": "Open",
+          "next": "r_other"
+        }
+      ]
+    },
+    "r_mud": {
+      "type": "result",
+      "cause": "The float chamber is probably loaded with mud or sediment, or the contacts are fused together.",
+      "fix": [
+        "Have the tech open and clean the float chamber and check for scale or sediment between the bellows corrugations.",
+        "Remove the switch and operate it manually; if C and N.C. will not open or contacts are fused, replace the switch.",
+        "Check the electrical load is within the switch ratings."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "15012015-mcdonnell-miller_series-63-lwco_instructions.pdf",
+        "page": 6
+      }
+    },
+    "r_other": {
+      "type": "result",
+      "cause": "The control is cutting out correctly, so the problem is downstream in the burner circuit.",
+      "fix": [
+        "Escalate to the boiler/controls contractor to trace the burner safety circuit wiring.",
+        "Do not bypass the low water cut-off."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "15012015-mcdonnell-miller_series-63-lwco_instructions.pdf",
+        "page": 6
+      }
+    }
+  }
+}

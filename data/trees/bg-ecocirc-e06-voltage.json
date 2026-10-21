@@ -1,0 +1,58 @@
+{
+  "id": "bg-ecocirc-e06-voltage",
+  "title": "B&G Ecocirc: E06 voltage imbalance",
+  "manufacturer": "B&G (Xylem)",
+  "equipment": "B&G Ecocirc circulator (field-derived draft; E06 meaning and +/-10% range are field-reported)",
+  "generic": true,
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Record the pump model, fault history and supply type. Does the problem line up with generator operation, a building shutdown or another electrical event?",
+      "options": [
+        {
+          "label": "Yes, correlates with an event",
+          "next": "r_event"
+        },
+        {
+          "label": "No obvious pattern",
+          "next": "n2"
+        }
+      ]
+    },
+    "r_event": {
+      "type": "result",
+      "cause": "The supply is the likely trigger.",
+      "fix": [
+        "Investigate the source: generator output, transfer equipment and upstream electrical gear.",
+        "A qualified person should measure the incoming supply with appropriate PPE and procedures.",
+        "Compare readings with the exact pump manual, including whether the limit is imbalance, deviation or another measurement.",
+        "Correct the electrical issue before returning the pump to service."
+      ]
+    },
+    "n2": {
+      "type": "question",
+      "text": "A qualified person measures the incoming supply and checks connections. Are readings outside the manual limit?",
+      "options": [
+        {
+          "label": "Outside limit",
+          "next": "r_event"
+        },
+        {
+          "label": "Within limit during the test",
+          "next": "r_intermit"
+        }
+      ]
+    },
+    "r_intermit": {
+      "type": "result",
+      "cause": "The problem may be intermittent and not present during a single measurement.",
+      "fix": [
+        "Review event timing, supply records, connections and manufacturer diagnostics.",
+        "Do not conclude the pump is healthy from one normal reading.",
+        "Do not repeatedly reset without investigating the supply.",
+        "Monitor through a representative operating period and through the condition tied to the original fault."
+      ]
+    }
+  }
+}

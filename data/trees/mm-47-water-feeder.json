@@ -1,0 +1,197 @@
+{
+  "id": "mm-47-water-feeder",
+  "generic": false,
+  "title": "Series 47 / 47-2 water feeder: too much water, not enough, noise or burner switch",
+  "manufacturer": "McDONNELL & MILLER",
+  "equipment": "McDonnell & Miller Series 47 / 47-2 / 247 water feeder (and feeder/low-water cut-off)",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "What is the tech seeing?",
+      "options": [
+        {
+          "label": "Boiler is getting too much water",
+          "next": "n2"
+        },
+        {
+          "label": "Boiler is not getting enough water",
+          "next": "n3"
+        },
+        {
+          "label": "Unit is making noise",
+          "next": "r_noise"
+        },
+        {
+          "label": "Burner switch not working",
+          "next": "r_switch"
+        },
+        {
+          "label": "Water leaking from the bellows",
+          "next": "r_bellows"
+        }
+      ]
+    },
+    "n2": {
+      "type": "question",
+      "text": "Ask the tech to perform the broken union test (per the manual). Does water keep flowing into the boiler with the union broken?",
+      "options": [
+        {
+          "label": "Yes, water keeps flowing",
+          "next": "r_toomuch_valve"
+        },
+        {
+          "label": "No / not sure, try the blow-down valve test",
+          "next": "n2b"
+        }
+      ]
+    },
+    "r_toomuch_valve": {
+      "type": "result",
+      "cause": "The feeder valve is not closing fully: something is holding the cartridge poppet open, or the by-pass valve is leaking.",
+      "fix": [
+        "Have the tech remove and inspect the cartridge; clean or replace as necessary.",
+        "Check whether the by-pass valve is leaking; repair or replace it.",
+        "Also have the tech confirm the water supply is not above 150 psi (install a pressure reducing valve if it is)."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "Mcdonnell Miller 47-2.pdf",
+        "page": 10
+      }
+    },
+    "n2b": {
+      "type": "question",
+      "text": "Ask the tech to open the blow-down valve. Is there little or no water flow?",
+      "options": [
+        {
+          "label": "Little or no flow",
+          "next": "r_chamber"
+        },
+        {
+          "label": "Normal flow",
+          "next": "r_toomuch_float"
+        }
+      ]
+    },
+    "r_chamber": {
+      "type": "result",
+      "cause": "The float chamber is likely clogged with sediment.",
+      "fix": [
+        "Have the tech remove the bottom of the float chamber and clean sediment from the chamber, float and bellows mechanism.",
+        "Replace the control if necessary."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "Mcdonnell Miller 47-2.pdf",
+        "page": 10
+      }
+    },
+    "r_toomuch_float": {
+      "type": "result",
+      "cause": "The float may be full of water or the equalizing piping may be plugged.",
+      "fix": [
+        "If the float has filled with water, replace it.",
+        "If the equalizing piping is plugged, clean or replace it.",
+        "Also consider system causes the manual lists: improper piping, faulty check valve in the return header, delayed condensate return, tankless coil leak, priming/foaming."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "Mcdonnell Miller 47-2.pdf",
+        "page": 10
+      }
+    },
+    "n3": {
+      "type": "question",
+      "text": "Ask the tech to perform the broken union test. With the union broken, is water flowing from the boiler side through the piping?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "n3b"
+        },
+        {
+          "label": "No flow",
+          "next": "r_feedline"
+        }
+      ]
+    },
+    "r_feedline": {
+      "type": "result",
+      "cause": "The feed line between the valve and boiler is partially plugged.",
+      "fix": [
+        "Have the tech clean or replace the piping.",
+        "If supply-side flow is also poor, check the feed line to the city water supply for a blockage."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "Mcdonnell Miller 47-2.pdf",
+        "page": 10
+      }
+    },
+    "n3b": {
+      "type": "question",
+      "text": "Ask the tech to open the blow-down valve. Is there little or no water flow?",
+      "options": [
+        {
+          "label": "Little or no flow",
+          "next": "r_chamber"
+        },
+        {
+          "label": "Normal flow",
+          "next": "r_notenough"
+        }
+      ]
+    },
+    "r_notenough": {
+      "type": "result",
+      "cause": "The cartridge poppet may not be fully opening, or the strainer is clogged. Water supply pressure may also be below boiler pressure.",
+      "fix": [
+        "Have the tech remove and inspect the cartridge and the strainer; clean or replace as necessary.",
+        "If supply pressure is lower than boiler pressure, reduce boiler pressure or convert to pumped return."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "Mcdonnell Miller 47-2.pdf",
+        "page": 10
+      }
+    },
+    "r_noise": {
+      "type": "result",
+      "cause": "Under some conditions the cartridge poppet vibrates when it is slightly open.",
+      "fix": [
+        "Install a pressure reducing valve (for example a Bell & Gossett B-38) in the inlet water line ahead of the feeder valve."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "Mcdonnell Miller 47-2.pdf",
+        "page": 11
+      }
+    },
+    "r_switch": {
+      "type": "result",
+      "cause": "The cam is worn or broken, or the linkage is not transferring float movement to the switch.",
+      "fix": [
+        "If the cam is worn or broken, replace the cam assembly (CO-106/302900).",
+        "If the linkage pins are worn or broken, the valve assembly must be replaced.",
+        "Otherwise check for a damaged float, sediment in the chamber or plugged equalizing piping."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "Mcdonnell Miller 47-2.pdf",
+        "page": 11
+      }
+    },
+    "r_bellows": {
+      "type": "result",
+      "cause": "Continuous exposure to chemicals, or water with pH above 9.0, can deteriorate the solder.",
+      "fix": [
+        "Remove the source of chemicals, or replace the control with one suitable for the application."
+      ],
+      "source": {
+        "manufacturer": "McDONNELL & MILLER",
+        "doc": "Mcdonnell Miller 47-2.pdf",
+        "page": 11
+      }
+    }
+  }
+}
