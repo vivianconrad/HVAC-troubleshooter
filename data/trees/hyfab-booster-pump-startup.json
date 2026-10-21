@@ -1,0 +1,156 @@
+{
+  "id": "hyfab-booster-pump-startup",
+  "generic": false,
+  "title": "Booster pump startup: remote check-through",
+  "manufacturer": "Hyfab",
+  "equipment": "Hyfab booster pump skid (up to 5 pumps, PLC and VFD)",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Ask the tech to confirm pre-power MECHANICAL checks: motor bolts, discharge flanges, pump base, flange and Victaulic connections all tight?",
+      "options": [
+        {
+          "label": "All tight",
+          "next": "n2"
+        },
+        {
+          "label": "Something loose",
+          "next": "r_mech"
+        }
+      ]
+    },
+    "r_mech": {
+      "type": "result",
+      "cause": "Mechanical connections are not secure, so the skid is not ready for power.",
+      "fix": [
+        "Have the tech tighten the loose bolts, flanges or Victaulic connections, then restart this check."
+      ],
+      "source": {
+        "manufacturer": "HYFAB",
+        "doc": "Hyfab Booster Pump Startup.pdf",
+        "page": 1
+      }
+    },
+    "n2": {
+      "type": "question",
+      "text": "Pre-power ELECTRICAL: motor wiring correct and tight; control breaker (line and load) and terminal strip wires tight; components secure; inverter inspected with cover removed (wiring tight, components secure); control transformer has proper primary and secondary voltage and tight wires. All good?",
+      "options": [
+        {
+          "label": "All good",
+          "next": "n3"
+        },
+        {
+          "label": "Something wrong",
+          "next": "r_elec"
+        }
+      ]
+    },
+    "r_elec": {
+      "type": "result",
+      "cause": "An electrical pre-power check failed.",
+      "fix": [
+        "Have a qualified tech correct the wiring, loose terminations or transformer voltage problem before applying power.",
+        "Do not energize the skid until every item on the pre-power list is good."
+      ],
+      "source": {
+        "manufacturer": "HYFAB",
+        "doc": "Hyfab Booster Pump Startup.pdf",
+        "page": 1
+      }
+    },
+    "n3": {
+      "type": "question",
+      "text": "Initial power-up: horizontal pumps primed with air bled from the top and couplings correct and tight? Vertical pumps with shaft/impellers adjusted to the blue spacer tool?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "n4"
+        },
+        {
+          "label": "No",
+          "next": "r_prime"
+        }
+      ]
+    },
+    "r_prime": {
+      "type": "result",
+      "cause": "Pumps are not prepared to run.",
+      "fix": [
+        "Have the tech prime horizontal pumps, bleed air from the top, and check the couplings.",
+        "Adjust vertical pump shaft and impellers to the blue spacer tool, then continue."
+      ],
+      "source": {
+        "manufacturer": "HYFAB",
+        "doc": "Hyfab Booster Pump Startup.pdf",
+        "page": 2
+      }
+    },
+    "n4": {
+      "type": "question",
+      "text": "Has rotation been checked on every pump (pump 1 through 5 as applicable)?",
+      "options": [
+        {
+          "label": "Yes, all correct",
+          "next": "n5"
+        },
+        {
+          "label": "Not checked or wrong",
+          "next": "r_rot"
+        }
+      ]
+    },
+    "r_rot": {
+      "type": "result",
+      "cause": "Pump rotation is unverified or wrong.",
+      "fix": [
+        "Have the tech check rotation on each pump before running further and correct any that are reversed per the pump manual."
+      ],
+      "source": {
+        "manufacturer": "HYFAB",
+        "doc": "Hyfab Booster Pump Startup.pdf",
+        "page": 2
+      }
+    },
+    "n5": {
+      "type": "question",
+      "text": "Ask the tech to measure supply voltage A-B, B-C, A-C and each phase to ground, plus control voltage. Is any reading over 506 VAC on a 460 VAC system (+10% of station design), or control voltage over 132 VAC?",
+      "options": [
+        {
+          "label": "Yes, over the limit",
+          "next": "r_volt"
+        },
+        {
+          "label": "No, within limits",
+          "next": "r_done"
+        }
+      ]
+    },
+    "r_volt": {
+      "type": "result",
+      "cause": "Supply or control voltage is above the limit on the Hyfab startup sheet.",
+      "fix": [
+        "Do not run the skid. Have a qualified electrician find and correct the over-voltage with the utility or source.",
+        "Limits on the sheet: not to exceed 506 VAC on 460 VAC systems (+10% of station design); control voltage not to exceed 132 VAC."
+      ],
+      "source": {
+        "manufacturer": "HYFAB",
+        "doc": "Hyfab Booster Pump Startup.pdf",
+        "page": 2
+      }
+    },
+    "r_done": {
+      "type": "result",
+      "cause": "Checks complete; the rest is recording data.",
+      "fix": [
+        "Have the tech record motor nameplate data, PLC and VFD manufacturer, model, serial and software version, and the operating macro.",
+        "Record the safety settings: low discharge pressure, high inlet pressure, high discharge pressure, high pump temperature setpoint and low inlet pressure."
+      ],
+      "source": {
+        "manufacturer": "HYFAB",
+        "doc": "Hyfab Booster Pump Startup.pdf",
+        "page": 2
+      }
+    }
+  }
+}

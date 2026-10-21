@@ -1,0 +1,42 @@
+{
+  "id": "bock-optitherm-maintenance-and-warranty",
+  "generic": false,
+  "title": "Bock OptiTherm: preventative maintenance and tank warranty claim",
+  "manufacturer": "Bock",
+  "equipment": "Bock OptiTherm water heaters and tanks (from the Bock maintenance sheet and warranty claim steps)",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "What does the customer need?",
+      "options": [
+        {
+          "label": "Preventative maintenance visit",
+          "next": "r_pm"
+        },
+        {
+          "label": "Tank warranty claim",
+          "next": "r_claim"
+        }
+      ]
+    },
+    "r_pm": {
+      "type": "result",
+      "cause": "The 2026 Bock OptiTherm maintenance sheet covers a standard visit.",
+      "fix": [
+        "For the OT200-299N model, replace the flame rod with gasket (part 19852R) and the hot surface ignitor with gasket (part 19948R); the OT300-500N has its own sheet.",
+        "Inspect/check: water pipes, T&P relief valve, power anode system, vent system, combustion system, tank and condensate trap.",
+        "Run and test the system. The sheet also lists a 6-month wellness check-up.",
+        "Pricing and labor rates are on the spreadsheet, not repeated here."
+      ]
+    },
+    "r_claim": {
+      "type": "result",
+      "cause": "Tank warranty claims are filed through the Bock account portal.",
+      "fix": [
+        "Log in, go to My Account, click Warranty Request, select the tank category and complete the form.",
+        "Bock must receive the ratings label from the failed tank (pictures are not accepted; a removed and scanned label is) and the Bock replacement serial number before credit can be processed."
+      ]
+    }
+  }
+}

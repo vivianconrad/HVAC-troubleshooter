@@ -1,0 +1,83 @@
+{
+  "id": "bg-pump-startup-readiness",
+  "generic": false,
+  "title": "B&G pump startup request: is the job ready?",
+  "manufacturer": "B&G (Xylem)",
+  "equipment": "Bornquist pump startup request form (B&G pumps)",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Go through the startup request form with the contractor. Which answer is NO or N/A?",
+      "options": [
+        {
+          "label": "Equipment damaged, mechanical connections, mounting or grouting",
+          "next": "r_mech"
+        },
+        {
+          "label": "System not filled or vented, no make-up water, gauges not installed",
+          "next": "r_hyd"
+        },
+        {
+          "label": "No power, cannot check rotation, BAS not operating, or no load for capacity verification",
+          "next": "r_elec"
+        },
+        {
+          "label": "All answers are YES",
+          "next": "r_ready"
+        }
+      ]
+    },
+    "r_mech": {
+      "type": "result",
+      "cause": "The equipment is not ready for startup.",
+      "fix": [
+        "Have the contractor confirm the equipment is undamaged, all mechanical connections are made, it is mounted correctly with all hardware, and the base is grouted per the OEM manual.",
+        "If a question truly cannot be answered, write the reason in the comment section so service can decide whether startup is still possible."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "B.I. PRE-STARTUP.pdf",
+        "page": 2
+      }
+    },
+    "r_hyd": {
+      "type": "result",
+      "cause": "The hydronic system is not ready for startup.",
+      "fix": [
+        "The system must be filled, vented and tested for leaks, make-up or domestic water connected and available, and gauges installed properly."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "B.I. PRE-STARTUP.pdf",
+        "page": 2
+      }
+    },
+    "r_elec": {
+      "type": "result",
+      "cause": "Electrical, controls or load conditions are not ready for startup.",
+      "fix": [
+        "Electrical connections must be made and power available, rotation must be checkable, BAS connections made and operating, and a load must be establishable for capacity verification.",
+        "If crews arrive and the equipment is not ready they leave instructions and the startup is rescheduled; a one-hour labor charge applies to unsuccessful startup requests."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "B.I. PRE-STARTUP.pdf",
+        "page": 2
+      }
+    },
+    "r_ready": {
+      "type": "result",
+      "cause": "The job looks ready to schedule.",
+      "fix": [
+        "Fill out the form for each pump (name, model, serial number, date code) and return it to the service department (service@bornquist.com, 773-774-2800).",
+        "Allow 48 hours for scheduling from the time the form is sent."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "B.I. PRE-STARTUP.pdf",
+        "page": 1
+      }
+    }
+  }
+}

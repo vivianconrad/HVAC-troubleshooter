@@ -1,0 +1,320 @@
+{
+  "id": "wessels-bladder-kit-lookup",
+  "generic": false,
+  "title": "Wessels tank: replacement bladder kit lookup",
+  "manufacturer": "Wessels",
+  "equipment": "Wessels / Amtrol B-series bladder tanks",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Which tank size needs a replacement bladder?",
+      "options": [
+        {
+          "label": "B200",
+          "next": "r_B200"
+        },
+        {
+          "label": "B300",
+          "next": "r_B300"
+        },
+        {
+          "label": "B400",
+          "next": "r_B400"
+        },
+        {
+          "label": "B500",
+          "next": "r_B500"
+        },
+        {
+          "label": "B600",
+          "next": "r_B600"
+        },
+        {
+          "label": "B800",
+          "next": "r_B800"
+        },
+        {
+          "label": "B1000",
+          "next": "r_B1000"
+        },
+        {
+          "label": "B1200",
+          "next": "r_B1200"
+        },
+        {
+          "label": "B1400",
+          "next": "r_B1400"
+        },
+        {
+          "label": "B1600",
+          "next": "r_B1600"
+        },
+        {
+          "label": "B2000",
+          "next": "r_B2000"
+        },
+        {
+          "label": "B2500",
+          "next": "r_B2500"
+        },
+        {
+          "label": "B3000",
+          "next": "r_B3000"
+        },
+        {
+          "label": "B3500",
+          "next": "r_B3500"
+        },
+        {
+          "label": "B4000",
+          "next": "r_B4000"
+        },
+        {
+          "label": "B5000",
+          "next": "r_B5000"
+        }
+      ]
+    },
+    "r_B200": {
+      "type": "result",
+      "cause": "Replacement bladder for the B200 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116550; Bladder Kit BG (current) 189579.",
+        "Tank P/N 116051; Bladder Kit 189600.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B300": {
+      "type": "result",
+      "cause": "Replacement bladder for the B300 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116551; Bladder Kit BG (current) 189580.",
+        "Tank P/N 116052; Bladder Kit 189601.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B400": {
+      "type": "result",
+      "cause": "Replacement bladder for the B400 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116552; Bladder Kit BG (current) 189581.",
+        "Tank P/N 116053; Bladder Kit 189602.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B500": {
+      "type": "result",
+      "cause": "Replacement bladder for the B500 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116553; Bladder Kit BG (current) 189582.",
+        "Tank P/N 116054; Bladder Kit 189603.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B600": {
+      "type": "result",
+      "cause": "Replacement bladder for the B600 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116554; Bladder Kit BG (current) 189583.",
+        "Tank P/N 116055; Bladder Kit 189604.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B800": {
+      "type": "result",
+      "cause": "Replacement bladder for the B800 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116555; Bladder Kit BG (current) 189584.",
+        "Tank P/N 116056; Bladder Kit 189605.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B1000": {
+      "type": "result",
+      "cause": "Replacement bladder for the B1000 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116556; Bladder Kit BG (current) 189585.",
+        "Tank P/N 116057; Bladder Kit 189606.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B1200": {
+      "type": "result",
+      "cause": "Replacement bladder for the B1200 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116557; Bladder Kit BG (current) 189586.",
+        "Tank P/N 116058; Bladder Kit 189607.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B1400": {
+      "type": "result",
+      "cause": "Replacement bladder for the B1400 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116558; Bladder Kit BG (current) 189587.",
+        "Tank P/N 116059; Bladder Kit 189608.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B1600": {
+      "type": "result",
+      "cause": "Replacement bladder for the B1600 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116559; Bladder Kit BG (current) 189588.",
+        "Tank P/N 116060; Bladder Kit 189609.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B2000": {
+      "type": "result",
+      "cause": "Replacement bladder for the B2000 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116560; Bladder Kit BG (current) 189589.",
+        "Tank P/N 116061; Bladder Kit 189610.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B2500": {
+      "type": "result",
+      "cause": "Replacement bladder for the B2500 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116793; Bladder Kit BG (current) 189590.",
+        "Tank P/N 116062; Bladder Kit 189611.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B3000": {
+      "type": "result",
+      "cause": "Replacement bladder for the B3000 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116794; Bladder Kit BG (current) 189591.",
+        "Tank P/N 116063; Bladder Kit 189612.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B3500": {
+      "type": "result",
+      "cause": "Replacement bladder for the B3500 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116795; Bladder Kit BG (current) 189592.",
+        "Tank P/N 116064; Bladder Kit 189613.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B4000": {
+      "type": "result",
+      "cause": "Replacement bladder for the B4000 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116796; Bladder Kit BG (current) 189593.",
+        "Tank P/N 116065; Bladder Kit 189614.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    },
+    "r_B5000": {
+      "type": "result",
+      "cause": "Replacement bladder for the B5000 tank (2026 cheat sheet).",
+      "fix": [
+        "Tank P/N (obsolete) 116819; Bladder Kit BG (current) 189597.",
+        "Tank P/N 116066; Bladder Kit 189615.",
+        "The sheet footer reads \"Amtrol-Supplied\" and \"Wessels-Supplied\" and says all new tank orders go through Wessels; confirm which pair of columns is which on the sheet before ordering.",
+        "2026 bladder pricing is available from Amtrol, per the sheet."
+      ],
+      "source": {
+        "manufacturer": "WESSELS",
+        "doc": "2026 Replacement Bladder Cheat Sheet.pdf",
+        "page": 1
+      }
+    }
+  }
+}

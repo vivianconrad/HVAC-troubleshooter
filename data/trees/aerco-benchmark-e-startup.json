@@ -1,0 +1,161 @@
+{
+  "id": "aerco-benchmark-e-startup",
+  "generic": false,
+  "title": "Benchmark E electric boiler: startup check by phone",
+  "manufacturer": "AERCO",
+  "equipment": "AERCO Benchmark E electric boiler (BMK E 216 / 360 / 432 / 576 / 684)",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Which part of the startup is the tech working on?",
+      "options": [
+        {
+          "label": "Power start-up checks",
+          "next": "n2"
+        },
+        {
+          "label": "Safety device tests",
+          "next": "n5"
+        },
+        {
+          "label": "Setpoints and sensor readings",
+          "next": "r_set"
+        }
+      ]
+    },
+    "n2": {
+      "type": "question",
+      "text": "Are terminal screws and wires tight, and has resistance to ground been checked between all element terminals and the mounting flange?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "n3"
+        },
+        {
+          "label": "No",
+          "next": "r_term"
+        }
+      ]
+    },
+    "r_term": {
+      "type": "result",
+      "cause": "Basic power start-up checks are incomplete.",
+      "fix": [
+        "Have the tech tighten all terminal screws and wires and check resistance to ground between every element terminal and the mounting flange before powering the unit."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "Benchmark E Startup Form.pdf",
+        "page": 1
+      }
+    },
+    "n3": {
+      "type": "question",
+      "text": "Ask the tech to record voltage at the distribution blocks (L1-L2, L1-L3, L2-L3 and each to ground) with the unit off and on. On the 576 kW and 684 kW models both sets of blocks are measured. Is control voltage within range and are the contactors running without buzzing or chattering?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_volt_ok"
+        },
+        {
+          "label": "Control voltage out of range",
+          "next": "r_cv"
+        },
+        {
+          "label": "Contactors buzzing or chattering",
+          "next": "r_cont"
+        }
+      ]
+    },
+    "r_volt_ok": {
+      "type": "result",
+      "cause": "Power start-up checks pass.",
+      "fix": [
+        "Record the measured voltages on the startup form and continue to the safety device tests."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "Benchmark E Startup Form.pdf",
+        "page": 1
+      }
+    },
+    "r_cv": {
+      "type": "result",
+      "cause": "Control voltage is out of range.",
+      "fix": [
+        "Do not continue the startup. Have a qualified tech find the cause of the control voltage problem and correct it, then repeat the measurements.",
+        "Escalate to AERCO if the cause is not found."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "Benchmark E Startup Form.pdf",
+        "page": 1
+      }
+    },
+    "r_cont": {
+      "type": "result",
+      "cause": "Contactor chatter or buzzing is abnormal on the startup form.",
+      "fix": [
+        "Stop and have the tech recheck control voltage and connections, then escalate to AERCO before continuing."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "Benchmark E Startup Form.pdf",
+        "page": 1
+      }
+    },
+    "n5": {
+      "type": "question",
+      "text": "Per the instructions in the manual, did each safety test pass: low water level fault, automatic reset fault, manual reset fault, remote interlock, delayed interlock, secondary LWCO, safety pressure relief valve and cabinet door switch?",
+      "options": [
+        {
+          "label": "All passed",
+          "next": "r_pass"
+        },
+        {
+          "label": "One or more failed",
+          "next": "r_fail"
+        }
+      ]
+    },
+    "r_fail": {
+      "type": "result",
+      "cause": "A safety device test failed.",
+      "fix": [
+        "Do not release the boiler for operation. Note which test failed and repeat it per the manual after the cause is corrected.",
+        "Never jumper or bypass a safety or interlock. Escalate to AERCO if the test still fails."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "Benchmark E Startup Form.pdf",
+        "page": 1
+      }
+    },
+    "r_pass": {
+      "type": "result",
+      "cause": "Safety tests pass.",
+      "fix": [
+        "Record the results on the startup form.",
+        "Return one completed form per unit to AERCO within 30 days of startup (Startup@AERCO.COM) for warranty validation."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "Benchmark E Startup Form.pdf",
+        "page": 1
+      }
+    },
+    "r_set": {
+      "type": "result",
+      "cause": "Setpoints and sensors are recorded on the form.",
+      "fix": [
+        "Record the operating setpoint, automatic reset setpoint, manual reset setpoint, and running inlet and outlet temperatures."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "Benchmark E Startup Form.pdf",
+        "page": 2
+      }
+    }
+  }
+}

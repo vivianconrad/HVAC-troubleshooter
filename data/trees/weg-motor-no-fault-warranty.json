@@ -1,0 +1,103 @@
+{
+  "id": "weg-motor-no-fault-warranty",
+  "generic": false,
+  "title": "WEG motor: no-fault warranty claim",
+  "manufacturer": "WEG (via Xylem)",
+  "equipment": "WEG electric motors",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Is the failed motor 215 frame size or smaller?",
+      "options": [
+        {
+          "label": "Yes, 215 frame or smaller",
+          "next": "n2"
+        },
+        {
+          "label": "No, larger than 215 frame",
+          "next": "r_big"
+        }
+      ]
+    },
+    "r_big": {
+      "type": "result",
+      "cause": "The no-fault warranty covers only motors up to and including 215 frame.",
+      "fix": [
+        "Any motor above 215 frame must be inspected.",
+        "Contact WEG directly at (800) 839-2529 or warranty@weg.net."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "WEG No-Fault Form.pdf",
+        "page": 1
+      }
+    },
+    "n2": {
+      "type": "question",
+      "text": "Is it a Hydro-Duty, Picker Plus or Hydro-Wash motor?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_excl"
+        },
+        {
+          "label": "No",
+          "next": "n3"
+        }
+      ]
+    },
+    "r_excl": {
+      "type": "result",
+      "cause": "Those motors are not part of the no-fault warranty policy.",
+      "fix": [
+        "Contact the WEG Warranty Department at (800) 839-2529 for instructions."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "WEG No-Fault Form.pdf",
+        "page": 1
+      }
+    },
+    "n3": {
+      "type": "question",
+      "text": "Did the motor fail within its specified warranty period (see the WEG catalog), and is this the first no-fault claim for this end user and this application?",
+      "options": [
+        {
+          "label": "Yes to both",
+          "next": "r_claim"
+        },
+        {
+          "label": "No",
+          "next": "r_no"
+        }
+      ]
+    },
+    "r_no": {
+      "type": "result",
+      "cause": "No-fault credit is offered one time per end user per application and only within the warranty period.",
+      "fix": [
+        "Check the WEG catalog warranty policy or call WEG warranty at (800) 839-2529 about other options."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "WEG No-Fault Form.pdf",
+        "page": 1
+      }
+    },
+    "r_claim": {
+      "type": "result",
+      "cause": "The motor qualifies to submit a no-fault claim.",
+      "fix": [
+        "Complete the form: date of request, WEG invoice or customer PO number, contact information and a description of the issue.",
+        "Tape the original nameplate from the failed motor to the form and mail it to WEG Electric Corp., ATTN: Warranty Department, 6655 Sugarloaf Parkway, Duluth, GA 30097.",
+        "Credit is for the motor only (excluding freight) to the account of the original purchaser."
+      ],
+      "source": {
+        "manufacturer": "XYLEM",
+        "doc": "WEG No-Fault Form.pdf",
+        "page": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "danfoss-vlt-startup-cheat-sheet",
+  "generic": false,
+  "title": "Danfoss VLT: startup settings and bypass terminals",
+  "manufacturer": "Danfoss",
+  "equipment": "Danfoss VLT HVAC drive (from the Danfoss startup cheat sheet; not a Danfoss manual)",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "What does the tech need?",
+      "options": [
+        {
+          "label": "Drive on a bypass will not start",
+          "next": "r_bypass"
+        },
+        {
+          "label": "Check or enter startup parameters",
+          "next": "r_params"
+        },
+        {
+          "label": "Wrong motor direction or speed range",
+          "next": "r_dir"
+        }
+      ]
+    },
+    "r_bypass": {
+      "type": "result",
+      "cause": "For drives with bypass, the run permissive, start command and external interlock each land on specific terminals.",
+      "fix": [
+        "Terminal block X55 pins 1 and 2: run permissive (drive terminal 19).",
+        "X55 pins 3 and 4: start command (drive terminal 18).",
+        "X55 pins 5 and 6: external interlock/safety (drive terminal 27).",
+        "Have the tech check each of the three circuits is in the correct state. Never jumper the interlock to force a start."
+      ]
+    },
+    "r_params": {
+      "type": "result",
+      "cause": "The cheat sheet lists the parameters to set after entering motor data; any parameter not listed is left as it is.",
+      "fix": [
+        "Quick Menu > Quick Setup: enter motor info, then 3-41 ramp up 10 s for pumps (60 s fans), 3-42 ramp down 10 s pumps (60 s fans), 4-12 motor speed low 18 Hz, 4-14 motor speed high 60 Hz.",
+        "Quick Menu > Function Setup > Open Loop > Analog Reference: 3-02 minimum reference 0 Hz, 3-03 maximum reference 60 Hz, 6-14 terminal 53 low 0.000, 6-15 terminal 53 high 60.000.",
+        "Main Menu 1 Load and Motor: 1-03 variable torque, 1-29 AMA enable complete AMA, 1-73 flying start disabled for pumps and enabled for fans.",
+        "Main Menu 4: 4-10 motor speed direction clockwise only for pumps, both directions for fans.",
+        "Main Menu 15: 15-43 software version for the paperwork.",
+        "These are the cheat sheet values; confirm against the project requirements and record old and new values for every change."
+      ]
+    },
+    "r_dir": {
+      "type": "result",
+      "cause": "Direction and speed limits are set by parameters 4-10, 4-12 and 4-14.",
+      "fix": [
+        "4-10 should be clockwise only for pumps and both directions for fans.",
+        "Speed range on the cheat sheet: 18 Hz low (4-12) to 60 Hz high (4-14).",
+        "Confirm the project requirement before changing anything and record old and new values."
+      ]
+    }
+  }
+}
