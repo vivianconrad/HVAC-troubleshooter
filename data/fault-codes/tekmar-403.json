@@ -1,0 +1,273 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "ADJUST ERROR",
+    "meaning": "The control failed to read the Adjust menu settings and reloaded the factory default settings. Operation stops until all the Adjust menu settings are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check each setting in the Adjust menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 28
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "Due to a short circuit, the control failed to read the outdoor sensor. The control assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [
+      "Short circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 28
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "Due to an open circuit (disconnected or broken wire), the control failed to read the outdoor sensor. The control assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [
+      "Open circuit (disconnected or broken wire)"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "MIX SENSOR SHORT CIRCUIT",
+    "meaning": "Due to a short circuit, the control failed to read the Mix supply sensor. The control operates the mixing device at a fixed output as long as there is a call for heat.",
+    "causes": [
+      "Short circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "MIX SENSOR OPEN CIRCUIT",
+    "meaning": "Due to an open circuit (disconnected or broken wire), the control failed to read the Mix supply sensor. The control operates the mixing device at a fixed output as long as there is a call for heat.",
+    "causes": [
+      "Open circuit (disconnected or broken wire)"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "BOILER SENSOR SHORT CIRCUIT",
+    "meaning": "Due to a short circuit, the control failed to read the boiler sensor. When there is a call for heat, the control no longer controls the boiler. Instead it provides a boiler enable and the boiler operates on its aquastat/limit until the sensor is repaired. The control will not operate the boiler contact if the Boil Minimum setting is set to Off.",
+    "causes": [
+      "Short circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "BOILER SENSOR OPEN CIRCUIT",
+    "meaning": "Due to an open circuit, the control failed to read the boiler sensor. The control no longer controls the boiler. Instead it provides a boiler enable and the boiler operates on its aquastat/limit until the sensor is repaired. The control will not operate the boiler contact if the Boil Minimum setting is set to Off.",
+    "causes": [
+      "Open circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "DOMESTIC HOT WATER SENSOR SHORT CIRCUIT",
+    "meaning": "Due to a short circuit, the control failed to read the DHW sensor. The control no longer heats the DHW tank. DHW tank heating resumes once the sensor problem is corrected.",
+    "causes": [
+      "Short circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual.",
+      "The error message self clears once the error condition is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "DOMESTIC HOT WATER SENSOR OPEN CIRCUIT",
+    "meaning": "Due to an open circuit, the control failed to read the DHW sensor. The control no longer heats the DHW tank. DHW tank heating resumes once the sensor problem is corrected.",
+    "causes": [
+      "Open circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual.",
+      "The error message self clears once the error condition is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "DOMESTIC HOT WATER CALL ERROR",
+    "meaning": "A DHW sensor and a DHW call have been applied at the same time. The DHW tank will not be heated until the DHW call signal is removed.",
+    "causes": [
+      "DHW sensor and DHW call applied at the same time"
+    ],
+    "checks": [
+      "Remove the DHW call signal.",
+      "The error message self clears once the error condition is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "BOILER DEVICE LOST (B:01 TO B:24)",
+    "meaning": "A tekmarNet device (thermostat, setpoint control, timer) with the displayed address on the boiler water temperature bus is no longer reporting back to the 403.",
+    "causes": [],
+    "checks": [
+      "Locate the device by its address, or go to each device in the building and check that the LCD is on and the tekmarNet communication symbol is on.",
+      "Trace the wires from the control to the lost device looking for loose or damaged wires.",
+      "If you deliberately remove a tekmarNet device, hold the Up and Down buttons to clear this error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "MIX DEVICE LOST (1:01 TO 1:24)",
+    "meaning": "A tekmarNet device (thermostat, setpoint control, timer) with the displayed address on the mix water temperature bus is no longer reporting back to the 403.",
+    "causes": [],
+    "checks": [
+      "Locate the device by its address, or go to each device in the building and check that the LCD is on and the tekmarNet communication symbol is on.",
+      "Trace the wires from the control to the lost device looking for loose or damaged wires.",
+      "If you deliberately remove a tekmarNet device, hold the Up and Down buttons to clear this error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "MASTER DEVICE ERROR",
+    "meaning": "More than one master has been detected on the tekmarNet 4 expansion terminals. The 403 is a Master Device and no other tekmarNet reset controls can be added to the tekmarNet 4 expansion terminals.",
+    "causes": [
+      "Another tekmarNet reset control added to the tekmarNet 4 expansion terminals"
+    ],
+    "checks": [
+      "If one has been added, remove it from the system."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "DEVICE ERROR AT ADDRESS B:01 TO B:24",
+    "meaning": "One of the tekmarNet devices on the boiler water temperature bus has an error.",
+    "causes": [],
+    "checks": [
+      "If there is a record of the device address together with the room name, go to that device to correct the error. Otherwise go to each device in the building, checking for the flashing Warning symbol.",
+      "Once the error on the device is corrected, the error message will clear."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "DEVICE ERROR AT ADDRESS 1:01 TO 1:24",
+    "meaning": "One of the tekmarNet devices on the mix water temperature bus has an error.",
+    "causes": [],
+    "checks": [
+      "If there is a record of the device address together with the room name, go to that device to correct the error. Otherwise go to each device in the building, checking for the flashing Warning symbol.",
+      "Once the error on the device is corrected, the error message will clear."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "403",
+    "code": "MIX MODULE ERROR",
+    "meaning": "A Mixing Module has been connected to the Mix Exp. tN4 terminals. The 403 controls mixing devices through outputs on the control and cannot operate tekmarNet mixing expansion modules.",
+    "causes": [
+      "Mixing expansion module connected to the Mix Exp. tN4 terminals"
+    ],
+    "checks": [
+      "Remove the device and connect the mixing actuator or pump directly to the appropriate output terminals on the 403."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 403.pdf",
+      "page": 30
+    }
+  }
+]

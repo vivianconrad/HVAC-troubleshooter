@@ -1,0 +1,104 @@
+{
+  "id": "tekmar-heat-not-on-or-off-target",
+  "generic": true,
+  "title": "Tekmar: heating will not turn on or is not holding target temperature",
+  "manufacturer": "Tekmar",
+  "equipment": "Tekmar boiler controls with outdoor reset (field-derived draft; behavior varies by model)",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Ask the tech to read the display. Is there an active error code (sensor fault, communication error)?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_err"
+        },
+        {
+          "label": "No error",
+          "next": "n2"
+        }
+      ]
+    },
+    "r_err": {
+      "type": "result",
+      "cause": "The control has a fault it is reporting.",
+      "fix": [
+        "For a sensor error (outdoor, boiler or DHW): have the tech check the sensor wiring terminals for looseness or corrosion.",
+        "Disconnect the sensor and measure resistance, compare it to the resistance chart for that sensor at the measured temperature, and replace it if open or shorted.",
+        "For other codes use the Fault codes tab or the model manual."
+      ]
+    },
+    "n2": {
+      "type": "question",
+      "text": "No error is shown, so find out why the relay is not closing. Is the outdoor temperature above the warm weather shutdown (WWSD) setting?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_wwsd"
+        },
+        {
+          "label": "No",
+          "next": "n3"
+        }
+      ]
+    },
+    "r_wwsd": {
+      "type": "result",
+      "cause": "The control is intentionally locking out heating because it is warm outside.",
+      "fix": [
+        "This is normal operation. Confirm the WWSD setting is what the customer wants.",
+        "Outdoor design is the cold design point of the reset curve, not a shutoff; use WWSD for this check."
+      ]
+    },
+    "n3": {
+      "type": "question",
+      "text": "Is a domestic hot water (DHW) demand active?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_dhw"
+        },
+        {
+          "label": "No",
+          "next": "n4"
+        }
+      ]
+    },
+    "r_dhw": {
+      "type": "result",
+      "cause": "DHW priority can hold off space heating.",
+      "fix": [
+        "Many Tekmar controls prioritize DHW and hold off space heating until the tank is satisfied or the priority times out. Confirm for the exact model."
+      ]
+    },
+    "n4": {
+      "type": "question",
+      "text": "Compare \"boiler target\" with \"boiler actual\". Is the actual temperature above the target?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_target"
+        },
+        {
+          "label": "No",
+          "next": "r_esc"
+        }
+      ]
+    },
+    "r_target": {
+      "type": "result",
+      "cause": "The control is holding off the burner on purpose.",
+      "fix": [
+        "Actual temperature above target is expected to keep the burner off. Check why the target is lower than expected: reset curve, outdoor reading (use the Tekmar outdoor temperature tree), and settings."
+      ]
+    },
+    "r_esc": {
+      "type": "result",
+      "cause": "No inhibitor found.",
+      "fix": [
+        "Record model, settings and displayed values, then check the model manual for the demand and relay logic, or escalate."
+      ]
+    }
+  }
+}

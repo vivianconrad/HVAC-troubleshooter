@@ -1,0 +1,79 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "261",
+    "code": "UNABLE TO READ EEPROM",
+    "meaning": "The control was unable to read a piece of information from its EEPROM. The control loads the factory defaults and stops operation until all the settings are verified.",
+    "causes": [
+      "Noisy power source"
+    ],
+    "checks": [
+      "Verify all the control settings after the factory defaults are loaded."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 261.PDF",
+      "page": 18
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "261",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "The control can no longer read the outdoor sensor due to a short circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press the Item button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 261.PDF",
+      "page": 18
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "261",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "The control can no longer read the outdoor sensor due to an open circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press the Item button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 261.PDF",
+      "page": 18
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "261",
+    "code": "BOILER SENSOR SHORT CIRCUIT",
+    "meaning": "The control can no longer read the boiler sensor due to a short circuit. If the BOIL MIN adjustment is set to OFF, the control does not operate the stage contacts. If BOIL MIN is not set to OFF and a boiler demand is present, the Stage 1 contact operates for up to 10 minutes of a 20 minute cycle.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press the Item button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 261.PDF",
+      "page": 18
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "261",
+    "code": "BOILER SENSOR OPEN CIRCUIT",
+    "meaning": "The control can no longer read the boiler sensor due to an open circuit. If the BOIL MIN adjustment is set to OFF, the control does not operate the stage contacts. If BOIL MIN is not set to OFF and a boiler demand is present, the Stage 1 contact operates for up to 10 minutes of a 20 minute cycle.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press the Item button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 261.PDF",
+      "page": 18
+    }
+  }
+]

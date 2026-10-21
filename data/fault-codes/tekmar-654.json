@@ -1,0 +1,599 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SET TEMP MENU SAVE ERROR",
+    "meaning": "The control failed to read the Set Temp menu settings from memory and has reloaded the factory default settings. The control stops operation until all settings in the Set Temp menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Set Temp menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SYSTEM MENU SAVE ERROR",
+    "meaning": "The control failed to read the System menu settings from memory and has reloaded the factory default settings. The control stops operation until all settings in the System menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the System menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "BOILER MENU SAVE ERROR",
+    "meaning": "The control failed to read the Boiler menu settings from memory and has reloaded the factory default settings. The control stops operation until all settings in the Boiler menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Boiler menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "MIXING MENU SAVE ERROR",
+    "meaning": "The control failed to read the Mixing menu settings from memory and has reloaded the factory default settings. The control stops operation until all settings in the Mixing menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Mixing menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "TEKMARNET MENU SAVE ERROR",
+    "meaning": "The control failed to read the tekmarNet menu settings from memory and has reloaded the factory default settings. The control continues to operate but does not provide any tekmarNet features until all settings in the tekmarNet menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the tekmarNet menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SCHEDULE MENU SAVE ERROR",
+    "meaning": "The control failed to read the Schedule menu settings from memory and has reloaded the factory default settings. The control operates with the programmable schedule disabled until all settings in the Schedule menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Schedule menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SCENES MENU SAVE ERROR",
+    "meaning": "The control failed to read the Scenes menu settings from memory and has reloaded the factory default settings. The control operates with the away scene disabled until all settings in the Scenes menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Scenes menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "MAXIMUM MELT TIME ERROR",
+    "meaning": "The control has operated in melting for the time set by Maximum Melt Days setting located in the System menu. This error is usually created when there is a mechanical system failure resulting in the snow melt slab not heating correctly.",
+    "causes": [
+      "Mechanical system failure resulting in the snow melt slab not heating correctly"
+    ],
+    "checks": [
+      "Clear the error message by touching the Cancel key while viewing the error message.",
+      "Use the Manual Override menu to manually check that each component of the mechanical system is operating correctly.",
+      "If necessary, change the Maximum Melt Days setting to a longer time period or to Off."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "TEKMARNET COMMUNICATION ERROR",
+    "meaning": "The tekmarNet communication bus has either an open or a short circuit. The result is that there are no communications.",
+    "causes": [
+      "Open or short circuit on the tekmarNet communication bus"
+    ],
+    "checks": [
+      "Check for loose wires between tN4 and C.",
+      "Check for short circuits between the tN4 and C wires on the House Control, Wiring Center, or Zone Manager.",
+      "Check for correct polarity between the C and R wires.",
+      "The error clears automatically once the wiring fault has been corrected. To force the error to clear while allowing a short or open circuit to continue, touch the Cancel key."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "ADDRESS TAKEN ERROR",
+    "meaning": "Two devices (thermostats, setpoint controls, snow melting controls) have been manually set to the same address. The device continues to operate with this error but does not communicate with the tekmarNet system.",
+    "causes": [
+      "Two devices manually set to the same tekmarNet address"
+    ],
+    "checks": [
+      "To clear this error, select an unused tekmarNet address or select automatic addressing."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SNOW ZONE TAKEN ERROR",
+    "meaning": "Two snow melting controls have been manually set to the same snow zone number and one of the controls is NOT set to App Mode 090. The control continues to operate with this error.",
+    "causes": [
+      "Two snow melting controls set to the same snow zone number, one not in App Mode 090"
+    ],
+    "checks": [
+      "To clear this error, select an unused snow zone number or set the App Mode to 090.",
+      "Once the error has been corrected, press the Cancel key to clear the error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "APP MODE 090 ERROR",
+    "meaning": "Two snow melting controls have been manually set to the same snow zone number and both of the controls are set to App Mode 090.",
+    "causes": [
+      "Two snow melting controls set to the same snow zone number, both in App Mode 090"
+    ],
+    "checks": [
+      "To clear this error, select an unused snow zone number or set the App Mode to anything other than 090."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "TANDEM 090 ERROR",
+    "meaning": "There are two Snow / Ice Sensors 090 or 094 installed in the zone and the other snow melting control's 090 or 094 has a sensor problem. The control continues to operate with this error.",
+    "causes": [
+      "Sensor problem at the other snow melting control's 090 or 094"
+    ],
+    "checks": [
+      "Locate the other snow melting control and navigate to the Toolbox menu to determine and correct the problem."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "DEVICE LIMIT",
+    "meaning": "More than 24 devices (thermostats or setpoint controls) have been connected to the tekmarNet communication bus.",
+    "causes": [
+      "More than 24 devices on one tekmarNet communication bus"
+    ],
+    "checks": [
+      "To clear the error, remove and relocate devices to other available buses until the device count is 24 or less."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the Outdoor Sensor 070. The control continues to operate and assumes an outdoor temperature of 32 F (0 C). Energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Out (CWCO) are disabled.",
+    "causes": [],
+    "checks": [
+      "Check the outdoor sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the outdoor sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to a open circuit, the control is unable to read the Outdoor Sensor 070. The control continues to operate and assumes an outdoor temperature of 32 F (0 C). Energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Out (CWCO) are disabled.",
+    "causes": [],
+    "checks": [
+      "Check the outdoor sensor wire for open circuits according to the sensor installation manual. It may be necessary to replace the outdoor sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SUPPLY SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the Supply Sensor 082. When set to App Mode Boiler or Mixing the control stops operation and does not provide any heat.",
+    "causes": [],
+    "checks": [
+      "Check the supply sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the supply sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SUPPLY SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to a open circuit, the control is unable to read the Supply Sensor 082. When set to App Mode Boiler or Mixing the control stops operation and does not provide any heat.",
+    "causes": [],
+    "checks": [
+      "Check the supply sensor wire for open circuits according to the sensor installation manual. It may be necessary to replace the supply sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "BOILER RETURN SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the Boiler Return Sensor 082. The control continues operation but does not provide any boiler return protection.",
+    "causes": [],
+    "checks": [
+      "Check the boiler return sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the boiler return sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "BOILER RETURN SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to a open circuit, the control is unable to read the Boiler Return Sensor 082. The control continues operation but does not provide any boiler return protection.",
+    "causes": [],
+    "checks": [
+      "Check the boiler return sensor wire for open circuits according to the sensor installation manual. It may be necessary to replace the boiler return sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SLAB SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the Slab Sensor 072 or 073. Idling and Storm are disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Out (CWCO) operate using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the slab sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the slab sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SLAB SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to a open circuit, the control is unable to read the Slab Sensor 072 or 073. Idling and Storm are disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Out (CWCO) operate using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the slab sensor wire for open circuits according to the sensor installation manual. It may be necessary to replace the slab sensor.",
+      "Once the error has been corrected, the error message automatically clears.",
+      "If the slab sensor has been intentionally removed, set the slab sensor setting in the System menu to Off."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "YELLOW WIRE OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the yellow wire connected to the Snow / Ice Sensor 090 or 094, or the Snow Sensor 095. The control can no longer automatically detect snow or ice but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the Snow / Ice Sensor or Snow Sensor yellow and black wires and any wire splices for open circuits according to the sensor installation manual. It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "BLUE WIRE SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the blue wire connected to the Snow / Ice Sensor 090 or 094, or the Snow Sensor 095. The control can no longer automatically detect snow or ice but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "First check the Snow / Ice Sensor or Snow Sensor for dirt or debris. The ring structure of the sensor may need cleaning with hot soapy water and a nylon brush. Rinse with water.",
+      "Secondly, check the Snow / Ice Sensor or Snow Sensor blue and black wires and any wire splices for short circuits according to the sensor installation manual. It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "BLUE WIRE OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the blue wire connected to the Snow / Ice Sensor 090 or 094, or the Snow Sensor 095. The control can no longer automatically detect snow or ice but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the Snow / Ice Sensor or Snow Sensor blue and black wires and any wire splices for open circuits according to the sensor installation manual. It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "BROWN WIRE SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the brown wire connected to the Snow / Ice Sensor 090 or 094. Idling and Storm is disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Out (CWCO) operate using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the Snow / Ice Sensor brown and black wires for open circuits according to the sensor installation manual. It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SNOW / ICE SENSOR ERROR",
+    "meaning": "The control is unable to properly detect the Snow / Ice Sensor 090 or 094. The control can no longer automatically detect snow or ice but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the Snow / Ice Sensor brown, yellow, red and black wires according to the sensor installation manual. It is important to check any cable splices for loose wiring connections. It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SNOW SENSOR ERROR",
+    "meaning": "The control is unable to properly detect the Snow Sensor 095. The control can no longer automatically detect snow but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the Snow Sensor yellow, red and black wires according to the sensor installation manual. It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SCHEDULE MASTER ERROR",
+    "meaning": "Two devices on the tekmarNet system have been set to the same Schedule Master number. The control operates according to the local programmable schedule while this error is present.",
+    "causes": [
+      "Two devices set to the same Schedule Master number"
+    ],
+    "checks": [
+      "To clear the error, select a different Schedule Master number, set a different Schedule Member number, set the Schedule to Zone, or set the Schedule to None."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "SCHEDULE MEMBER ERROR",
+    "meaning": "The control can no longer detect its schedule master. The control operates as if the programmable schedule is in idle or off operation while this error is present.",
+    "causes": [],
+    "checks": [
+      "To clear the error, select a different Schedule Member number, set the Schedule to Zone, or set the Schedule to None."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "ERROR AT THERMOSTAT (01 TO 24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this control. 01 TO 24 = there is an error on a thermostat or setpoint control with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "ERROR AT THERMOSTAT (B:01 TO B:24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this control. B:01 TO B:24 = there is an error on a thermostat or setpoint control wired to the boiler communication bus with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "ERROR AT THERMOSTAT (1:01 TO 1:24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this control. 1:01 TO 1:24 = there is an error on a thermostat or setpoint control wired to communication bus 1 with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "ERROR AT THERMOSTAT (2:01 TO 2:24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this control. 2:01 TO 2:24 = there is an error on a thermostat or setpoint control wired to communication bus 2 with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "ERROR AT THERMOSTAT (3:01 TO 3:24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this control. 3:01 TO 3:24 = there is an error on a thermostat or setpoint control wired to the mix 3 bus with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "ERROR AT SYSTEM CONTROL",
+    "meaning": "There is an error on the tekmarNet system control connected to the tekmarNet system and not on this control.",
+    "causes": [],
+    "checks": [],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "654",
+    "code": "INTERNAL FAULT",
+    "meaning": "Generated by any of four conditions: Max Melt Days Error, System Save Error, Boiler Save Error or Mixing Save Error.",
+    "causes": [
+      "Max Melt Days Error",
+      "System Save Error",
+      "Boiler Save Error",
+      "Mixing Save Error"
+    ],
+    "checks": [
+      "To determine and clear the error, go to the Toolbox menu: hold the Home button for 3 seconds, press Next Item until Toolbox Menu is found, then press Enter.",
+      "Go to the respective error message in this manual to correct the error condition."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 654.pdf",
+      "page": 41
+    }
+  }
+]

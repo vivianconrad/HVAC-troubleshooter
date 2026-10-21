@@ -1,0 +1,159 @@
+{
+  "id": "tekmar-360-mixing-valve-not-modulating",
+  "generic": false,
+  "title": "Tekmar mixing control: radiant loop temperature wrong or valve not modulating",
+  "manufacturer": "Tekmar",
+  "equipment": "Tekmar 360 (floating action mixing valve) and 356 (variable speed injection pump)",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Which control is it?",
+      "options": [
+        {
+          "label": "360, floating action valve actuator",
+          "next": "n2"
+        },
+        {
+          "label": "356, variable speed injection pump",
+          "next": "r_356"
+        }
+      ]
+    },
+    "r_356": {
+      "type": "result",
+      "cause": "The 356 controls the mixed temperature by varying injection pump speed.",
+      "fix": [
+        "Run the control built-in test routine from the Testing section and watch the pump and boiler outputs.",
+        "If mixing is cold the 356 can also limit its output to protect the boiler from cold return water (BOIL MIN) when a boiler sensor is installed.",
+        "Check the mix sensor placement and the sensor resistance per the sensor data brochure."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 356.pdf",
+        "page": 4
+      }
+    },
+    "n2": {
+      "type": "question",
+      "text": "Ask the tech to press the Test button. Step 1 runs the valve fully open, step 2 fully closed then turns on the system pump, step 3 closes the boiler contact for 10 seconds. Does the actuator move?",
+      "options": [
+        {
+          "label": "Yes, it moves open and closed",
+          "next": "n3"
+        },
+        {
+          "label": "No movement",
+          "next": "n4"
+        }
+      ]
+    },
+    "n4": {
+      "type": "question",
+      "text": "The actuator is wired to terminals 9, 10 and 11 (R Opn, R Cls, C) at 24 V (ac). Ask a qualified tech to check for output at those terminals during the test steps. Is output present?",
+      "options": [
+        {
+          "label": "Output present, actuator does not move",
+          "next": "r_mech"
+        },
+        {
+          "label": "No output",
+          "next": "r_ctrl"
+        }
+      ]
+    },
+    "r_mech": {
+      "type": "result",
+      "cause": "The control is driving the actuator, so the actuator, linkage or valve stem is the likely fault.",
+      "fix": [
+        "Look for a binding valve stem, a loose coupling or a failed actuator motor.",
+        "Field note: a mechanically seized valve and a dead actuator look the same remotely; have the tech move the valve by hand if the actuator allows it."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 360.pdf",
+        "page": 17
+      }
+    },
+    "r_ctrl": {
+      "type": "result",
+      "cause": "The control is not driving the actuator.",
+      "fix": [
+        "Look for an error message on the display (an EEPROM or overheated-control error stops operation) and check power and wiring.",
+        "See the error list for the cause; the control may need service."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 360.pdf",
+        "page": 19
+      }
+    },
+    "n3": {
+      "type": "question",
+      "text": "The actuator works in the test but the loop temperature is wrong. Is the mixing supply sensor reading correctly against a thermometer strapped beside it?",
+      "options": [
+        {
+          "label": "Reading is wrong",
+          "next": "r_sensor"
+        },
+        {
+          "label": "Reading is correct",
+          "next": "n5"
+        }
+      ]
+    },
+    "r_sensor": {
+      "type": "result",
+      "cause": "The mix sensor is reading wrong or is poorly placed.",
+      "fix": [
+        "Check the sensor is strapped to the pipe in the right place, disconnect it, and test resistance per the sensor data brochure against the actual pipe temperature.",
+        "If the mixing sensor is shorted or open, the 360 runs the valve at a fixed output while there is a mixing demand."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 360.pdf",
+        "page": 19
+      }
+    },
+    "n5": {
+      "type": "question",
+      "text": "Is the boiler sensor temperature below the BOIL MIN setting while the boiler is firing?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_protect"
+        },
+        {
+          "label": "No or no boiler sensor",
+          "next": "r_target"
+        }
+      ]
+    },
+    "r_protect": {
+      "type": "result",
+      "cause": "Boiler protection is limiting the mixing valve.",
+      "fix": [
+        "When the boiler is cooler than BOIL MIN and firing, the 360 reduces output to the mixing valve to limit cool return water and let the boiler recover. This is normal behavior.",
+        "BOIL MIN works only with a boiler sensor. Set it to the boiler manufacturer recommendation, or OFF if the boiler is designed for low-temperature operation."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 360.pdf",
+        "page": 4
+      }
+    },
+    "r_target": {
+      "type": "result",
+      "cause": "The valve and sensors work, so check the target the control is aiming for.",
+      "fix": [
+        "In outdoor reset the target comes from the heating curve (outdoor design, indoor design, terminal unit settings). With outdoor design set to OFF it holds the MIX TARGET setting.",
+        "Check the outdoor sensor and warm weather shutdown settings."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 360.pdf",
+        "page": 4
+      }
+    }
+  }
+}

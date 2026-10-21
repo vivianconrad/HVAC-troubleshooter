@@ -1,0 +1,602 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "CONTROL MEMORY ERROR",
+    "meaning": "A memory error has been detected. The control will not operate the boilers until all settings have been reviewed.",
+    "causes": [],
+    "checks": [
+      "Review all settings. You may also reload factory defaults and use the Setup Wizard to configure the control.",
+      "If the memory error keeps recurring after a power outage, the control may require replacement. Consult technical support for assistance."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 48
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "BOILER SENSOR SHORT ERROR",
+    "meaning": "A short circuit is detected on the boiler supply temperature sensor input. The control will not operate the boilers until this fault is corrected. The error clears automatically once the fault is corrected.",
+    "causes": [],
+    "checks": [
+      "Remove the wires from the boiler supply sensor terminals, then use an electrical multimeter to measure the resistance. The resistance should be proportional to the temperature lookup table in the Installation and Operation Manual.",
+      "Check the wires for damage. If the wires are OK, replace the Universal Sensor 082."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 48
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "BOILER SENSOR OPEN ERROR",
+    "meaning": "An open circuit is detected on the boiler supply temperature sensor input. The control will not operate the boilers until this fault is corrected. The error clears automatically once the fault is corrected.",
+    "causes": [],
+    "checks": [
+      "Remove the wires from the boiler supply sensor terminals, then use an electrical multimeter to measure the resistance. The resistance should be proportional to the temperature lookup table in the Installation and Operation Manual.",
+      "If the resistance is open circuit, check the wires for loose wiring connections. If the wires are OK, replace the Universal Sensor 082."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 48
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "DOMESTIC HOT WATER SHORT SENSOR ERROR",
+    "meaning": "A short circuit is detected on the domestic hot water temperature sensor input. The control will not heat the domestic hot water tank until this fault is corrected. The error clears automatically once the fault is corrected.",
+    "causes": [],
+    "checks": [
+      "Remove the wires from the DHW sensor terminals, then use an electrical multimeter to measure the resistance. The resistance should be proportional to the temperature lookup table in the Installation and Operation Manual.",
+      "If the resistance is short circuit, check the wires for damage. If the wires are OK, replace the Universal Sensor 078."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 48
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "DOMESTIC HOT WATER OPEN SENSOR ERROR",
+    "meaning": "An open circuit is detected on the domestic hot water temperature sensor input. The control will not heat the domestic hot water tank until this fault is corrected. The error clears automatically once the fault is corrected.",
+    "causes": [
+      "The DHW sensor is optional and the DHW Sensor setting was incorrectly turned on"
+    ],
+    "checks": [
+      "Check if a sensor is installed. If not installed, set DHW Sensor to off.",
+      "If installed, remove the wires from the DHW sensor terminals, then use an electrical multimeter to measure the resistance. The resistance should be proportional to the temperature lookup table in the Installation and Operation Manual.",
+      "If the resistance is open circuit, check the wires for loose wiring connections. If the wires are OK, replace the Universal Sensor 078."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 48
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "OUTDOOR SENSOR SHORT ERROR",
+    "meaning": "A short circuit is detected on the outdoor air temperature sensor input. The control operates the central heating system at the boiler design temperature until this fault is corrected. The error clears automatically once the fault is corrected.",
+    "causes": [],
+    "checks": [
+      "Remove the wires from the outdoor air sensor terminals, then use an electrical multimeter to measure the resistance. The resistance should be proportional to the temperature lookup table in the Installation and Operation Manual.",
+      "If the resistance is short circuit, check the wires for damage. If the wires are OK, replace the Outdoor Sensor 070."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 48
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "OUTDOOR SENSOR OPEN ERROR",
+    "meaning": "An open circuit is detected on the outdoor air temperature sensor input. The control operates the central heating system at the boiler design temperature until this fault is corrected. The error clears automatically once the fault is corrected.",
+    "causes": [],
+    "checks": [
+      "Remove the wires from the outdoor air sensor terminals, then use an electrical multimeter to measure the resistance. The resistance should be proportional to the temperature lookup table in the Installation and Operation Manual.",
+      "If the resistance is open circuit, check the wires for loose wiring connections. If the wires are OK, replace the Outdoor Sensor 070."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 48
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "TEKMARNET OUTDOOR SENSOR ERROR",
+    "meaning": "The control has not received an outdoor temperature report from the tekmarNet network. The error clears automatically once the fault is corrected.",
+    "causes": [],
+    "checks": [
+      "Check the tekmarNet network for the location of the outdoor sensor measurement.",
+      "Check the sensor for open or short circuits and replace the Outdoor Sensor 070 if necessary."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "INTERNET OUTDOOR SENSOR ERROR",
+    "meaning": "The control has not received an outdoor temperature report from the Internet.",
+    "causes": [],
+    "checks": [
+      "Check that your router is not blocking Port 443.",
+      "Contact an IT professional if assistance is required."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "PRESSURE SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "An open circuit is detected on the pressure sensor input. The control continues to operate normally but is unable to detect pressure changes. The error clears automatically once the fault is corrected.",
+    "causes": [],
+    "checks": [
+      "If a pressure sensor is not installed, set the Pressure Sensor setting in the System menu to Off.",
+      "If a pressure sensor is installed, inspect the wires for loose connections.",
+      "If the wires are OK, measure the DC voltage between the pressure sensor Ref and Gnd terminals; it should measure 5.0 V(dc).",
+      "Then check the voltage between pressure sensor In and Gnd; it should measure 0.5 to 4.5 V(dc) depending on the system pressure.",
+      "If either voltage reading is abnormal, replace the Pressure Sensor 088."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "PRESSURE SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "A short circuit is detected on the pressure sensor input. The control continues to operate normally but is unable to detect pressure changes. The error clears automatically once the fault is corrected.",
+    "causes": [],
+    "checks": [
+      "Inspect the pressure sensor wires for damage.",
+      "If the wires are OK, measure the DC voltage between the pressure sensor Ref and Gnd terminals; it should measure 5.0 V(dc).",
+      "Then check the voltage between pressure sensor In and Gnd; it should measure 0.5 to 4.5 V(dc) depending on the system pressure.",
+      "If either voltage reading is abnormal, replace the Pressure Sensor 088."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "EXPANSION COMMUNICATION ERROR",
+    "meaning": "The control has lost communication to all Smart Boiler Expansion. Boilers 5 through 16 will not operate until this error is corrected.",
+    "causes": [],
+    "checks": [
+      "Check the expansion communication wires +, -, and Gnd on both the control and expansion to ensure the wire polarity is correct, the wire insulation is stripped, and the wire terminals are tight."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "EXPANSION 5 TO 8 LOST ERROR",
+    "meaning": "The control has lost communication to the Smart Boiler Expansion operating boilers 5 to 8. Boilers 5 through 8 will not operate until this error is corrected.",
+    "causes": [],
+    "checks": [
+      "Check that the expansion power light is on. If the power light is off, use an electrical multimeter to check the power line and neutral terminals for 115 V(ac).",
+      "If the expansion power light is on, check the expansion communication wires +, -, and Gnd on both the control and expansion to ensure the wire polarity is correct, the wire insulation is stripped, and the wire terminals are tight."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "EXPANSION 9 TO 12 LOST ERROR",
+    "meaning": "The control has lost communication to the Smart Boiler Expansion operating boilers 9 to 12. Boilers 9 through 12 will not operate until this error is corrected.",
+    "causes": [],
+    "checks": [
+      "Check that the expansion power light is on. If the power light is off, use an electrical multimeter to check the power line and neutral terminals for 115 V(ac).",
+      "If the expansion power light is on, check the expansion communication wires +, -, and Gnd on both the control and expansion to ensure the wire polarity is correct, the wire insulation is stripped, and the wire terminals are tight."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "EXPANSION 13 TO 16 LOST ERROR",
+    "meaning": "The control has lost communication to the Smart Boiler Expansion operating boilers 13 to 16. Boilers 13 through 16 will not operate until this error is corrected.",
+    "causes": [],
+    "checks": [
+      "Check that the expansion power light is on. If the power light is off, use an electrical multimeter to check the power line and neutral terminals for 115 V(ac).",
+      "If the expansion power light is on, check the expansion communication wires +, -, and Gnd on both the control and expansion to ensure the wire polarity is correct, the wire insulation is stripped, and the wire terminals are tight."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "TN4 BUS ERROR",
+    "meaning": "Communication has been lost on the Boiler Bus. The error message self clears once the error condition is corrected.",
+    "causes": [],
+    "checks": [
+      "Check the tN4, C and R wires for each tN4 device.",
+      "Check the polarity of the C and R wires.",
+      "Check for loose or broken wires."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "TN4 DEVICE B:01 TO B:24 LOST ERROR",
+    "meaning": "Communication is lost to tekmarNet device with address b:##. The ## varies from 01 to 24. The error message self clears when the error condition is corrected.",
+    "causes": [],
+    "checks": [
+      "Ensure that there is power to the lost device.",
+      "Trace the wires from the control to the lost device looking for loose or damaged wires.",
+      "If the tN4 device is deliberately removed, go to the Reset menu and press tekmarNet Device Reset."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "TN4 DUPLICATE MASTER ERROR",
+    "meaning": "More than one tN4 system control has been detected on the tN4 Boiler Bus. The 294 is a Master Device and no other tekmarNet boiler control can be added to the tN4 Boiler Bus terminals.",
+    "causes": [],
+    "checks": [
+      "Remove all other tekmarNet boiler controls from the tN4 Bus."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 49
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "TN4 DEVICE B:01 TO B:25 ERROR",
+    "meaning": "A tN4 thermostat or device with address b:## has an error that requires corrective action. The ## varies from 01 to 25.",
+    "causes": [],
+    "checks": [
+      "Locate the tN4 device and troubleshoot using the device Installation and Operating Manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "ETHERNET DISCONNECTED ERROR",
+    "meaning": "The Ethernet is not connected to a network.",
+    "causes": [],
+    "checks": [
+      "Check the Ethernet cable connection to the control and the Router or Switch.",
+      "Check that the Router or Switch is powered on and operating correctly."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "WI-FI DISCONNECTED ERROR",
+    "meaning": "The Wi-Fi network could not be found.",
+    "causes": [],
+    "checks": [
+      "Check that the Wi-Fi network name was entered correctly and that the Router signal is medium to high strength.",
+      "If necessary, reconfigure your Wi-Fi network."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "WI-FI INVALID PASSWORD ERROR",
+    "meaning": "The Wi-Fi Password was not accepted.",
+    "causes": [],
+    "checks": [
+      "Check that the password was entered correctly.",
+      "If necessary, reconfigure your Wi-Fi network."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "DHCP ADDRESS ERROR",
+    "meaning": "The router has not assigned the control an IP address.",
+    "causes": [],
+    "checks": [
+      "Check the router configuration settings and ensure that the DHCP server is enabled and enough IP addresses are available.",
+      "Contact an IT professional for assistance."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "INTERNET UNAVAILABLE ERROR",
+    "meaning": "The control is unable to communicate to the Watts cloud through the Internet. The error will automatically clear once Internet communications are established. You may also set the Internet Connection Type to Off to clear the error.",
+    "causes": [],
+    "checks": [
+      "Check the control Internet DNS 1 and DNS 2 settings.",
+      "Check that the router firewall is not blocking or filtering MAC addresses.",
+      "Check that the router firewall is not blocking outbound port 23."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "WATTS ONSITE ERROR",
+    "meaning": "The control is unable to connect to Watts OnSite.",
+    "causes": [],
+    "checks": [
+      "Check that your router is not blocking outbound ports 443 or 8883.",
+      "Contact an IT professional for assistance."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "BOILER PLANT NO HEAT ALERT",
+    "meaning": "The boiler supply temperature did not increase within the boiler alert time. The control operates normally while this alert is present.",
+    "causes": [
+      "Likely a mechanical failure with either a boiler or circulator that requires immediate attention"
+    ],
+    "checks": [
+      "To reset the alert, press the X button to dismiss the error message on the home screen."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "BOILER HIGH TEMPERATURE ALERT",
+    "meaning": "The boiler supply temperature exceeded the boiler high temperature alert threshold. The control operates normally while this alert is present.",
+    "causes": [
+      "Likely a mechanical failure with either a boiler or circulator that requires immediate attention"
+    ],
+    "checks": [
+      "The alert clears when the boiler supply temperature falls 2 F (1 C) below the boiler high temperature alert threshold."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "BOILER LOW TEMPERATURE ALERT",
+    "meaning": "The boiler supply temperature fell below the boiler low temperature alert threshold. The control operates normally while this alert is present.",
+    "causes": [
+      "Likely a mechanical failure with either a boiler or circulator that requires immediate attention"
+    ],
+    "checks": [
+      "The alert clears when the boiler supply temperature rises 2 F (1 C) above the boiler low temperature alert threshold."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "HIGH PRESSURE ALERT",
+    "meaning": "The system pressure exceeded the high pressure alert threshold. The control operates normally while this alert is present.",
+    "causes": [
+      "There may be a problem with the system expansion tank or makeup water feed"
+    ],
+    "checks": [
+      "The alert clears when the pressure falls 1 psi (7 kPa) below the high pressure alert threshold."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "LOW PRESSURE ALERT",
+    "meaning": "The system pressure exceeded the low pressure alert threshold. The control operates normally while this alert is present.",
+    "causes": [
+      "There may be a leak in the system"
+    ],
+    "checks": [
+      "The alert clears when the pressure rises 1 psi (7 kPa) above the low pressure alert threshold."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "BOILER 01 TO 16 ERROR",
+    "meaning": "The control has read an error code status from boiler 01 to 16 through the modbus communication channel. The screen shows Manufacturer, Series, Model and Code (the Modbus error code from the boiler).",
+    "causes": [],
+    "checks": [
+      "Look up the error code in the boiler manufacturer manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 50
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "MODBUS BUS ERROR",
+    "meaning": "The control has detected a problem with the boiler modbus communication.",
+    "causes": [],
+    "checks": [
+      "Check the modbus wire polarity, the cable length, connection to the boiler, and connection of any terminating resistors."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 51
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "MODBUS BOILER 01 TO 16 LOST ERROR",
+    "meaning": "The control is unable to communicate to Boiler 01 to 16 through Modbus.",
+    "causes": [],
+    "checks": [
+      "Check that the boiler manufacturer, make and model are set correctly.",
+      "Contact tekmar technical support for further assistance."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 51
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "BOILER 01 TO 16 SERVICE HOURS ALERT",
+    "meaning": "The boiler run time has exceeded the recommended boiler service hours alert interval.",
+    "causes": [],
+    "checks": [
+      "Once maintenance has been completed, the service interval can be reset in the boiler status screen."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 51
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "BOILER 01 TO 16 SERVICE CYCLES ALERT",
+    "meaning": "The boiler has exceeded the recommended boiler service cycles.",
+    "causes": [],
+    "checks": [
+      "Once maintenance has been completed, the service interval can be reset in the boiler status screen."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 51
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "UNSUPPORTED TN4 DEVICE",
+    "meaning": "An unsupported tN4 device is connected to the tekmarNet communication network. This may include the Mixing Expansion Modules 440, 441, and 444. The error will clear automatically once this device is removed.",
+    "causes": [],
+    "checks": [
+      "Remove the unsupported tN4 device."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 51
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "294",
+    "code": "HARDWARE FAULT",
+    "meaning": "An internal hardware fault has been detected.",
+    "causes": [],
+    "checks": [
+      "Power the control off then back on.",
+      "If the hardware fault reoccurs, the control may require replacement. Contact technical support for assistance."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 294.pdf",
+      "page": 51
+    }
+  }
+]

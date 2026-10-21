@@ -1,0 +1,264 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "CONTROL ERROR",
+    "meaning": "The thermostat was unable to correctly read settings from memory and has reloaded the factory default settings. The thermostat does not operate the heating, cooling or the fan while this error message is present.",
+    "causes": [],
+    "checks": [
+      "Error clears once all adjust menu settings in the Installer access level (unlocked) have been checked.",
+      "Set the thermostat's switch setting #3 to unlock and unlock the tekmarNet system control. Then press and hold the two buttons together for 2 seconds to enter the adjust menu. Continue until all settings have been reviewed."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 18
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "PORT ERROR",
+    "meaning": "The thermostat has been connected to a tN2 Zone already in use by a 2-stage device. A 2-stage device requires two tN2 ports to operate.",
+    "causes": [
+      "Thermostat connected to a tN2 Zone already in use by a 2-stage device"
+    ],
+    "checks": [
+      "Move the thermostat's tN2 wires to an unused tN2 port on the control."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 18
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "BUS ERROR",
+    "meaning": "The tekmarNet 4 communication bus has either an open or a short circuit. The result is that there are no communications.",
+    "causes": [
+      "Open or short circuit on the tekmarNet 4 communication bus"
+    ],
+    "checks": [
+      "Check for loose wires.",
+      "Check for short circuits between the tN4 and C wires on the House Control, Wiring Center or Zone Manager.",
+      "Check for correct polarity between the C and R wires.",
+      "Error clears automatically once the wiring fault has been corrected. If the thermostat is intentionally removed from the tekmarNet 4 bus, press the two buttons together to clear the error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 18
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "DEVICE LIMIT",
+    "meaning": "The number of devices on the tekmarNet bus has exceeded 24. Devices include tekmarNet Thermostats and Setpoint Controls.",
+    "causes": [
+      "More than 24 devices on the tekmarNet bus"
+    ],
+    "checks": [
+      "The device count must be lowered to 24 or less. If possible, move devices to other tekmarNet buses.",
+      "Error clears automatically once the number of devices on the bus is 24 or lower."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "ADDRESS ERROR",
+    "meaning": "This thermostat and another device have been manually given the same tekmarNet address.",
+    "causes": [
+      "Duplicate manually set tekmarNet address"
+    ],
+    "checks": [
+      "Error clears automatically once this thermostat is given a new manually set address or if the thermostat is set to automatic addressing."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "ROOM SENSOR SHORT CIRCUIT",
+    "meaning": "The built-in air temperature sensor has a short circuit fault. Do not confuse this error with the auxiliary room sensor short circuit error.",
+    "causes": [
+      "Short circuit fault in the built-in air temperature sensor"
+    ],
+    "checks": [
+      "This error cannot be field repaired. Contact your wholesaler or tekmar sales representative for details on repair procedures."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "ROOM SENSOR OPEN CIRCUIT",
+    "meaning": "The built-in air temperature sensor has an open circuit fault. Do not confuse this error with the auxiliary room sensor short circuit error.",
+    "causes": [
+      "Open circuit fault in the built-in air temperature sensor"
+    ],
+    "checks": [
+      "This error cannot be field repaired. Contact your wholesaler or tekmar sales representative for details on repair procedures."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "AIR GROUP MEMBER ERROR",
+    "meaning": "The thermostat has been selected to join an air group as a member, yet there is no air group master thermostat.",
+    "causes": [
+      "No air group master thermostat"
+    ],
+    "checks": [
+      "Error clears once the thermostat detects an air group master or the air group is set to OFF."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 20
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "FLOOR SENSOR SHORT CIRCUIT",
+    "meaning": "The auxiliary floor sensor has a short circuit.",
+    "causes": [
+      "Short circuit",
+      "Damaged wires"
+    ],
+    "checks": [
+      "Check for damaged wires.",
+      "Locate and repair the problem as described in the Data Brochure D072 or D 079.",
+      "Error clears once the floor sensor fault is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 20
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "FLOOR SENSOR OPEN CIRCUIT",
+    "meaning": "The auxiliary floor sensor has an open circuit.",
+    "causes": [
+      "Open circuit",
+      "Loose or damaged wires"
+    ],
+    "checks": [
+      "Check for loose or damaged wires.",
+      "Locate and repair the problem as described in the Data Brochure D072 or D 079.",
+      "Error clears once the floor sensor fault is corrected.",
+      "If the floor sensor was intentionally removed, locate the Room Sensor setting in the Adjust menu and set to On. Power the thermostat down and up to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 20
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "The auxiliary outdoor sensor has a short circuit.",
+    "causes": [
+      "Short circuit",
+      "Damaged wires"
+    ],
+    "checks": [
+      "Check for damaged wires.",
+      "Locate and repair the problem as described in the Data Brochure D 070.",
+      "Error clears after the outdoor sensor fault is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 20
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "The auxiliary outdoor sensor has an open circuit.",
+    "causes": [
+      "Open circuit",
+      "Loose or damaged wires"
+    ],
+    "checks": [
+      "Check for loose or damaged wires.",
+      "Locate and repair the problem as described in the Data Brochure D 070.",
+      "Error clears once the outdoor sensor fault is corrected.",
+      "If the outdoor sensor was intentionally removed, power the thermostat down and up to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 21
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "AUXILIARY ROOM SENSOR SHORT CIRCUIT",
+    "meaning": "The auxiliary room sensor has a short circuit.",
+    "causes": [
+      "Short circuit",
+      "Damaged wires"
+    ],
+    "checks": [
+      "Check for damaged wires.",
+      "Locate and repair the problem as described in the Data Brochure D 076, D077, or D084.",
+      "Error clears after the auxiliary room sensor fault is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 21
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "528",
+    "code": "AUXILIARY ROOM SENSOR OPEN CIRCUIT",
+    "meaning": "The auxiliary room sensor has an open circuit.",
+    "causes": [
+      "Open circuit",
+      "Loose or damaged wires"
+    ],
+    "checks": [
+      "Check for loose or damaged wires.",
+      "Locate and repair the problem as described in the Data Brochure D 076, D077, or D084.",
+      "Error clears once the auxiliary room sensor fault is corrected.",
+      "If the auxiliary room sensor was intentionally removed, power the thermostat down and up to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 528.pdf",
+      "page": 21
+    }
+  }
+]

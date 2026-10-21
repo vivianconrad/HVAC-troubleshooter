@@ -1,0 +1,187 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "UNABLE TO READ MEMORY (E01)",
+    "meaning": "The control was unable to read a piece of information stored in its memory. The control was required to reload the factory settings into all of the items in the ADJUST menu. The control will stop operation until all of the items in the ADJUST menu have been checked by the user or installer.",
+    "causes": [],
+    "checks": [
+      "Check all items in the ADJUST menu.",
+      "The Installer / Advanced DIP switch must be set to Advanced in order to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 34
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the outdoor sensor due to a short circuit. The control assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press any button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 34
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the outdoor sensor due to an open circuit. The control assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press any button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 34
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "MIX 1 SUPPLY SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the mix 1 supply sensor due to a short circuit. The control will operate mixing device 1 at a fixed output as long as there is a mix 1 demand.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press any button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 34
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "MIX 1 SUPPLY SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the mix 1 supply sensor due to an open circuit. The control will operate mixing device 1 at a fixed output as long as there is a mix 1 demand.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press any button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 34
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "MIX 2 SUPPLY SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the mix 2 supply sensor due to a short circuit. The control will operate mixing device 2 at a fixed output as long as there is a mix 2 demand.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press any button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 34
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "MIX 2 SUPPLY SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the mix 2 supply sensor due to an open circuit. The control will operate mixing device 2 at a fixed output as long as there is a mix 2 demand.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press any button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 34
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "BOILER SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the boiler sensor due to a short circuit. When there is a demand, the control will not control the boiler(s), but will provide a boiler enable to the boiler aquastat or boiler control until the sensor is repaired. The control will not operate the boiler contact if the Boil Minimum setting is less than 100 F (38 C).",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press any button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 34
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "BOILER SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the boiler sensor due to an open circuit. When there is a demand, the control will not control the boiler(s), but will provide a boiler enable to the boiler aquastat or boiler control until the sensor is repaired. The control will not operate the boiler contact if the Boil Minimum setting is less than 100 F (38 C).",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press any button.",
+      "If the Boiler Sensor has been intentionally removed, the Boiler Sensor Return / Supply DIP switch should be set to Return, and the control must be powered down and then re-powered."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "INTERNAL SENSOR SHORT CIRCUIT",
+    "meaning": "The control has an internal sensor that monitors the temperature inside the enclosure. The internal sensor has a short circuit that is not field repairable. The control will continue to operate normally with this error present.",
+    "causes": [],
+    "checks": [
+      "Contact your tekmar sales representative for details on the repair procedures if this error occurs."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "INTERNAL SENSOR OPEN CIRCUIT",
+    "meaning": "The control has an internal sensor that monitors the temperature inside the enclosure. The internal sensor has an open circuit that is not field repairable. The control will continue to operate normally with this error present.",
+    "causes": [],
+    "checks": [
+      "Contact your tekmar sales representative for details on the repair procedures if this error occurs."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "374",
+    "code": "INTERNAL TEMPERATURE TOO HOT",
+    "meaning": "The control has an internal sensor that monitors the temperature inside the enclosure. The internal temperature of the control is too hot. The control will shut off both variable speed outputs until the control has cooled off.",
+    "causes": [
+      "Ambient temperature too high"
+    ],
+    "checks": [
+      "Make sure the ambient temperature is less than 120 F (50 C).",
+      "To clear the error message after the control has cooled off, press any button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 374.pdf",
+      "page": 35
+    }
+  }
+]

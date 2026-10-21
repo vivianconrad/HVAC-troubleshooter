@@ -1,0 +1,171 @@
+{
+  "id": "tekmar-274-boilers-not-staging",
+  "generic": false,
+  "title": "Tekmar 274: boilers will not stage, lag boilers off or lead short-cycling",
+  "manufacturer": "Tekmar",
+  "equipment": "Tekmar 274 boiler control (up to four on/off boilers); the 356 is a mixing control, see the mixing tree",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Ask the tech to read the 274 display. Is a boiler target temperature shown, or does it show \"- - -\"?",
+      "options": [
+        {
+          "label": "A boiler target is shown",
+          "next": "n2"
+        },
+        {
+          "label": "Shows \"- - -\"",
+          "next": "r_nodemand"
+        }
+      ]
+    },
+    "r_nodemand": {
+      "type": "result",
+      "cause": "The control has no requirement for heat, so it will not fire any boiler.",
+      "fix": [
+        "Find where the demand is meant to come from: a tN4 device, a DHW demand or a setpoint demand.",
+        "Warm weather shutdown only applies when the DIP switch is set to Demands, and boilers still run for a DHW or setpoint demand.",
+        "Check the demand terminals and tN4 devices for the missing call."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 6
+      }
+    },
+    "n2": {
+      "type": "question",
+      "text": "Is a boiler supply sensor error, a boiler alarm, or a pump / combustion air proof error showing?",
+      "options": [
+        {
+          "label": "Boiler supply sensor short or open",
+          "next": "r_sensor"
+        },
+        {
+          "label": "Proof or boiler alarm error",
+          "next": "r_proof"
+        },
+        {
+          "label": "No error",
+          "next": "n3"
+        }
+      ]
+    },
+    "r_sensor": {
+      "type": "result",
+      "cause": "With the boiler supply sensor faulted, the 274 stops controlling the boilers and only sends a boiler enable to the boiler aquastat or control.",
+      "fix": [
+        "The control will not operate the boiler contact if Boil Minimum is set below 100 F (38 C).",
+        "Locate and repair the sensor problem per Data Brochure D 070; the message clears itself once corrected."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 42
+      }
+    },
+    "r_proof": {
+      "type": "result",
+      "cause": "A proof device or a boiler alarm is stopping or holding off the stages.",
+      "fix": [
+        "Pump or combustion air damper failure: the relay closed but no proof was seen before the proof delay. With a proof demand set to C.A., boilers cannot operate until the proof is present and are sequenced off if it is lost.",
+        "Boiler alarm: the supply temperature did not rise within the boiler alarm time. Clear it by holding Up and Down together for 5 seconds while viewing the message.",
+        "Check the proof device wiring and operation."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 43
+      }
+    },
+    "n3": {
+      "type": "question",
+      "text": "What is the staging complaint?",
+      "options": [
+        {
+          "label": "Lag boilers stay off while the lead boiler runs",
+          "next": "n4"
+        },
+        {
+          "label": "Lead boiler short-cycles",
+          "next": "r_cycle"
+        },
+        {
+          "label": "Wrong boiler is firing first",
+          "next": "r_rot"
+        }
+      ]
+    },
+    "n4": {
+      "type": "question",
+      "text": "Ask the tech to check each boiler relay: shut off power, disconnect the relay wiring, power the control, press Test and check continuity across terminals 7-8, 9-10, 11-12 and 13-14. Does each relay close when its boiler symbol shows?",
+      "options": [
+        {
+          "label": "Yes, all close correctly",
+          "next": "r_delay"
+        },
+        {
+          "label": "One does not close",
+          "next": "r_relay"
+        }
+      ]
+    },
+    "r_relay": {
+      "type": "result",
+      "cause": "A relay output is not closing when the control calls for it.",
+      "fix": [
+        "If the relay does not show continuity when its symbol is on (or shows continuity when it is off), the control needs service or replacement.",
+        "These are dry contacts, so test for continuity with the wiring disconnected, not for voltage."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 24
+      }
+    },
+    "r_delay": {
+      "type": "result",
+      "cause": "The control is outputting correctly, so staging is limited by its settings.",
+      "fix": [
+        "Stage Delay is the minimum time between firing each stage; the next stage cannot fire until it expires. It can be manual or automatic.",
+        "The Boiler Mass setting also adjusts the inter-stage delay when auto differential is used.",
+        "Check whether boiler supply is already at or near the target, or at Boil MAX (the MAX segment shows); then lag stages are not needed.",
+        "Check the Mode setting matches how the boilers are wired (for example Mode 1 is four single-stage boilers)."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 7
+      }
+    },
+    "r_cycle": {
+      "type": "result",
+      "cause": "On/off boilers need a differential to avoid short cycling.",
+      "fix": [
+        "The boiler differential can be fixed or automatic; the automatic setting balances temperature swing against on, off and cycle times.",
+        "The boiler aquastat must be set above the 274 boiler maximum setting, otherwise the burner short cycles.",
+        "Match the Boiler Mass setting to each boiler (LO, MED or HI)."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 8
+      }
+    },
+    "r_rot": {
+      "type": "result",
+      "cause": "The firing order follows the rotation settings.",
+      "fix": [
+        "Rotation changes the firing order when one boiler has 48 hours more run time than another, and forces it at 60 hours. The boiler with the least hours fires first.",
+        "With rotation off the order is always lowest to highest boiler.",
+        "Fixed Lead and Fixed Last DIP switches hold a boiler in first or last position. Toggling the Rotation switch off for 3 seconds resets the sequence."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 7
+      }
+    }
+  }
+}

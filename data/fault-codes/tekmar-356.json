@@ -1,0 +1,110 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "356",
+    "code": "UNABLE TO READ EEPROM",
+    "meaning": "The control was unable to read a piece of information from its EEPROM. The control will load the factory defaults and stop operation until all the settings are verified.",
+    "causes": [
+      "Noisy power source"
+    ],
+    "checks": [
+      "Verify all settings."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 356.pdf",
+      "page": 15
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "356",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the outdoor sensor due to a short circuit. The control assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 356.pdf",
+      "page": 15
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "356",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the outdoor sensor due to an open circuit. The control assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 356.pdf",
+      "page": 15
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "356",
+    "code": "MIXING SUPPLY SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the mixing supply sensor due to a short circuit. The control will operate the injection pump at a fixed output as long as there is a mixing demand.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 356.pdf",
+      "page": 15
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "356",
+    "code": "MIXING SUPPLY SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the mixing supply sensor due to an open circuit. The control will operate the injection pump at a fixed output as long as there is a mixing demand.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 356.pdf",
+      "page": 15
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "356",
+    "code": "BOILER SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the boiler sensor due to a short circuit. If the BOIL MIN adjustment is higher than 100 F (38 C), the control closes the Boiler contact when the injection pump starts to operate. The boiler temperature is limited by the operating aquastat. If the BOIL MIN adjustment is lower than 100 F (38 C), the control does not operate the Boiler contact.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 356.pdf",
+      "page": 15
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "356",
+    "code": "BOILER SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the boiler sensor due to an open circuit. If the BOIL MIN adjustment is higher than 100 F (38 C), the control closes the Boiler contact when the injection pump starts to operate. The boiler temperature is limited by the operating aquastat. If the BOIL MIN adjustment is lower than 100 F (38 C), the control does not operate the Boiler contact.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. To clear the error message after the sensor has been repaired, press the Item button.",
+      "If the boiler sensor is deliberately removed, the control must be powered down, and then powered back up."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 356.pdf",
+      "page": 15
+    }
+  }
+]

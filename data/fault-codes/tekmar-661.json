@@ -1,0 +1,112 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "661",
+    "code": "090 CENTRE SENSOR FAILURE",
+    "meaning": "When the control has this error, the melting system is shut down.",
+    "causes": [],
+    "checks": [
+      "Check the 090 center temperature sensor and the wiring to the sensor (black and yellow wires, terminals 12 & 14)."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 661.pdf",
+      "page": 7
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "661",
+    "code": "OUTDOOR SENSOR - OPEN CIRCUIT",
+    "meaning": "When the control has this error, it continues operation using only the Snow/Ice Sensor.",
+    "causes": [],
+    "checks": [
+      "Check the Outdoor Sensor and wiring from the terminal."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 661.pdf",
+      "page": 7
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "661",
+    "code": "OUTDOOR SENSOR - SHORT CIRCUIT",
+    "meaning": "When the control has this error, it continues operation using only the Snow/Ice Sensor.",
+    "causes": [],
+    "checks": [
+      "Check the Outdoor Sensor and wiring from the terminal."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 661.pdf",
+      "page": 7
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "661",
+    "code": "090 HEATER SHORTED",
+    "meaning": "If the red and black wires on the 090 Sensor are shorted together, the power supply itself is shorted. When this occurs, the control continuously cycles through the start of the power up routine.",
+    "causes": [
+      "Red and black wires on the 090 Sensor shorted together"
+    ],
+    "checks": [
+      "This fault should be repaired immediately or damage to the control could result."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 661.pdf",
+      "page": 7
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "661",
+    "code": "090 HEATER FAILURE",
+    "meaning": "When the control has this error, the melting system can only be operated using a remote enable signal.",
+    "causes": [
+      "Red wire open circuit",
+      "Reversal of the yellow and brown wires"
+    ],
+    "checks": [
+      "Check the 090 heater circuit (red and black wires, terminals 11 & 12)."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 661.pdf",
+      "page": 7
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "661",
+    "code": "090 WATER DETECTOR FAILURE",
+    "meaning": "When the control has this error, the system can only be operated using a remote enable signal.",
+    "causes": [],
+    "checks": [
+      "Check the 090 water circuit (black and blue wires, terminals 12 & 13)."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 661.pdf",
+      "page": 7
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "661",
+    "code": "090 EDGE SENSOR FAILURE",
+    "meaning": "When the control has this error, the melting system is shut down.",
+    "causes": [],
+    "checks": [
+      "Check the 090 edge temperature sensor and the wiring to the sensor (black and brown wires, terminals 12 & 15)."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 661.pdf",
+      "page": 7
+    }
+  }
+]

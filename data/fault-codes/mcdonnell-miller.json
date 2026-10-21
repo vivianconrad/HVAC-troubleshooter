@@ -1,0 +1,76 @@
+[
+  {
+    "manufacturer": "McDONNELL & MILLER",
+    "model": "Guard Dog RB-122E",
+    "code": "GREEN LED BLINKS 13 TIMES",
+    "meaning": "The probe is shorting at power on; the boiler does not turn on.",
+    "causes": [
+      "Probe wiring shorted",
+      "Probe tip touching a metal surface"
+    ],
+    "checks": [
+      "Turn off the boiler and check the probe wiring connection.",
+      "Turn off the boiler, drain it and remove the control to check whether the probe tip touches a metal surface."
+    ],
+    "source": {
+      "manufacturer": "McDONNELL & MILLER",
+      "doc": "guarddog.pdf",
+      "page": 5
+    }
+  },
+  {
+    "manufacturer": "McDONNELL & MILLER",
+    "model": "Guard Dog RB-122E",
+    "code": "GREEN LED BLINKS 1 TO 10 TIMES",
+    "meaning": "Internal fault; the boiler does not turn on.",
+    "causes": [
+      "Internal fault"
+    ],
+    "checks": [
+      "Press the test button for more than 1 second until the red LED turns off, or power cycle to reset.",
+      "If it continues, replace the control."
+    ],
+    "source": {
+      "manufacturer": "McDONNELL & MILLER",
+      "doc": "guarddog.pdf",
+      "page": 5
+    }
+  },
+  {
+    "manufacturer": "McDONNELL & MILLER",
+    "model": "FPC-1000",
+    "code": "GREEN/YELLOW LED BLINKS 13 TIMES",
+    "meaning": "The probe is shorting at power on; the boiler does not turn on.",
+    "causes": [
+      "Probe wiring shorted",
+      "Probe tip touching a metal surface"
+    ],
+    "checks": [
+      "Turn off the boiler and check the probe wiring connection.",
+      "Turn off the boiler, drain it and remove the control to check whether the probe tip touches a metal surface."
+    ],
+    "source": {
+      "manufacturer": "McDONNELL & MILLER",
+      "doc": "fpc-1000.pdf",
+      "page": 7
+    }
+  },
+  {
+    "manufacturer": "McDONNELL & MILLER",
+    "model": "FPC-1000",
+    "code": "GREEN/YELLOW LED BLINKS 1 TO 10 TIMES",
+    "meaning": "Internal fault; the boiler does not turn on.",
+    "causes": [
+      "Internal fault"
+    ],
+    "checks": [
+      "Press the Test/Reset button for more than 1 second until the red LED turns off, or power cycle.",
+      "If the problem continues, replace the control with a new unit."
+    ],
+    "source": {
+      "manufacturer": "McDONNELL & MILLER",
+      "doc": "fpc-1000.pdf",
+      "page": 7
+    }
+  }
+]

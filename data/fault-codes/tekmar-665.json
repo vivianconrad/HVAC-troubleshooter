@@ -1,0 +1,283 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "UNABLE TO STORE TO EEPROM",
+    "meaning": "The control was unable to store a piece of information into its EEPROM. This error can be caused by a noisy power source. The control will display the error message and will continue to operate as normal.",
+    "causes": [],
+    "checks": [
+      "Pressing either the Menu or Item button will clear this error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "UNABLE TO READ ADJUST MENU",
+    "meaning": "The control was unable to read a piece of information stored in the ADJUST menu. Because of this, the control was required to load the factory settings into all of the items in the ADJUST menu. The control will stop operation until all of the items available in the ADJUST menu of the control have been checked by the user or installer.",
+    "causes": [],
+    "checks": [
+      "Note: Access level must be ADV in order to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "UNABLE TO READ MONITOR MENU",
+    "meaning": "The control was unable to read a piece of information stored in the MONITOR menu. Because of this, the control was required to load the factory settings into all of the items in the MONITOR menu. The control will continue to display the error message until all of the items available in the MONITOR menu of the control have been checked by the user or installer.",
+    "causes": [],
+    "checks": [
+      "Note: Access level must be ADV in order to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "UNABLE TO READ SCHEDULE MENU",
+    "meaning": "The control was unable to read a piece of information stored in the SCHEDULE menu. Because of this, the control was required to load the factory settings into all of the items in the SCHEDULE menu. The control will continue to display the error message until all of the items available in the SCHEDULE menu of the control have been checked by the user or installer.",
+    "causes": [],
+    "checks": [
+      "Note: Access level must be ADV in order to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "UNABLE TO READ MISCELLANEOUS MENU",
+    "meaning": "The control was unable to read a piece of information stored in the MISCELLANEOUS menu. Because of this, the control was required to load the factory settings into all of the items in the MISCELLANEOUS menu. The control will continue to display the error message until all of the items available in the MISCELLANEOUS menu of the control have been checked by the user or installer.",
+    "causes": [],
+    "checks": [
+      "Note: Access level must be ADV in order to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "INCORRECT DEVICE ON TN2 INPUT",
+    "meaning": "An incorrect device has been connected to the tekmarNet tN2 input terminal.",
+    "causes": [],
+    "checks": [
+      "Once the problem has been corrected, press either the Menu or Item button to clear the error message from the control."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "TN2 SHORT CIRCUIT",
+    "meaning": "A short circuit has been read between the tN2 terminal and a Com terminal on the control. Either the wires leading to the tN2 device are shorted or the polarity of the wires is reversed.",
+    "causes": [],
+    "checks": [
+      "Determine the cause and remove the short.",
+      "To clear this error, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the outdoor sensor due to a short circuit. In this case the control assumes an outdoor temperature of 32 F and continues operation.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in the Testing section.",
+      "To clear the error message from the control after the sensor has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the outdoor sensor due to an open circuit. In this case the control assumes an outdoor temperature of 32 F and continues operation.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in the Testing section.",
+      "To clear the error message from the control after the sensor has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "SLAB SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the slab sensor due to a short circuit. In this case, if the control is currently in the Melting mode, the control turns off the Heat relay.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in the Data Brochure supplied with the sensor.",
+      "To clear the error message from the control after the sensor has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "SLAB SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the slab sensor due to an open circuit. In this case, if the control is currently in the Melting mode, the control will turn off the Heat relay.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in the Data Brochure supplied with the sensor.",
+      "To clear the error message from the control after the sensor has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 24
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "YELLOW SENSOR SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the yellow sensor due to a short circuit. In this case, the control will turn off the heater in the Snow / Ice Sensor 090.",
+    "causes": [],
+    "checks": [
+      "Check the 090 yellow temperature sensor (black and yellow wires, terminals 2 and 4), and the wiring from the terminal plug to the sensor.",
+      "To clear the error message from the control after the sensor has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 24
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "YELLOW SENSOR OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the yellow sensor due to an open circuit. In this case, the control will turn off the heater in the Snow / Ice Sensor 090.",
+    "causes": [],
+    "checks": [
+      "Check the 090 yellow temperature sensor (black and yellow wires, terminals 2 and 4), and the wiring from the terminal plug to the sensor.",
+      "To clear the error message from the control after the sensor has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 24
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "WATER DETECTION CIRCUIT SHORT CIRCUIT",
+    "meaning": "The control is no longer able to read the water detection circuit due to a short circuit. In this case, if the control is currently in the Melting mode, the control will finish the snow melting cycle. The snow melting system can only be operated using an external melt demand, Remote Display Module 040, Remote Start / Stop Module 039 or the Start button on the control. Otherwise, the control will operate as if the Snow / Ice Sensor 090 is dry.",
+    "causes": [],
+    "checks": [
+      "Check the 090 water detection circuit (black and blue wires, terminals 2 and 3) according to the Data Brochure D 090.",
+      "To clear the error message from the control after the error has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 24
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "WATER DETECTION CIRCUIT OPEN CIRCUIT",
+    "meaning": "The control is no longer able to read the water detection circuit due to an open circuit. In this case, if the control is currently in the Melting mode, the control will finish the snow melting cycle. The snow melting system can only be operated using an external melt demand, Remote Display Module 040, Remote Start / Stop Module 039 or the Start button on the control. Otherwise, the control will operate as if the Snow / Ice Sensor 090 is dry.",
+    "causes": [],
+    "checks": [
+      "Check the 090 water detection circuit (black and blue wires, terminals 2 and 3) according to the Data Brochure D 090.",
+      "To clear the error message from the control after the error has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 24
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "HEATER MALFUNCTION",
+    "meaning": "The control is reading a heater malfunction. In this case, unless the yellow sensor becomes too hot, the heater continues to try to operate. The snow melting system can only be operated using an external melt demand, Remote Display Module 040, Remote Start / Stop Module 039 or the Start button on the control.",
+    "causes": [],
+    "checks": [
+      "Check the 090 heater circuit (red and black wires, terminals 1 and 2) according to the Data Brochure D 090.",
+      "Make sure the yellow and brown wires are not reversed.",
+      "To clear the error message from the control after the error has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 24
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "INTERNAL SENSOR TOO HOT",
+    "meaning": "The control's internal sensor is too hot (Above 160 F (71 C)). In this case, the control will turn off the heater in the Snow / Ice Sensor 090 until the control cools off.",
+    "causes": [],
+    "checks": [
+      "To clear the error message from the control after the error has been repaired, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 24
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "665",
+    "code": "SLAB NOT HEATING WARNING",
+    "meaning": "This warning message will be displayed if the Slab temperature does not increase to the SLAB TRG temperature while the system is melting within a set time. The time limit is set using the NO HEAT item in the MONITOR menu.",
+    "causes": [],
+    "checks": [
+      "To clear this warning, press either the Menu or Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 665.pdf",
+      "page": 24
+    }
+  }
+]

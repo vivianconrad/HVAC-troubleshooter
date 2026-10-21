@@ -1,0 +1,126 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "265",
+    "code": "UNABLE TO READ STORED SETTINGS",
+    "meaning": "The control was unable to read a piece of information stored in its memory, so it reloaded the factory settings into all of the items in the ADJUST menu. The control stops operation until all of the items in the ADJUST menu have been checked by the user or installer. The factory defaults section (page 6) notes that an E01 error occurs after the defaults are reloaded and forces the installer through the ADJUST menu.",
+    "causes": [],
+    "checks": [
+      "Check all of the items in the ADJUST menu.",
+      "The Installer / Advanced DIP switch must be set to Advanced in order to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 265.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "265",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "The control can no longer read the outdoor sensor due to a short circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation. This error message can only occur if the External Input / Stand Alone DIP switch is set to Stand Alone.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press either the Menu or Item button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 265.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "265",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "The control can no longer read the outdoor sensor due to an open circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation. This error message can only occur if the External Input / Stand Alone DIP switch is set to Stand Alone.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press either the Menu or Item button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 265.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "265",
+    "code": "BOILER SUPPLY SENSOR SHORT CIRCUIT",
+    "meaning": "The control can no longer read the boiler supply sensor due to a short circuit. The control will not operate the boiler(s) until the sensor is repaired.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press either the Menu or Item button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 265.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "265",
+    "code": "BOILER SUPPLY SENSOR OPEN CIRCUIT",
+    "meaning": "The control can no longer read the boiler supply sensor due to an open circuit. The control will not operate the boiler(s) until the sensor is repaired.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press either the Menu or Item button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 265.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "265",
+    "code": "BOILER RETURN SENSOR SHORT CIRCUIT",
+    "meaning": "The control can no longer read the boiler return sensor due to a short circuit. The control continues to operate normally.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press either the Menu or Item button to clear the error message after the sensor has been repaired.",
+      "If the boiler return sensor was deliberately removed from the control, remove power from the control and repower the control to clear the error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 265.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "265",
+    "code": "BOILER RETURN SENSOR OPEN CIRCUIT",
+    "meaning": "The control can no longer read the boiler return sensor due to an open circuit. The control continues to operate normally.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press either the Menu or Item button to clear the error message after the sensor has been repaired.",
+      "If the boiler return sensor was deliberately removed from the control, remove power from the control and repower the control to clear the error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 265.pdf",
+      "page": 35
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "265",
+    "code": "NO SUPPLY TEMPERATURE INCREASE WITHIN BOIL ALERT TIME",
+    "meaning": "The control has detected no increase in the supply water temperature within the BOIL Alert time setting.",
+    "causes": [],
+    "checks": [
+      "Check that the boilers are operating properly using the Test button.",
+      "To reset the alert, press and hold the Up and Down buttons for 5 seconds while in the VIEW menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 265.pdf",
+      "page": 35
+    }
+  }
+]

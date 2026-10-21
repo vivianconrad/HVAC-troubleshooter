@@ -1,0 +1,241 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "MEMORY ERROR",
+    "meaning": "The thermostat memory settings are corrupted. The thermostat will not operate any heating or cooling equipment while this error message is present.",
+    "causes": [
+      "Corrupted thermostat memory settings"
+    ],
+    "checks": [
+      "To clear, load the factory defaults in the Toolbox menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "INTERNAL ROOM SENSOR FAULT",
+    "meaning": "Due to an open or short circuit, the thermostat is unable to read the internal room temperature sensor. If sensor 1, 2 or 3 is set to room the thermostat continues to operate, otherwise operation stops.",
+    "causes": [],
+    "checks": [
+      "The error cannot be field repaired. Contact your tekmar sales representative for warranty or repair procedures."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "INTERNAL HUMIDITY SENSOR FAULT",
+    "meaning": "Due to an open or short circuit, the thermostat is unable to read the internal humidity sensor. The thermostat stops controlling the humidifier or dehumidifier unless an external humidity sensor is installed on Sensor 3.",
+    "causes": [],
+    "checks": [
+      "The error cannot be field repaired. Contact your tekmar sales representative for warranty or repair procedures."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "SENSOR 1 FAULT",
+    "meaning": "Due to an open or short circuit, the thermostat is unable to read the sensor wired to S1 and Com. The thermostat stops normal operation if sensor 1 is the only active room or floor sensor or if a floor maximum temperature has been set.",
+    "causes": [
+      "Open or short circuit in the auxiliary sensor wiring"
+    ],
+    "checks": [
+      "Check the auxiliary sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the auxiliary sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "SENSOR 2 FAULT",
+    "meaning": "Due to an open or short circuit, the thermostat is unable to read the sensor wired to S2 and Com. The thermostat stops normal operation if sensor 2 is the only active room or floor sensor or if a floor maximum temperature has been set.",
+    "causes": [
+      "Open or short circuit in the auxiliary sensor wiring"
+    ],
+    "checks": [
+      "Check the auxiliary sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the auxiliary sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "SENSOR 3 FAULT",
+    "meaning": "Due to an open or short circuit, the thermostat is unable to read the sensor wired to S3 and Com. The thermostat stops normal operation if sensor 3 is the only active room sensor or if a floor maximum temperature has been set.",
+    "causes": [
+      "Open or short circuit in the auxiliary sensor wiring"
+    ],
+    "checks": [
+      "Check the auxiliary sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the auxiliary sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 29
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "INTERNET UNAVAILABLE",
+    "meaning": "The thermostat has a WiFi connection to the router but is unable to communicate to the internet.",
+    "causes": [],
+    "checks": [
+      "Steps to clear the error include: 1) power off and on the router, 2) power off and on the thermostat."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "ROOM HOT WARNING",
+    "meaning": "The room temperature is above the Room Hot Warning setting in the Alerts menu.",
+    "causes": [],
+    "checks": [
+      "The warning will automatically clear once the room temperature falls below the setting."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "ROOM COLD WARNING",
+    "meaning": "The room temperature is below the Room Cold Warning setting in the Alerts menu.",
+    "causes": [],
+    "checks": [
+      "The warning will automatically clear once the room temperature rises above the setting."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "LOW HUMIDITY WARNING",
+    "meaning": "The relative humidity is below the Low Humidity Warning setting in the Alerts menu.",
+    "causes": [],
+    "checks": [
+      "The warning will automatically clear once the relative humidity rises above the setting."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "HIGH HUMIDITY WARNING",
+    "meaning": "The relative humidity is above the High Humidity Warning setting in the Alerts menu.",
+    "causes": [],
+    "checks": [
+      "The warning will automatically clear once the relative humidity falls below the setting."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "AUXILIARY HEAT RUN TIME WARNING",
+    "meaning": "The auxiliary heat has been operating continuously longer than the Aux Heat Run Time Warning setting in the Alerts menu. There may be problem with your heat pump.",
+    "causes": [
+      "Possible heat pump problem (per manual)"
+    ],
+    "checks": [
+      "The error clears when the auxiliary heat turns off.",
+      "Contact your heating professional for service."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "CHANGE AIR FILTER WARNING",
+    "meaning": "The fan run time has exceeded the Change Air Filter setting in the Alerts menu and requires replacement.",
+    "causes": [],
+    "checks": [
+      "To clear the warning, press the Air Filter Replaced button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "CHANGE UV LAMP WARNING",
+    "meaning": "The UV lamp run time has exceeded the UV Lamp setting in the Alerts menu and requires replacement.",
+    "causes": [],
+    "checks": [
+      "To clear the warning, press the UV Lamp Replaced button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 30
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "563",
+    "code": "ZIP/POSTAL CODE ERROR",
+    "meaning": "The thermostat was unable to locate the ZIP or Postal Code entered in the WiFi menu.",
+    "causes": [],
+    "checks": [
+      "Please try again with a ZIP or Postal Code of a nearby area."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 563.pdf",
+      "page": 30
+    }
+  }
+]

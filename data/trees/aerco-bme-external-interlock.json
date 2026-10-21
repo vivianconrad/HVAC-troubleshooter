@@ -2,8 +2,8 @@
   "id": "aerco-bme-external-interlock",
   "title": "AERCO BME: external interlock alarm",
   "manufacturer": "AERCO",
-  "equipment": "AERCO BME boiler controller (field-derived draft; verify against the AERCO manual)",
-  "generic": true,
+  "equipment": "AERCO Benchmark boilers and BMS (Benchmark 5000-6000 manual cited; BMS has two interlocks that must both be closed)",
+  "generic": false,
   "start": "n1",
   "nodes": {
     "n1": {
@@ -44,12 +44,19 @@
     },
     "r_trace": {
       "type": "result",
-      "cause": "The external circuit or BMS sequence is holding the interlock open.",
+      "cause": "The interlock circuit is open: a missing jumper, a unit disabled by the Energy Management System, or an unclosed proving switch.",
       "fix": [
-        "Trace the external circuit, contacts, terminals and BMS logic to find the actual cause.",
-        "Repair the cause. Never jumper or bypass the interlock to force operation.",
-        "Do not infer terminals or voltage from another model."
-      ]
+        "Check that a jumper is properly installed across the interlock terminals in the I/O box (if there are no external wires).",
+        "If external wires are on those terminals, check any Energy Management system or BMS to see whether it has the unit disabled.",
+        "Check that the proving switch for any device on the interlock circuit closes and that the device operates.",
+        "The manual allows a jumper to be installed temporarily to see whether the interlock circuit works. Only a qualified tech should do this, remove it afterwards, and never leave a safety interlock bypassed.",
+        "The Delayed Interlock is a separate circuit with its own message (DELAYED INTERLOCK OPEN) and terminals."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+        "page": 70
+      }
     },
     "n3": {
       "type": "question",

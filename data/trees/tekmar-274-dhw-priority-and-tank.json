@@ -1,0 +1,202 @@
+{
+  "id": "tekmar-274-dhw-priority-and-tank",
+  "generic": false,
+  "title": "Tekmar 274: DHW priority lockout or tank not reaching setpoint",
+  "manufacturer": "Tekmar",
+  "equipment": "Tekmar 274 boiler control with domestic hot water",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "What is the complaint?",
+      "options": [
+        {
+          "label": "Space heating is held off by DHW",
+          "next": "h1"
+        },
+        {
+          "label": "DHW tank does not reach setpoint",
+          "next": "t1"
+        }
+      ]
+    },
+    "h1": {
+      "type": "question",
+      "text": "Does the display show a DHW ERROR?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_dhwerr"
+        },
+        {
+          "label": "No",
+          "next": "h2"
+        }
+      ]
+    },
+    "r_dhwerr": {
+      "type": "result",
+      "cause": "A DHW sensor and a DHW demand were applied at the same time.",
+      "fix": [
+        "The tank will not be heated until the externally powered DHW demand is removed. A powered demand with the DHW sensor enabled generates the error and both demands are ignored.",
+        "Use one demand source only: either the DHW sensor, or a powered demand with the sensor set to Off."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 43
+      }
+    },
+    "h2": {
+      "type": "question",
+      "text": "Which DHW source is calling: a powered demand (aquastat or relay across terminals 23 and 24), the DHW tank sensor, or a tN4 setpoint control?",
+      "options": [
+        {
+          "label": "Powered demand",
+          "next": "r_stuck"
+        },
+        {
+          "label": "DHW sensor",
+          "next": "r_sens"
+        },
+        {
+          "label": "tN4 setpoint control",
+          "next": "r_tn4"
+        }
+      ]
+    },
+    "r_stuck": {
+      "type": "result",
+      "cause": "A powered demand is registered when 20 to 260 V (ac) is across terminals 23 and 24, so a stuck aquastat or relay will hold a permanent demand.",
+      "fix": [
+        "Have the tech measure across terminals 23 and 24 with the aquastat satisfied. If voltage remains, find the stuck aquastat, relay or wiring.",
+        "Also compare how long heating has been held off with the DHW Priority Override time (see the override result)."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 9
+      }
+    },
+    "r_sens": {
+      "type": "result",
+      "cause": "With a DHW sensor, demand starts when the tank drops 1/2 the DHW differential below setpoint and ends 1/2 above it.",
+      "fix": [
+        "Check the sensor temperature against the tank and the DHW setpoint and differential.",
+        "Remember a shorted or open DHW sensor stops DHW heating (it does not make a false demand); DHW heating resumes when the sensor is repaired."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 10
+      }
+    },
+    "r_tn4": {
+      "type": "result",
+      "cause": "A tN4 setpoint control in DHW mode sends the demand over the bus.",
+      "fix": [
+        "Check that device for a call stuck on, and its tank temperature setting."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 9
+      }
+    },
+    "t1": {
+      "type": "question",
+      "text": "Does the display show a DHW sensor short or open circuit?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_sensor_err"
+        },
+        {
+          "label": "No",
+          "next": "t2"
+        }
+      ]
+    },
+    "r_sensor_err": {
+      "type": "result",
+      "cause": "With the DHW sensor faulted the 274 stops heating the DHW tank.",
+      "fix": [
+        "Test the sensor and wiring per Data Brochure D 070 by measuring the actual tank temperature and the sensor resistance.",
+        "DHW tank heating resumes once the sensor problem is corrected."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 42
+      }
+    },
+    "t2": {
+      "type": "question",
+      "text": "Is a DHW demand showing on the display?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "t3"
+        },
+        {
+          "label": "No",
+          "next": "r_nodem"
+        }
+      ]
+    },
+    "r_nodem": {
+      "type": "result",
+      "cause": "The control does not see a DHW demand.",
+      "fix": [
+        "Demand with a sensor starts only after the tank drops 1/2 the DHW differential below setpoint.",
+        "DHW demand is ignored in the Away scene, and a powered demand is ignored during UnOccupied or Sleep when DHW UnOccupied is set to Off.",
+        "DHW mode must not be set to OFF, and DHW operation needs the Pump Sequencer DIP switch off."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 10
+      }
+    },
+    "t3": {
+      "type": "question",
+      "text": "Ask the tech to test the DHW pump relay (terminals 17-18) and confirm the DHW circulator or valve runs when the DHW symbol shows. Does it operate?",
+      "options": [
+        {
+          "label": "No",
+          "next": "r_pump"
+        },
+        {
+          "label": "Yes",
+          "next": "r_cap"
+        }
+      ]
+    },
+    "r_pump": {
+      "type": "result",
+      "cause": "The DHW pump or valve output is not working.",
+      "fix": [
+        "Follow the Testing the Wiring steps for the DHW and primary pump terminals 17-18, then check the pump or valve and its wiring."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 24
+      }
+    },
+    "r_cap": {
+      "type": "result",
+      "cause": "The tank is being called and pumped, so capacity or limits may be the issue.",
+      "fix": [
+        "With a DHW sensor demand the boilers aim for 40 F above the tank temperature, never above Boil MAX. A tank setpoint high compared to Boil MAX cannot be reached.",
+        "DHW Priority Override (modes 2 and 4, and 5 with a tN4 DHW device) ends priority after 15 minutes at design outdoor temperature to 2 hours at 70 F or above, then space heating resumes, so a long recovery may be cut short.",
+        "Check boiler capacity and the DHW exchanger or tank."
+      ],
+      "source": {
+        "manufacturer": "tekmar",
+        "doc": "Tekmar 274.pdf",
+        "page": 12
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "519",
+    "code": "SETUP MENU SAVE ERROR",
+    "meaning": "The thermostat failed to read the Programmable Settings from memory and has reloaded the factory default settings. The thermostat stops normal operation, except to provide freeze protection, until all Programmable Settings are checked.",
+    "causes": [],
+    "checks": [
+      "Check all Programmable Settings."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 519.pdf",
+      "page": 14
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "519",
+    "code": "ROOM SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "The built-in air temperature sensor has an open circuit fault. Do not confuse this error with the auxiliary room sensor short circuit error.",
+    "causes": [
+      "Open circuit fault in the built-in air temperature sensor"
+    ],
+    "checks": [
+      "This error cannot be field repaired. Contact your wholesaler or tekmar sales representative for details on repair procedures."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 519.pdf",
+      "page": 14
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "519",
+    "code": "ROOM SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "The built-in air temperature sensor has a short circuit fault. Do not confuse this error with the auxiliary room sensor short circuit error.",
+    "causes": [
+      "Short circuit fault in the built-in air temperature sensor"
+    ],
+    "checks": [
+      "This error cannot be field repaired. Contact your wholesaler or tekmar sales representative for details on repair procedures."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 519.pdf",
+      "page": 14
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "519",
+    "code": "AUXILIARY SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "The auxiliary sensor has an open circuit.",
+    "causes": [
+      "Open circuit",
+      "Loose or damaged wires"
+    ],
+    "checks": [
+      "Check for loose or damaged wires.",
+      "Locate and repair the problem as described in the Sensor Testing section of the brochure.",
+      "The error clears after the auxiliary sensor fault is corrected. If the auxiliary sensor was intentionally removed, power the thermostat down and up to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 519.pdf",
+      "page": 14
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "519",
+    "code": "AUXILIARY SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "The auxiliary sensor has a short circuit.",
+    "causes": [
+      "Short circuit",
+      "Damaged wires"
+    ],
+    "checks": [
+      "Check for damaged wires.",
+      "Locate and repair the problem as described in the Sensor Testing section of the brochure.",
+      "The error clears after the auxiliary sensor fault is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 519.pdf",
+      "page": 14
+    }
+  }
+]

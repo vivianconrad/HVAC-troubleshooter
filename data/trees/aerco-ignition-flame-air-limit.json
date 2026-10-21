@@ -1,0 +1,234 @@
+{
+  "id": "aerco-ignition-flame-air-limit",
+  "title": "AERCO boiler: ignition failure, airflow fault or high water temp switch",
+  "manufacturer": "AERCO",
+  "equipment": "AERCO Benchmark 5000-6000 (cited); Innovation page numbers noted in steps",
+  "generic": false,
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Which fault does the C-More display show?",
+      "options": [
+        {
+          "label": "Ignition failure or flame loss",
+          "next": "i1"
+        },
+        {
+          "label": "Airflow fault (blower / air proving)",
+          "next": "a1"
+        },
+        {
+          "label": "High water temp switch open",
+          "next": "h1"
+        }
+      ]
+    },
+    "i1": {
+      "type": "question",
+      "text": "Is the gas supply fully open and the inlet gas pressure correct (measured with the unit firing)?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "i2"
+        },
+        {
+          "label": "No",
+          "next": "r_gas"
+        }
+      ]
+    },
+    "r_gas": {
+      "type": "result",
+      "cause": "Gas supply is closed or at the wrong pressure.",
+      "fix": [
+        "Have a qualified tech measure gas pressure upstream of the SSOV actuator with the unit firing. The Innovation manual gives 4.0 to 14 in. W.C.; check the manual for the exact model and gas train.",
+        "If the pressure is wrong, correct the supply or regulator before retrying; a defective low gas pressure switch can also trip (measure at the switch, replace if it fails continuity)."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+        "page": 95
+      }
+    },
+    "i2": {
+      "type": "question",
+      "text": "Ask the tech to close the internal gas valve and arc a spark igniter outside the unit. Is there a spark?",
+      "options": [
+        {
+          "label": "Spark is good",
+          "next": "r_flame"
+        },
+        {
+          "label": "No spark",
+          "next": "r_spark"
+        }
+      ]
+    },
+    "r_spark": {
+      "type": "result",
+      "cause": "No spark during the ignition cycle.",
+      "fix": [
+        "If there is no spark, have the tech check for 120 VAC at the primary side of the ignition transformer during the ignition cycle.",
+        "If 120 VAC is not present, the IGST board in the C-More controller may be defective; refer to qualified service personnel.",
+        "Also observe that the safety shut-off valve opens (check 120 VAC at its terminals); if it does not and there is no voltage, suspect the IGST board."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+        "page": 66
+      }
+    },
+    "r_flame": {
+      "type": "result",
+      "cause": "Spark is present, so the flame detector, burner or pilot may be at fault.",
+      "fix": [
+        "Remove and inspect the flame detector for wear or a cracked ceramic; replace if necessary. Check the burner for carbon or debris and clean it.",
+        "Innovation manual: if the detector is not eroded, clean it with fine emery cloth (not sandpaper) after the unit has cooled and power is off.",
+        "Flame strength is measured in microamps with a multimeter in series with the detector lead during combustion calibration. These manuals give no 1.0 microamp minimum for troubleshooting, so check the calibration procedure for your model.",
+        "Benchmark: also check that the pilot gas valve is open, the pilot solenoid clicks open, the pilot view port is clear, and the main flame detector is not touching the burner mesh."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+        "page": 66
+      }
+    },
+    "a1": {
+      "type": "question",
+      "text": "Is the combustion blower inlet and air filter free of blockage, and is the blower running?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "a2"
+        },
+        {
+          "label": "Blocked, or blower not running",
+          "next": "r_blower"
+        }
+      ]
+    },
+    "r_blower": {
+      "type": "result",
+      "cause": "The blower is stopped, slow or starved of air.",
+      "fix": [
+        "Check the blower for excess heat or high current that may trip its thermal or current overload.",
+        "Inspect the blower inlet and the air filter at the air/fuel valve for blockage.",
+        "If the blower will not run during start, check the blower solid-state relay input and output voltage; if the relay is fine, check the blower."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+        "page": 64
+      }
+    },
+    "a2": {
+      "type": "question",
+      "text": "Ask the tech to check continuity of the blower proof switch with the blower running. Is it zero ohms and steady?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_esc"
+        },
+        {
+          "label": "Erratic, or greater than zero ohms",
+          "next": "r_sw"
+        }
+      ]
+    },
+    "r_sw": {
+      "type": "result",
+      "cause": "The blower proof switch is defective or blocked.",
+      "fix": [
+        "Replace the switch if the reading is erratic or above zero ohms. Also remove it and inspect for blockage, and clean or replace as necessary.",
+        "Also check the blocked inlet switch for blockage or defect the same way."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+        "page": 64
+      }
+    },
+    "r_esc": {
+      "type": "result",
+      "cause": "Blower and proof switch pass, so look further down the airflow fault table.",
+      "fix": [
+        "Check the actual inlet air temperature and the AUX input voltage in the I/O box against the Appendix C table, the 0-10 V signal to the blower, the Analog Out setting (Valve Position 0-10V), and the air/fuel valve position at 0, 50 and 100 percent.",
+        "During run, also check for combustion oscillations (rumble at full fire means a combustion calibration is needed). Contact your AERCO representative if the fault cannot be cleared."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+        "page": 64
+      }
+    },
+    "h1": {
+      "type": "question",
+      "text": "Is the unit in MANUAL mode, or is its setpoint above the over-temperature switch setpoint?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_cfg"
+        },
+        {
+          "label": "No",
+          "next": "h2"
+        }
+      ]
+    },
+    "r_cfg": {
+      "type": "result",
+      "cause": "The configuration can trip the high water temperature switch.",
+      "fix": [
+        "If the unit is in MANUAL mode, switch to AUTO.",
+        "Make sure the temperature switch is set higher than the unit setpoint."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+        "page": 68
+      }
+    },
+    "h2": {
+      "type": "question",
+      "text": "Is it a variable flow system where flow changes may be faster than the unit can respond?",
+      "options": [
+        {
+          "label": "Possibly",
+          "next": "r_flow"
+        },
+        {
+          "label": "No, flow is steady",
+          "next": "r_sw2"
+        }
+      ]
+    },
+    "r_flow": {
+      "type": "result",
+      "cause": "Fast system flow changes can overshoot the water temperature.",
+      "fix": [
+        "Monitor system flow changes to confirm the rate of change is not faster than the units can respond."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+        "page": 68
+      }
+    },
+    "r_sw2": {
+      "type": "result",
+      "cause": "The switch, sensors or settings may be at fault.",
+      "fix": [
+        "Test that the temperature switch trips at its actual water temperature setting.",
+        "Compare PID settings with the menu defaults; if changed, record them and reset to default.",
+        "Measure the shell sensor and BTU sensor resistance at a known water temperature using the Appendix C charts.",
+        "Benchmark 5000-6000 also lists refractory temperature switches in series with the limit (replace the refractory at the hottest end plate) and a VFD in Local mode or low voltage (set to Remote)."
+      ],
+      "source": {
+        "manufacturer": "AERCO",
+        "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+        "page": 68
+      }
+    }
+  }
+}

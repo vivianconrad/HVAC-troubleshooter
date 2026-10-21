@@ -1,0 +1,122 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "354",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "Fault detected in the outdoor sensor (short circuit); the indicator lights flash a specific pattern. The control is programmed to calculate the outdoor temperature at -8 F (-22 C) and control the supply temperature accordingly. The control only allows the valve to operate as high as the supply maximum setting.",
+    "causes": [],
+    "checks": [
+      "Follow standard testing procedures to confirm the problem (sensor testing instructions are in Data Brochure D 001). If a wiring fault is suspected, carefully check all external wiring and wiring connections. After repair, press the Test button to cycle the control through the test routine and confirm correct operation has been restored."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 354.pdf",
+      "page": 11
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "354",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "Fault detected in the outdoor sensor (open circuit); the indicator lights flash a specific pattern. The control is programmed to calculate the outdoor temperature at -8 F (-22 C) and control the supply temperature accordingly. The control only allows the valve to operate as high as the supply maximum setting.",
+    "causes": [],
+    "checks": [
+      "Follow standard testing procedures to confirm the problem (sensor testing instructions are in Data Brochure D 001). If a wiring fault is suspected, carefully check all external wiring and wiring connections. After repair, press the Test button to cycle the control through the test routine and confirm correct operation has been restored."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 354.pdf",
+      "page": 11
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "354",
+    "code": "SUPPLY SENSOR SHORT CIRCUIT",
+    "meaning": "Fault detected in the supply sensor (short circuit); the indicator lights flash a specific pattern. The control is programmed to fully close the mixing valve to help prevent overheating.",
+    "causes": [],
+    "checks": [
+      "Follow standard testing procedures to confirm the problem (sensor testing instructions are in Data Brochure D 001). If a wiring fault is suspected, carefully check all external wiring and wiring connections. After repair, press the Test button to cycle the control through the test routine and confirm correct operation has been restored."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 354.pdf",
+      "page": 11
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "354",
+    "code": "SUPPLY SENSOR OPEN CIRCUIT",
+    "meaning": "Fault detected in the supply sensor (open circuit); the indicator lights flash a specific pattern. The control is programmed to fully close the mixing valve to help prevent overheating.",
+    "causes": [],
+    "checks": [
+      "Follow standard testing procedures to confirm the problem (sensor testing instructions are in Data Brochure D 001). If a wiring fault is suspected, carefully check all external wiring and wiring connections. After repair, press the Test button to cycle the control through the test routine and confirm correct operation has been restored."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 354.pdf",
+      "page": 11
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "354",
+    "code": "RETURN SENSOR SHORT CIRCUIT",
+    "meaning": "Fault detected in the return sensor (short circuit); the indicator lights flash a specific pattern.",
+    "causes": [],
+    "checks": [
+      "Follow standard testing procedures to confirm the problem (sensor testing instructions are in Data Brochure D 001). If a wiring fault is suspected, carefully check all external wiring and wiring connections. After repair, press the Test button to cycle the control through the test routine and confirm correct operation has been restored."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 354.pdf",
+      "page": 11
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "354",
+    "code": "RETURN SENSOR OPEN CIRCUIT",
+    "meaning": "Fault detected in the return sensor (open circuit); the indicator lights flash a specific pattern.",
+    "causes": [],
+    "checks": [
+      "Follow standard testing procedures to confirm the problem (sensor testing instructions are in Data Brochure D 001). If a wiring fault is suspected, carefully check all external wiring and wiring connections. After repair, press the Test button to cycle the control through the test routine and confirm correct operation has been restored."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 354.pdf",
+      "page": 11
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "354",
+    "code": "INDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "Fault detected in the indoor sensor (short circuit); the indicator lights flash a specific pattern.",
+    "causes": [],
+    "checks": [
+      "Follow standard testing procedures to confirm the problem (sensor testing instructions are in Data Brochure D 001). If a wiring fault is suspected, carefully check all external wiring and wiring connections. After repair, press the Test button to cycle the control through the test routine and confirm correct operation has been restored."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 354.pdf",
+      "page": 11
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "354",
+    "code": "RTU SHORT CIRCUIT",
+    "meaning": "Fault detected in the RTU input (short circuit); the indicator lights flash a specific pattern.",
+    "causes": [],
+    "checks": [
+      "Follow standard testing procedures to confirm the problem (sensor testing instructions are in Data Brochure D 001). If a wiring fault is suspected, carefully check all external wiring and wiring connections. After repair, press the Test button to cycle the control through the test routine and confirm correct operation has been restored."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 354.pdf",
+      "page": 11
+    }
+  }
+]

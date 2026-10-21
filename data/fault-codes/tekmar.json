@@ -246,5 +246,477 @@
       "doc": "Tekmar 274.pdf",
       "page": 42
     }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "CONTROL ERROR TIME",
+    "meaning": "The control failed to read the Time menu settings and reloaded the factory defaults. Operation continues normally.",
+    "causes": [
+      "Time menu settings could not be read"
+    ],
+    "checks": [
+      "Set the access level to Advanced and check the settings in the Time menu to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "CONTROL ERROR SCHEDULE",
+    "meaning": "The control failed to read the Schedule menu settings and reloaded the factory defaults. Operation continues normally.",
+    "causes": [
+      "Schedule menu settings could not be read"
+    ],
+    "checks": [
+      "Set the access level to Advanced and check the settings in the Schedule menu to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "CONTROL ERROR MISCELLANEOUS",
+    "meaning": "The control failed to read the Miscellaneous menu settings and reloaded the factory defaults. Operation continues normally.",
+    "causes": [
+      "Miscellaneous menu settings could not be read"
+    ],
+    "checks": [
+      "Set the access level to Advanced and check the settings in the Miscellaneous menu to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "DEVICE LOST",
+    "meaning": "Communication is lost to a tN4 device on the boiler bus. The number shown is the address of the lost device.",
+    "causes": [
+      "No power to the lost device",
+      "Loose or damaged wiring to the device"
+    ],
+    "checks": [
+      "Ensure there is power to the lost device (its LCD shows Bus Boil OPn).",
+      "Trace the wires from the control to the lost device for loose or damaged wires.",
+      "The message clears itself when corrected; if a device was deliberately removed, hold the Up and Down buttons to clear it."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "MASTER DEVICE ERROR",
+    "meaning": "More than one tN4 System control has been detected on the tN4 bus.",
+    "causes": [
+      "Two tN4 buses wired together"
+    ],
+    "checks": [
+      "Check the tN4 bus wiring. The error clears once the condition is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "DEVICE SCHEDULE ERROR",
+    "meaning": "The selected system schedule is no longer available.",
+    "causes": [
+      "The system schedule master is no longer connected to the network",
+      "The system schedule number was changed on the schedule master"
+    ],
+    "checks": [
+      "Restore the schedule master connection or schedule number. The error clears when corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 42
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "DEVICE ERROR AT ADDRESS",
+    "meaning": "A device on the boiler bus has an error; the address shown (b:01 to b:24) is the device with the error.",
+    "causes": [
+      "Error at the device with the displayed address"
+    ],
+    "checks": [
+      "Go to the device with the displayed address and read its error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 42
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "DHW SHORT CIRCUIT",
+    "meaning": "The control failed to read the DHW sensor due to a short circuit, so it no longer heats the DHW tank.",
+    "causes": [
+      "Short in the DHW sensor or its wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. DHW heating resumes and the message clears once corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 42
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "DHW OPEN CIRCUIT",
+    "meaning": "The control failed to read the DHW sensor due to an open circuit, so it no longer heats the DHW tank.",
+    "causes": [
+      "Open in the DHW sensor or its wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. DHW heating resumes and the message clears once corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 42
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "PRIMARY PUMP P1 & P2 FAILURE",
+    "meaning": "Both primary pump P1 and P2 have failed.",
+    "causes": [
+      "Both primary pumps failed to prove"
+    ],
+    "checks": [
+      "Check both pumps and their proof devices."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "PRIMARY PUMP P1 FAILURE",
+    "meaning": "The Prim P1 relay closed but a flow proof demand was not detected before the proof demand delay elapsed.",
+    "causes": [
+      "Pump P1 or its flow proof device failed"
+    ],
+    "checks": [
+      "Check pump P1 and its flow proof wiring and device."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "PRIMARY PUMP P2 FAILURE",
+    "meaning": "The Prim P2 relay closed but a flow proof demand was not detected before the proof demand delay elapsed.",
+    "causes": [
+      "Pump P2 or its flow proof device failed"
+    ],
+    "checks": [
+      "Check pump P2 and its flow proof wiring and device."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "PUMP PROOF DEMAND ERROR",
+    "meaning": "The primary pump has been turned off but the pump proof demand remains after 4 minutes.",
+    "causes": [
+      "Pump proof demand still present after the pump was turned off"
+    ],
+    "checks": [
+      "Check the pump proof device and its wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "COMBUSTION AIR DAMPER FAILURE",
+    "meaning": "The C.A. relay closed but the control did not detect a damper proof demand before the proof demand delay elapsed.",
+    "causes": [
+      "Combustion air damper or its proof device failed"
+    ],
+    "checks": [
+      "Check the damper, its proof switch and wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "DAMPER PROOF DEMAND ERROR",
+    "meaning": "The combustion air damper has been turned off but the damper proof demand remains after 4 minutes.",
+    "causes": [
+      "Damper proof demand still present after the damper was turned off"
+    ],
+    "checks": [
+      "Check the damper proof device and its wiring."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "BOILER RETURN SENSOR SHORT CIRCUIT",
+    "meaning": "The control failed to read the boiler return sensor due to a short circuit; it continues to operate normally.",
+    "causes": [
+      "Short in the return sensor or wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. The message clears once corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "BOILER RETURN SENSOR OPEN CIRCUIT",
+    "meaning": "The control failed to read the boiler return sensor due to an open circuit; it continues to operate normally.",
+    "causes": [
+      "Open in the return sensor or wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. The message clears once corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "BOILER ALARM ERROR",
+    "meaning": "The boiler supply temperature did not increase within the boiler alarm time.",
+    "causes": [
+      "No temperature rise at the boiler supply sensor within the alarm time"
+    ],
+    "checks": [
+      "To reset the alarm, press and hold the Up and Down buttons for 5 seconds while viewing the error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "274",
+    "code": "DHW ERROR",
+    "meaning": "A DHW sensor and a DHW demand have been applied at the same time. The DHW tank will not be heated until the demand signal is removed.",
+    "causes": [
+      "Externally powered DHW demand applied while the DHW sensor is enabled"
+    ],
+    "checks": [
+      "Remove the powered DHW demand or disable the DHW sensor. The message clears once the condition is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 274.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "360",
+    "code": "EEPROM ERROR",
+    "meaning": "The control was unable to read a piece of information from its EEPROM. It loads the factory defaults and stops operation until all the settings are verified.",
+    "causes": [
+      "Noisy power source"
+    ],
+    "checks": [
+      "Verify all settings in the control."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 360.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "360",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "The control cannot read the outdoor sensor due to a short circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [
+      "Short in the outdoor sensor or wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070.",
+      "To clear the error after repair, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 360.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "360",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "The control cannot read the outdoor sensor due to an open circuit. It assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [
+      "Open in the outdoor sensor or wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070.",
+      "To clear the error after repair, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 360.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "360",
+    "code": "MIXING SUPPLY SENSOR ERROR",
+    "meaning": "The control cannot read the mixing supply sensor. It operates the mixing valve at a fixed output as long as there is a mixing demand.",
+    "causes": [
+      "Short or open circuit in the mixing supply sensor or wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070.",
+      "To clear the error after repair, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 360.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "360",
+    "code": "BOILER SENSOR SHORT CIRCUIT",
+    "meaning": "The control cannot read the boiler sensor due to a short circuit. If BOIL MIN is above 100 F (38 C) it closes the Boiler contact when the mixing valve starts to operate; the boiler temperature is then limited by the operating aquastat. If BOIL MIN is below 100 F it does not operate the Boiler contact.",
+    "causes": [
+      "Short in the boiler sensor or wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070.",
+      "To clear the error after repair, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 360.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "360",
+    "code": "BOILER SENSOR OPEN CIRCUIT",
+    "meaning": "The control cannot read the boiler sensor due to an open circuit. If BOIL MIN is above 100 F (38 C) it closes the Boiler contact when the mixing valve starts to operate; the boiler temperature is then limited by the operating aquastat. If BOIL MIN is below 100 F it does not operate the Boiler contact.",
+    "causes": [
+      "Open in the boiler sensor or wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070.",
+      "If the sensor was deliberately removed, power the control down and back up.",
+      "To clear the error after repair, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 360.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "360",
+    "code": "INDOOR SENSOR ERROR",
+    "meaning": "The control cannot read the indoor sensor. It continues to operate as if nothing were connected to the indoor sensor input.",
+    "causes": [
+      "Short or open circuit in the indoor sensor or wiring"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 074.",
+      "If the sensor was deliberately removed, power down and back up.",
+      "To clear the error after repair, press the Item button."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 360.pdf",
+      "page": 19
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "360",
+    "code": "CONTROL OVERHEATED OR INTERNAL ERROR",
+    "meaning": "The control enclosure has overheated or the control has an internal error. The control stops operation until the condition is corrected.",
+    "causes": [
+      "Enclosure overheating",
+      "Internal error"
+    ],
+    "checks": [
+      "Try resetting by powering down, waiting 1 minute and powering back up."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 360.pdf",
+      "page": 19
+    }
   }
 ]

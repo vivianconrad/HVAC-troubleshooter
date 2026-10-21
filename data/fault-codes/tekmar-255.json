@@ -1,0 +1,42 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "255",
+    "code": "OUTDOOR SENSOR OPEN OR SHORT CIRCUIT",
+    "meaning": "The display window flashes \"Err\" and the outdoor pointer: the outdoor sensor is either open or short circuit. The control is programmed to assume an outdoor temperature of 32 F (0 C) and control the supply temperature accordingly.",
+    "causes": [
+      "Outdoor sensor open circuit",
+      "Outdoor sensor short circuit"
+    ],
+    "checks": [
+      "Follow the testing procedure in step four of the installation procedure on page 2 of the brochure.",
+      "Check that the settings have been made correctly and that the problem is not a result of external causes.",
+      "Make sure that all wiring connections are solid and the sensors are correctly located."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 255.pdf",
+      "page": 4
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "255",
+    "code": "SUPPLY SENSOR OPEN OR SHORT CIRCUIT",
+    "meaning": "The display window flashes \"Err\" and the supply pointer: the supply sensor is either open or short circuit. The control turns off its relays in order to shut down the heating equipment it is controlling.",
+    "causes": [
+      "Supply sensor open circuit",
+      "Supply sensor short circuit"
+    ],
+    "checks": [
+      "Follow the testing procedure in step four of the installation procedure on page 2 of the brochure.",
+      "Check that the settings have been made correctly and that the problem is not a result of external causes.",
+      "Make sure that all wiring connections are solid and the sensors are correctly located."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 255.pdf",
+      "page": 4
+    }
+  }
+]

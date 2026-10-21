@@ -1,0 +1,600 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SETPOINTS MENU SAVE ERROR",
+    "meaning": "The control failed to read the Setpoints menu settings from memory and has reloaded the factory default settings. The control stops operation until all settings in the Setpoints menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Setpoints menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SYSTEM SETUP MENU SAVE ERROR",
+    "meaning": "The control failed to read the System Setup menu settings from memory and has reloaded the factory default settings. The control stops operation until all settings in the System Setup menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the System Setup menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "BOILER SETUP MENU SAVE ERROR",
+    "meaning": "The control failed to read the Boiler Setup menu settings from memory and has reloaded the factory default settings. The control stops operation until all settings in the Boiler Setup menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Boiler Setup menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "MIXING SETUP MENU SAVE ERROR",
+    "meaning": "The control failed to read the Mixing Setup menu settings from memory and has reloaded the factory default settings. The control stops operation until all settings in the Mixing Setup menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Mixing Setup menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "BAS MENU SAVE ERROR",
+    "meaning": "The control failed to read the BAS menu settings from memory and has reloaded the factory default settings. The control stops operation until all settings in the BAS menu are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the BAS menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "LOW PRESSURE ALERT",
+    "meaning": "The system pressure has dropped below the Low Pressure Warning setting. This could indicate that the snow melting system has a leak. Fix any leaks and ensure that the glycol solution has not been diluted with water.",
+    "causes": [
+      "Leak in the snow melting system",
+      "Glycol solution diluted with water"
+    ],
+    "checks": [
+      "To clear the error, press the Cancel button while viewing the warning message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "MAX MELT DAYS ERROR",
+    "meaning": "The control has operated in melting for the time set by Maximum Melt Days setting located in the System Setup menu. This error is usually created when there is a mechanical system failure resulting in the snow melt slab not heating correctly.",
+    "causes": [
+      "Mechanical system failure resulting in the snow melt slab not heating correctly (stated as the usual cause)"
+    ],
+    "checks": [
+      "Clear the error message by touching the Cancel button while viewing the error message.",
+      "Use the Manual Override menu to manually check that each component of the mechanical system is operating correctly.",
+      "If necessary, change the Maximum Melt Days setting to a longer time period or to Off."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the Outdoor Sensor 070 on terminals 14 and 15. This error also occurs when the BAS system has failed to communicate the outdoor temperature parameter. The control continues to operate and assumes an outdoor temperature of 32 F (0 C). Energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are disabled.",
+    "causes": [],
+    "checks": [
+      "Check the outdoor sensor wire for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the outdoor sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the Outdoor Sensor 070 on terminals 14 and 15. The control continues to operate and assumes an outdoor temperature of 32 F (0 C). Energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are disabled.",
+    "causes": [],
+    "checks": [
+      "Check the outdoor sensor wire for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the outdoor sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 43
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SYSTEM SUPPLY SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the System Supply Sensor 082 on terminals 11 and 12. The control stops operation and does not provide any heat.",
+    "causes": [],
+    "checks": [
+      "Check the system supply sensor wire for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the system supply sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SYSTEM SUPPLY SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the System Supply Sensor 082 on terminals 11 and 12. The control stops operation and does not provide any heat.",
+    "causes": [],
+    "checks": [
+      "Check the system supply sensor wire for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the system supply sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SYSTEM RETURN SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the System Return Sensor 082 on terminals 11 and 13. The control continues normal operation but does not accumulate any energy usage.",
+    "causes": [],
+    "checks": [
+      "Check the system return sensor wire for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the system return sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SYSTEM RETURN SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the System Return Sensor 082 on terminals 11 and 13. The control continues normal operation but does not accumulate any energy usage.",
+    "causes": [],
+    "checks": [
+      "Check the system return sensor wire for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the system return sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "BOILER SUPPLY SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the Boiler Supply Sensor 082 on terminals 8 and 9. When application mode is set to boiler or boiler+mix the control stops operation. In all other application modes, the control continues to heat the snow melting system but does not control the boiler operating temperature.",
+    "causes": [],
+    "checks": [
+      "Check the boiler supply sensor wire for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the boiler supply sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "BOILER SUPPLY SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the Boiler Supply Sensor 082 on terminals 8 and 9. When application mode is set to boiler or boiler+mix the control stops operation. In all other application modes, the control continues to heat the snow melting system but does not control the boiler operating temperature.",
+    "causes": [],
+    "checks": [
+      "Check the boiler supply sensor wire for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the boiler supply sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "BOILER RETURN SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the Boiler Return Sensor 082 on terminals 8 and 10. The control continues to heat the snow melting system but does not provide boiler protection.",
+    "causes": [],
+    "checks": [
+      "Check the boiler return sensor wire for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the boiler return sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "BOILER RETURN SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the Boiler Return Sensor 082 on terminals 8 and 10. The control continues to heat the snow melting system but does not provide boiler protection.",
+    "causes": [],
+    "checks": [
+      "Check the boiler return sensor wire for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the boiler return sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SLAB 1 SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the Slab Sensor 072 or 073 on terminals 19 and 20. The control continues normal operation if slab sensor 2 is installed; otherwise, Idling and Storm are disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are operated using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the slab sensor 1 wire for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the slab sensor.",
+      "Once the error has been corrected, the error message automatically clears.",
+      "If the slab sensor 1 has been intentionally removed, set the slab sensor 1 setting in the System Setup menu to Off."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SLAB 1 SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the Slab Sensor 072 or 073 on terminals 19 and 20. The control continues normal operation if slab sensor 2 is installed; otherwise, Idling and Storm are disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are operated using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the slab sensor 1 wire for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the slab sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 44
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 1 YELLOW WIRE OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the yellow wire connected to the Snow/Ice Sensor 090 or 094, or the Snow Sensor 095 on terminals 20 and 22. The control continues normal operation if snow/ice sensor 2 is installed; otherwise, the control can no longer automatically detect snow or ice, but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor or snow sensor yellow and black wires and any wire splices for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 45
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 1 BLUE WIRE OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the blue wire connected to the Snow/Ice Sensor 090 or 094, or the Snow Sensor 095 on terminals 20 and 21. The control continues normal operation if snow/ice sensor 2 is installed; otherwise, the control can no longer automatically detect snow or ice, but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor 1 or snow sensor 1 blue and black wires and any wire splices for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 45
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 1 BLUE WIRE SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the blue wire connected to the Snow/Ice Sensor 090 or 094, or the Snow Sensor 095 on terminals 20 and 21. The control continues normal operation if snow/ice sensor 2 is installed; otherwise, the control can no longer automatically detect snow or ice, but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "First check the snow/ice sensor 1 or snow sensor 1 for dirt or debris.",
+      "The ring structure of the sensor may need cleaning with hot soapy water and a nylon brush.",
+      "Rinse with water.",
+      "Second, check the snow/ice sensor 1 or snow sensor 1 blue and black wires and any wire splices for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 45
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 1 BROWN WIRE OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the brown wire connected to the Snow/Ice Sensor 090 or 094 on terminals 19 and 20. The control continues normal operation if snow/ice sensor 2 is installed; otherwise, Idling and Storm is disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are operated using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor 1 brown and black wires for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 45
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 1 BROWN WIRE SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the brown wire connected to the Snow/Ice Sensor 090 or 094 on terminals 19 and 20. The control continues normal operation if snow/ice sensor 2 is installed; otherwise, Idling and Storm is disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are operated using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor 1 brown and black wires for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 45
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW/ICE SENSOR 1 ERROR",
+    "meaning": "The control is unable to properly detect the Snow/Ice Sensor 090 or 094 on terminals 19, 20, 21, 22 and 23. The control continues normal operation if snow/ice sensor 2 is installed; otherwise, the control can no longer automatically detect snow or ice, but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor 1 brown, yellow, red and black wires according to the sensor installation manual.",
+      "It is important to check any cable splices for loose wiring connections.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 45
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 1 ERROR",
+    "meaning": "The control is unable to properly detect the Snow Sensor 095 on terminals 20, 21, 22 and 23. The control continues normal operation if snow sensor 2 is installed; otherwise, the control can no longer automatically detect snow but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the snow sensor 1 yellow, red and black wires according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 45
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SLAB SENSOR 2 OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the Slab Sensor 072 or 073 on terminals 24 and 25. The control continues normal operation if slab sensor 1 is installed; otherwise, Idling and Storm are disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are operated using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the slab sensor 2 wire for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the slab sensor.",
+      "Once the error has been corrected, the error message automatically clears.",
+      "If the slab sensor 2 has been intentionally removed, set the slab sensor 2 setting in the System Setup menu to Off."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 45
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SLAB SENSOR 2 SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the Slab Sensor 072 or 073 on terminals 24 and 25. The control continues normal operation if slab sensor 1 is installed; otherwise, Idling and Storm are disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are operated using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the slab sensor 2 wire for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the slab sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 46
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 2 YELLOW WIRE OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the yellow wire connected to the Snow/Ice Sensor 090 or 094 or the Snow Sensor 095 on terminals 25 and 27. The control continues normal operation if snow/ice sensor 1 is installed; otherwise, the control can no longer automatically detect snow or ice, but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor 2 or snow sensor 2 yellow and black wires and any wire splices for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 46
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 2 BLUE WIRE OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the blue wire connected to the Snow/Ice Sensor 090 or 094 or the Snow Sensor 095 on terminals 25 and 26. The control continues normal operation if snow/ice sensor 1 is installed; otherwise, the control can no longer automatically detect snow or ice, but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor 2 or snow sensor 2 blue and black wires and any wire splices for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 46
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 2 BLUE WIRE SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the blue wire connected to the Snow/Ice Sensor 090 or 094 or the Snow Sensor 095 on terminals 25 and 26. The control continues normal operation if snow/ice sensor 1 is installed; otherwise, the control can no longer automatically detect snow or ice, but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "First check the snow/ice sensor 2 or snow sensor 2 for dirt or debris.",
+      "The ring structure of the sensor may need cleaning with hot soapy water and a nylon brush.",
+      "Rinse with water.",
+      "Secondly, check the snow/ice sensor 2 or snow sensor 2 blue and black wires and any wire splices for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 46
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 2 BROWN WIRE OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the control is unable to read the brown wire connected to the Snow/Ice Sensor 090 or 094 on terminals 24 and 25. The control continues normal operation if snow/ice sensor 1 is installed; otherwise, Idling and Storm is disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are operated using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor 2 brown and black wires for open circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 46
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 2 BROWN WIRE SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the control is unable to read the brown wire connected to the Snow/Ice Sensor 090 or 094 on terminals 24 and 25. The control continues normal operation if snow/ice sensor 1 is installed; otherwise, Idling and Storm is disabled and energy saving features such as Warm Weather Shut Down (WWSD) and Cold Weather Cut Off (CWCO) are operated using the outdoor temperature only.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor 2 brown and black wires for short circuits according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 46
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW/ICE SENSOR 2 ERROR",
+    "meaning": "The control is unable to properly detect the Snow/Ice Sensor 090 or 094 on terminals 24, 25, 26, 27 and 28. The control continues normal operation if snow/ice sensor 1 is installed; otherwise, the control can no longer automatically detect snow or ice, but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the snow/ice sensor 2 brown, yellow, red and black wires according to the sensor installation manual.",
+      "It is important to check any cable splices for loose wiring connections.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 46
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "680",
+    "code": "SNOW SENSOR 2 ERROR",
+    "meaning": "The control is unable to properly detect the Snow Sensor 095 on terminals 25, 26, 27 and 28. The control continues normal operation if snow sensor 1 is installed; otherwise, the control can no longer automatically detect snow, but manual start of the snow melting system is still available.",
+    "causes": [],
+    "checks": [
+      "Check the snow sensor 2 yellow, red and black wires according to the sensor installation manual.",
+      "It may be necessary to replace the sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 680.pdf",
+      "page": 46
+    }
+  }
+]

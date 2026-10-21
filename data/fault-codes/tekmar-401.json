@@ -1,0 +1,206 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "ADJUST ERROR",
+    "meaning": "The control failed to read the Adjust menu settings and reloaded the factory default settings. Operation stops until all the Adjust menu settings are checked.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check each setting in the Adjust menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 25
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "Due to a short circuit, the control failed to read the outdoor sensor. The control assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [
+      "Short circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 25
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "Due to an open circuit (disconnected or broken wire), the control failed to read the outdoor sensor. The control assumes an outdoor temperature of 32 F (0 C) and continues operation.",
+    "causes": [
+      "Open circuit (disconnected or broken wire)"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 25
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "BOILER SENSOR SHORT CIRCUIT",
+    "meaning": "Due to a short circuit, the control failed to read the boiler sensor. When there is a call for heat, the control no longer controls the boiler. Instead it provides a boiler enable and the boiler operates on its aquastat/limit until the sensor is repaired. The control will not operate the boiler contact if the Boil Minimum setting is set to Off.",
+    "causes": [
+      "Short circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 25
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "BOILER SENSOR OPEN CIRCUIT",
+    "meaning": "Due to an open circuit, the control failed to read the boiler sensor. The control no longer controls the boiler. Instead it provides a boiler enable and the boiler operates on its aquastat/limit until the sensor is repaired. The control will not operate the boiler contact if the Boil Minimum setting is set to Off.",
+    "causes": [
+      "Open circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 25
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "DOMESTIC HOT WATER SENSOR SHORT CIRCUIT",
+    "meaning": "Due to a short circuit, the control failed to read the DHW sensor. The control no longer heats the DHW tank. DHW tank heating resumes once the sensor problem is corrected.",
+    "causes": [
+      "Short circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual.",
+      "The error message self clears once the error condition is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 25
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "DOMESTIC HOT WATER SENSOR OPEN CIRCUIT",
+    "meaning": "Due to an open circuit, the control failed to read the DHW sensor. The control no longer heats the DHW tank. DHW tank heating resumes once the sensor problem is corrected.",
+    "causes": [
+      "Open circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the \"Test the Sensor Wiring\" section of the manual.",
+      "The error message self clears once the error condition is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 25
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "DOMESTIC HOT WATER CALL ERROR",
+    "meaning": "A DHW sensor and a DHW call have been applied at the same time. The DHW tank will not be heated until the DHW call signal is removed.",
+    "causes": [
+      "DHW sensor and DHW call applied at the same time"
+    ],
+    "checks": [
+      "Remove the DHW call signal.",
+      "The error message self clears once the error condition is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 25
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "BOILER DEVICE LOST (B:01 TO B:24)",
+    "meaning": "A tekmarNet device (thermostat, setpoint control, timer) with the displayed address on the boiler water temperature bus is no longer reporting back to the 401.",
+    "causes": [],
+    "checks": [
+      "Locate the device by its address, or go to each device in the building and check that the LCD is on and the tekmarNet communication symbol is on.",
+      "Trace the wires from the control to the lost device looking for loose or damaged wires.",
+      "If you deliberately remove a tekmarNet device, hold the Up and Down buttons to clear this error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 26
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "MASTER DEVICE ERROR",
+    "meaning": "More than one master has been detected on the tekmarNet 4 expansion terminals. The 401 is a Master Device and no other tekmarNet reset controls can be added to the tekmarNet 4 expansion terminals.",
+    "causes": [
+      "Another tekmarNet reset control added to the tekmarNet 4 expansion terminals"
+    ],
+    "checks": [
+      "If one has been added, remove it from the system."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 26
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "DEVICE ERROR AT ADDRESS B:01 TO B:24",
+    "meaning": "One of the tekmarNet devices on the boiler water temperature bus has an error.",
+    "causes": [],
+    "checks": [
+      "If there is a record of the device address together with the room name, go to that device to correct the error. Otherwise go to each device in the building, checking for the flashing Warning symbol.",
+      "Once the error on the device is corrected, the error message will clear."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 26
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "401",
+    "code": "MIX MODULE ERROR",
+    "meaning": "A Mixing Module has been connected to the Boiler Exp. tN4 terminals. The 401 control cannot operate tekmarNet mixing expansion modules.",
+    "causes": [
+      "Mixing expansion module connected to the Boiler Exp. tN4 terminals"
+    ],
+    "checks": [
+      "Remove the mixing expansion module; the error message will then clear."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 401.pdf",
+      "page": 26
+    }
+  }
+]

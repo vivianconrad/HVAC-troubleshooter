@@ -1,0 +1,1088 @@
+[
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "AIRFLOW FAULT DURING IGNITION",
+    "meaning": "Airflow was not proven while the unit was in the ignition cycle.",
+    "causes": [
+      "Blower stopped on thermal or current overload",
+      "Blocked blower inlet or inlet air filter",
+      "Blockage in or defective Blower Proof switch or Blocked Inlet switch",
+      "Loose temperature (AUX) connection in I/O box or defective temperature sensor",
+      "Loose 0-10 V wire from I/O box to blower, defective I/O box, wrong 0-10 V output selection, defective air-fuel valve potentiometer",
+      "Hard light"
+    ],
+    "checks": [
+      "Check the blower for excess heat or high current that may trip an overload.",
+      "Inspect the blower inlet and air filter at the air/fuel valve.",
+      "Remove and inspect the Blower Proof and Blocked Inlet switches; clean or replace. Check continuity with the blower running; replace if erratic or above zero ohms.",
+      "Check inlet air temperature and the AUX input voltage in the I/O box against the Appendix C table.",
+      "Measure the I/O box 0-10 V output (10 V equals 100 percent open valve) and check the Analog Out option is Valve Position 0-10V.",
+      "Check air/fuel valve position at 0, 50 and 100 percent against the dial; check igniter-injector for soot or electrode erosion."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 64
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "AIRFLOW FAULT DURING PURGE",
+    "meaning": "Airflow was not proven during the purge.",
+    "causes": [
+      "Blower not running or too slow",
+      "Defective or blocked Blocked Inlet switch or air filter",
+      "Blocked blower inlet or ductwork",
+      "No voltage to the Blocked Inlet switch from the C-More controller",
+      "Causes 3 to 12 of AIRFLOW FAULT DURING IGNITION also apply"
+    ],
+    "checks": [
+      "Start the unit; if the blower does not run, check the blower solid-state relay input and output voltage, then the blower.",
+      "If it runs, turn the unit off and check the Blocked Inlet switch for continuity; replace if none.",
+      "Remove and inspect the air filter and switch for blockage; inspect the blower inlet and ductwork.",
+      "During start, verify 24 VAC from each side of the switch to ground; if absent refer to qualified service personnel."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 65
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "AIRFLOW FAULT DURING RUN",
+    "meaning": "Airflow was lost while the unit was running.",
+    "causes": [
+      "Blower stopped on thermal or current overload",
+      "Blocked blower inlet, ductwork, air filter or Blocked Inlet switch",
+      "Defective Blocked Inlet switch",
+      "Combustion oscillations",
+      "Causes 3 to 16 of AIRFLOW FAULT DURING IGNITION also apply"
+    ],
+    "checks": [
+      "Check the blower for excess heat or high current draw.",
+      "Inspect the inlet and ductwork; clean or replace the air filter and switch.",
+      "Verify 24 VAC from each side of the switch to ground; if not present at both sides replace the switch.",
+      "Run to full fire; if the unit rumbles or runs rough, perform combustion calibration."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 65
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "DELAYED INTERLOCK OPEN",
+    "meaning": "The delayed interlock circuit is open.",
+    "causes": [
+      "Delayed interlock jumper not properly installed or missing",
+      "Device proving switch hooked to the interlock is not closed"
+    ],
+    "checks": [
+      "Check that the jumper is installed across the delayed interlock terminals in the I/O box.",
+      "If two external wires are on the terminals, check that an end switch for a proving device (pump, louver, etc.) is functional. A jumper may be temporarily installed to test the interlock; remove it afterwards."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 66
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "DIRECT DRIVE SIGNAL FAULT",
+    "meaning": "The direct drive signal is not present or is wrong.",
+    "causes": [
+      "Signal not installed, wrong polarity, defective at source or loose wiring",
+      "Signal not isolated (floating)",
+      "C-More signal type switches not set for voltage or current"
+    ],
+    "checks": [
+      "Check the I/O box connection, polarity and signal level, and wiring continuity from the source.",
+      "Check the signal is isolated at the source.",
+      "Check the DIP switch on the PMC board and the control signal type in the Configuration menu."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 66
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "FLAME LOSS DURING IGN",
+    "meaning": "Flame was lost or not detected during the ignition trial.",
+    "causes": [
+      "Worn flame detector",
+      "No spark from the spark igniter or defective ignition transformer",
+      "Defective IGST board or SSOV",
+      "Pilot scanner failed, pilot view port blocked, pilot gas valve closed, pilot solenoid not opening, clogged pilot ignition piece",
+      "Carbon or debris on the burner"
+    ],
+    "checks": [
+      "Before starting, refer to the Figure 5-4 flow chart at the end of the chapter.",
+      "Remove and inspect the flame detector; replace if worn.",
+      "Close the internal gas valve and arc a spark igniter outside the unit; if no spark check for 120 VAC at the transformer primary during ignition.",
+      "Check the SSOV opens (120 VAC at its terminals); if not and no voltage, suspect the IGST board.",
+      "Check the scanner red LED goes from flashing to steady with a small flame; clean the pilot view port; open the pilot gas valve; listen for the pilot solenoid; inspect the ignition piece; inspect the burner with a borescope and clean."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 66
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "FLAME LOSS DURING RUN",
+    "meaning": "Flame was lost while the unit was running.",
+    "causes": [
+      "Worn flame detector or cracked ceramic",
+      "Defective regulator",
+      "Poor combustion calibration",
+      "Debris on burner or blocked condensate drain",
+      "Main flame detector touching the burner mesh"
+    ],
+    "checks": [
+      "Inspect the flame detector for wear or cracked ceramic; replace if necessary.",
+      "Check gas pressure into and out of the air/fuel valve.",
+      "Check combustion calibration per Section 4.5 of the installation and startup guide.",
+      "Inspect the burner for carbon or debris and clean; clear the condensate drain.",
+      "Straighten or replace the main flame detector."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 67
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "HEAT DEMAND FAILURE",
+    "meaning": "The heat demand relays on the ignition/stepper board did not respond correctly.",
+    "causes": [
+      "Heat demand relays on the IGST board failed to activate when commanded",
+      "Relay activated when not in demand"
+    ],
+    "checks": [
+      "Press CLEAR and restart; if the fault persists replace the IGST board.",
+      "A defective relay means replacing the IGST board."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 67
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "HIGH EXHAUST TEMPERATURE",
+    "meaning": "Exhaust temperature is high.",
+    "causes": [
+      "Poor combustion calibration",
+      "Carboned heat exchanger due to incorrect combustion calibration"
+    ],
+    "checks": [
+      "Check combustion calibration per Section 4.5 of the installation and startup guide.",
+      "If exhaust temperature is above 200 F (93.3 C) check calibration; calibrate or repair as necessary."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 67
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "GAS PRESSURE FAULT (HIGH)",
+    "meaning": "Gas pressure fault due to high gas pressure.",
+    "causes": [
+      "Incorrect supply gas pressure",
+      "Defective SSOV actuator",
+      "Defective high gas pressure switch"
+    ],
+    "checks": [
+      "Ensure gas pressure at the SSOV inlet does not exceed 14 in. W.C. (3487 Pa).",
+      "If downstream pressure cannot be lowered with the adjustment screw to the range in the installation and startup guide, the SSOV actuator may be defective.",
+      "Remove the switch leads and check continuity across C and NC with the unit not firing; replace the switch if none."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 68
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "HIGH WATER TEMP SWITCH OPEN",
+    "meaning": "The high water temperature switch has opened.",
+    "causes": [
+      "Faulty water temperature switch",
+      "Incorrect PID settings or faulty shell temperature sensor",
+      "Unit in MANUAL mode, or setpoint above the over-temperature switch setpoint",
+      "System flow changes faster than the unit can respond",
+      "Refractory failure",
+      "VFD in Local mode or voltage dropped below threshold"
+    ],
+    "checks": [
+      "Test that the switch trips at its actual setting.",
+      "Compare PID settings with menu defaults; if changed, record them and reset to defaults.",
+      "Measure shell and BTU sensor resistance at a known water temperature using the Appendix C charts.",
+      "If in MANUAL, switch to AUTO; confirm the switch is set above the unit setpoint.",
+      "On variable flow systems monitor flow changes.",
+      "Refractory switches on the end plates are in series with the limit; replace the refractory at the hottest end plate. Check incoming voltage and set the VFD to Remote."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 68
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "HIGH WATER TEMPERATURE",
+    "meaning": "The unit has exceeded its high water temperature limit.",
+    "causes": [
+      "Causes listed under HIGH WATER TEMP SWITCH OPEN",
+      "Temp HI Limit setting too low"
+    ],
+    "checks": [
+      "See HIGH WATER TEMP SWITCH OPEN.",
+      "Check the Temp HI Limit setting."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 69
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "IGN BOARD COMM FAULT",
+    "meaning": "Communication fault between the PMC board and the ignition/stepper (IGST) board.",
+    "causes": [
+      "Communication fault between the PMC board and the IGST board"
+    ],
+    "checks": [
+      "Press CLEAR and restart; if the fault persists contact qualified service personnel."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 69
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "IGN SWTCH CLOSED DURING PURGE",
+    "meaning": "The ignition position switch is closed when the air/fuel valve should be in the purge position.",
+    "causes": [
+      "Air/fuel valve not rotating",
+      "Defective or shorted switch, or switch wired incorrectly",
+      "Defective power supply board or fuse, or defective IGST board"
+    ],
+    "checks": [
+      "Start the unit; the air/fuel valve should rotate to purge (open). If not, check its calibration; if calibration is fine the problem may be the valve or controller, refer to qualified service personnel.",
+      "If it rotates to purge, check the ignition switch for continuity between N.O. and COM when not on the cam; replace if it shows continuity.",
+      "Check wiring (wire numbers on the N.O. terminals).",
+      "Check DS1 and DS2 LEDs on the power supply board (steady on) and the IGST heartbeat LED DS1 (blinking each second); replace the board if not."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 69
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "IGN SWTCH OPEN DURING IGNITION",
+    "meaning": "The ignition position switch is open when the air/fuel valve should be in the ignition position.",
+    "causes": [
+      "Air/fuel valve not rotating to ignition position",
+      "Defective ignition switch",
+      "Defective power supply board or fuse, or defective IGST board"
+    ],
+    "checks": [
+      "Start the unit; the valve should go to purge then back toward closed. If not, check calibration, then refer to qualified service personnel.",
+      "Check the ignition position switch for continuity between N.O. and COM when on the cam.",
+      "Check DS1 and DS2 LEDs on the power supply board and the IGST heartbeat LED."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 70
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "INTERLOCK OPEN",
+    "meaning": "The interlock circuit is open.",
+    "causes": [
+      "Interlock jumper not installed or removed",
+      "Energy Management System does not have the unit enabled",
+      "Device proving switch on the interlock is not closed"
+    ],
+    "checks": [
+      "Check a jumper is installed across the interlock terminals in the I/O box.",
+      "If there are two external wires, check whether an Energy Management system has the unit disabled. A jumper may be temporarily installed to see whether the interlock circuit works; remove it afterwards.",
+      "Check that the proving switch for any device on the interlock closes and that the device is operational."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 70
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "LINE VOLTAGE OUT OF PHASE",
+    "meaning": "Line voltage is wired out of phase.",
+    "causes": [
+      "Line and neutral switched in the AC power box",
+      "Incorrect power supply transformer wiring"
+    ],
+    "checks": [
+      "Check hot and neutral in the AC power box are not reversed.",
+      "Check transformer wiring against the power box wiring diagram."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 70
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "GAS PRESSURE FAULT (LOW)",
+    "meaning": "Gas pressure fault due to low gas pressure.",
+    "causes": [
+      "Incorrect supply gas pressure",
+      "Defective low gas pressure switch"
+    ],
+    "checks": [
+      "Measure natural gas pressure upstream of the SSOV actuator(s) with the unit firing; the minimum is 14 in. W.C. (3.5 kPa), though the BMK 6000 can operate derated at 11 in. W.C. and the BMK 5000 at 10 in. W.C.",
+      "Measure at the low gas pressure switch; if it is above 10 in. W.C. check continuity across the switch and replace if necessary."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 70
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "LOW WATER LEVEL",
+    "meaning": "The water level circuit reports low water.",
+    "causes": [
+      "Insufficient water level in the system",
+      "Defective water level circuitry",
+      "Defective water level probe"
+    ],
+    "checks": [
+      "Check the system for sufficient water.",
+      "Test the circuitry with the C-More LOW WATER TEST and RESET buttons; replace the circuitry if it does not respond.",
+      "Check continuity from the probe end to the shell; change the probe if none."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 71
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "MODBUS COMM FAULT",
+    "meaning": "The unit is not receiving information from the Modbus network.",
+    "causes": [
+      "Unit not seeing information from the Modbus network"
+    ],
+    "checks": [
+      "Check network connections; if the fault persists contact qualified service personnel."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 71
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "O2 PERCENTAGE LOW",
+    "meaning": "The oxygen reading is low.",
+    "causes": [
+      "Dirty air filter or blocked inlet air duct",
+      "Gas pressure too high",
+      "Blocked flue or blocked condensate trap",
+      "Blower failure or VFD failure"
+    ],
+    "checks": [
+      "Clean the air filter per Section 4.10 and inspect the duct.",
+      "Measure gas pressure between the SSOV and air/fuel valve; it should be 7.9 in. W.C. plus or minus 0.2.",
+      "Check the flue and the condensate trap (Section 4.9).",
+      "Check blower speed with a strobe against VFD Hz (RPM = 57.5 x Hz); check the VFD using the VFD manufacturer documentation."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 71
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "O2 SENSOR MALFUNCTION",
+    "meaning": "The oxygen sensor reads below -4 percent or above 24 percent.",
+    "causes": [
+      "O2 reading less than -4 percent or greater than 24 percent"
+    ],
+    "checks": [
+      "Check the O2 offset and gain values in the Calibration menu; if they are 1.0 and 1024 respectively, replace the O2 sensor."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 71
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "O2 % OUT OF RANGE",
+    "meaning": "The oxygen reading is out of range.",
+    "causes": [
+      "Combustion calibration incorrect",
+      "Blocked inlet air duct or louver"
+    ],
+    "checks": [
+      "Check with a combustion analyzer and recalibrate.",
+      "Unblock the air inlet and measure the open area for combustion air to the room."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 71
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "OUTDOOR TEMP SENSOR",
+    "meaning": "Fault with the outdoor temperature sensor.",
+    "causes": [
+      "Loose or broken wiring",
+      "Defective or incorrect sensor"
+    ],
+    "checks": [
+      "Inspect the sensor wiring.",
+      "Check sensor resistance against specification.",
+      "Confirm the correct sensor is installed."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 71
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "PRG SWTCH CLOSED DURING IGNITION",
+    "meaning": "The purge position switch is closed during ignition.",
+    "causes": [
+      "Air/fuel valve rotated to purge and did not return to the ignition position",
+      "Defective or shorted switch, or switch wired incorrectly",
+      "Defective power supply board or fuse, or defective IGST board"
+    ],
+    "checks": [
+      "Start the unit; the valve should go to purge then back toward closed. If not, check calibration and refer to qualified service personnel.",
+      "If it returns, check the purge switch for continuity between N.O. and COM when not on the cam and check its wiring; replace if wired correctly.",
+      "Check power supply board DS1 and DS2 LEDs and the IGST heartbeat LED."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 72
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "PRG SWTCH OPEN DURING PURGE",
+    "meaning": "The purge position switch did not close during purge.",
+    "causes": [
+      "Defective purge switch",
+      "No voltage at switch, or switch wired incorrectly",
+      "Defective power supply board or fuse, or defective IGST board"
+    ],
+    "checks": [
+      "If the air/fuel valve rotates, check the purge switch for continuity when closing; replace if none.",
+      "Measure 24 VAC from each side of the switch to ground; if absent refer to qualified service personnel.",
+      "Check wiring and the power supply and IGST board LEDs."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 72
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "RECIRC PUMP FAILURE",
+    "meaning": "The internal recirculation pump has failed.",
+    "causes": [
+      "Internal recirculation pump failed"
+    ],
+    "checks": [
+      "Replace the recirculation pump."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 72
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "REMOTE SETPT SIGNAL FAULT",
+    "meaning": "The remote setpoint signal is not present or is wrong.",
+    "causes": [
+      "Signal not installed, wrong polarity, defective at source or loose wiring",
+      "Signal not isolated (floating) if 4 to 20 mA",
+      "C-More signal type switches not set for voltage or current"
+    ],
+    "checks": [
+      "Check the I/O box connection, polarity, signal level and wiring continuity.",
+      "Check isolation at the source.",
+      "Check the PMC DIP switch and the control signal type in the Configuration menu."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 73
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "RESIDUAL FLAME",
+    "meaning": "Flame is detected when none should be present.",
+    "causes": [
+      "Defective flame detector",
+      "SSOV not fully closed"
+    ],
+    "checks": [
+      "Replace the flame detector.",
+      "Check the SSOV open/close indicator window and confirm it is fully closed; if not, replace the valve or actuator.",
+      "Close the 2 in. gas shut-off valve downstream of the SSOV, install a manometer at the leak detection port between the SSOV and shut-off valve; if there is a pressure reading replace the SSOV valve or actuator."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 73
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "SSOV FAULT DURING PURGE",
+    "meaning": "The safety shut-off valve fault occurred during purge.",
+    "causes": [
+      "See SSOV SWITCH OPEN"
+    ],
+    "checks": [
+      "See SSOV SWITCH OPEN."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 73
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "SSOV FAULT DURING RUN",
+    "meaning": "The SSOV switch closed for 15 seconds during the run.",
+    "causes": [
+      "SSOV switch closed for 15 seconds during run"
+    ],
+    "checks": [
+      "Replace the actuator."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 73
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "SSOV RELAY FAILURE",
+    "meaning": "The SSOV relay on the IGST board has failed or the SSOV is miswired.",
+    "causes": [
+      "SSOV relay failed on the IGST board",
+      "Floating neutral",
+      "Hot and neutral reversed at the SSOV"
+    ],
+    "checks": [
+      "Press CLEAR and restart; if the fault persists replace the IGST board.",
+      "Neutral and earth ground must be connected at the source; the measured voltage between them should be near zero, no more than a few millivolts.",
+      "Check the SSOV power wiring."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 73
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "SSOV SWITCH OPEN",
+    "meaning": "The SSOV proof-of-closure switch does not show the valve closed.",
+    "causes": [
+      "Actuator not allowing full closure of the gas valve",
+      "SSOV powered when it should not be",
+      "Defective switch or actuator, or incorrectly wired switch"
+    ],
+    "checks": [
+      "Observe the SSOV indicator and confirm the valve fully closes.",
+      "If the SSOV never closes it may be powered continuously: close the gas supply, remove power and refer to qualified service personnel.",
+      "Remove the SSOV electrical cover and check switch continuity with the gas valve closed; adjust or replace the switch or actuator.",
+      "Confirm the proof-of-closure switch is correctly wired."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 74
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "STEPPER MOTOR FAILURE",
+    "meaning": "The air/fuel valve stepper motor is not responding correctly.",
+    "causes": [
+      "Air/fuel valve out of calibration or unplugged",
+      "Loose wiring to the stepper motor or defective motor",
+      "Defective power supply board or fuse, or defective IGST board"
+    ],
+    "checks": [
+      "Perform the Stepper Feedback Calibration procedure (C-More User Manual OMM-0032, Section 6.2.1).",
+      "Check the air/fuel valve is connected and inspect connections at the motor and harness.",
+      "Replace the stepper motor if defective.",
+      "Check power supply board DS1 and DS2 LEDs and the IGST heartbeat LED."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 74
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Benchmark 5000/6000",
+    "code": "SSOV FAULT DURING IGNITION",
+    "meaning": "The SSOV did not open during ignition.",
+    "causes": [
+      "SSOV did not open"
+    ],
+    "checks": [
+      "Check the pilot assembly for carbon buildup.",
+      "Check the scanners sensed the pilot flame.",
+      "Check power through the ignition relay.",
+      "Scanners close the neutral side of the relay coil."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "OMM-0118_B+GF-203+BMK+PLATINUM+5000-6000+Operation-Maintenance+G-19-0001+and+UP+5-9-19.pdf",
+      "page": 74
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "AIRFLOW FAULT DURING IGNITION",
+    "meaning": "Airflow was not proven while the unit was in the ignition cycle.",
+    "causes": [
+      "Blower stopped on thermal or current overload",
+      "Blocked blower inlet or ductwork, blocked or defective Blower Proof switch or blocked-air inlet switch",
+      "Loose temperature (AUX) connection or defective temperature sensor",
+      "Loose 0-10 V wire to the blower, defective I/O box, wrong 0-10 V output selection or defective air-fuel valve potentiometer"
+    ],
+    "checks": [
+      "Check the blower for excess heat or high current.",
+      "Inspect the inlet and ductwork; remove and inspect, clean or replace the proof and blocked-air inlet switches. Check continuity with the blower running; replace if erratic or above zero ohms.",
+      "Check inlet air temperature and AUX input voltage against Appendix C.",
+      "Measure the I/O box 0-10 V output (8.2 V equals 100 percent open valve) and check Analog Out is Valve Position 0-10V.",
+      "Check air/fuel valve position at 0, 50 and 100 percent against the dial."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 89
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "AIRFLOW FAULT DURING PURGE",
+    "meaning": "Airflow was not proven during purge.",
+    "causes": [
+      "Blower not running or too slow",
+      "Defective or blocked air flow switch, or blocked blower inlet or ductwork",
+      "No voltage to the switch from the control box",
+      "Causes 3 to 12 of AIRFLOW FAULT DURING IGNITION also apply"
+    ],
+    "checks": [
+      "Start the unit; if the blower does not run check the blower solid-state relay, then the blower.",
+      "If it runs, check the airflow switch for continuity; replace if none.",
+      "Remove and inspect the switch for blockage; inspect the blower inlet and ductwork.",
+      "Measure 24 VAC from each side of the switch to ground during start; if absent refer to qualified service personnel."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 90
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "AIRFLOW FAULT DURING RUN",
+    "meaning": "Airflow was lost while running.",
+    "causes": [
+      "Blower stopped on thermal or current overload",
+      "Blocked blower inlet, ductwork or airflow switch",
+      "Defective airflow switch",
+      "Combustion oscillations"
+    ],
+    "checks": [
+      "Check the blower for excess heat or high current.",
+      "Inspect the inlet and ductwork; inspect and clean or replace the airflow switch.",
+      "Check airflow switch continuity with the blower running; replace if erratic or above zero ohms.",
+      "Run to full fire; if the unit rumbles or runs rough, perform combustion calibration."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 90
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "DELAYED INTERLOCK OPEN",
+    "meaning": "The delayed interlock circuit is open.",
+    "causes": [
+      "Delayed interlock jumper not installed or removed",
+      "Device proving switch on the interlock is not closed"
+    ],
+    "checks": [
+      "Check a jumper is installed across the delayed interlock terminals in the I/O box.",
+      "If two external wires are on the terminals, check the end switch for a device such as a pump or louver. A jumper may be temporarily installed to test the interlock; remove it afterwards."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 91
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "FLAME LOSS DURING IGN",
+    "meaning": "Flame was lost or not detected during the ignition trial.",
+    "causes": [
+      "Burner ground screw not installed or loose",
+      "Worn flame detector",
+      "No spark from the spark plug, or defective ignition transformer",
+      "Defective IGST board or defective SSOV",
+      "Carbon or debris on the burner",
+      "Staged ignition ball valve closed, solenoid valve not opening, or clogged staged ignition piece"
+    ],
+    "checks": [
+      "Inspect and retighten the burner ground screw.",
+      "Remove and inspect the flame detector for wear.",
+      "Close the internal gas valve and arc a spark igniter outside the unit; if no spark check for 120 VAC at the transformer primary during ignition.",
+      "Observe the SSOV indicator opening while arcing; if it does not open check 120 VAC at its terminals; if absent the IGST board may be defective.",
+      "Remove the burner and inspect for carbon or debris.",
+      "Open the ball valve downstream of the SSOV; listen for the solenoid valve clicking; inspect the staged ignition piece for blockage."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 91
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "FLAME LOSS DURING RUN",
+    "meaning": "Flame was lost while running.",
+    "causes": [
+      "Worn flame detector or cracked ceramic",
+      "Defective regulator",
+      "Poor combustion calibration",
+      "Debris on burner",
+      "Blocked condensate drain"
+    ],
+    "checks": [
+      "Inspect the flame detector for wear or cracked ceramic; replace if necessary.",
+      "Check gas pressure into and out of the air/fuel valve.",
+      "Check combustion calibration.",
+      "Remove the burner and inspect for carbon or debris.",
+      "Remove any blockage in the condensate drain."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 92
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "HEAT DEMAND FAILURE",
+    "meaning": "The heat demand relays on the ignition/stepper board did not respond correctly.",
+    "causes": [
+      "Heat demand relays on the IGST board failed to activate",
+      "Relay activated when not in demand"
+    ],
+    "checks": [
+      "Press CLEAR and restart; if it persists replace the IGST board.",
+      "A defective relay means replacing the IGST board."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 92
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "HIGH EXHAUST TEMPERATURE",
+    "meaning": "Exhaust temperature is high.",
+    "causes": [
+      "Poor combustion calibration",
+      "Heat exchanger has scale"
+    ],
+    "checks": [
+      "Check combustion calibration using the procedures in Chapter 4.",
+      "Clean the heat exchanger using the procedures in Chapter 6."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 92
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "HIGH GAS PRESSURE",
+    "meaning": "Gas pressure is high.",
+    "causes": [
+      "Incorrect supply gas pressure",
+      "Defective SSOV actuator",
+      "Defective high gas pressure switch"
+    ],
+    "checks": [
+      "Ensure gas pressure at the SSOV inlet is 2 psig maximum.",
+      "If pressure downstream of the SSOV actuator cannot be lowered below 3.0 in. W.C. with the adjustment screw, the actuator may be defective.",
+      "Remove the switch leads and check continuity across common and normally closed with the unit not firing; replace if none."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 92
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "HIGH WATER TEMP SWITCH OPEN",
+    "meaning": "The high water temperature switch has opened.",
+    "causes": [
+      "Faulty water temperature switch",
+      "Incorrect PID settings or faulty shell temperature sensor",
+      "Unit in Manual mode, or setpoint above the over-temperature switch setpoint",
+      "System flow changes faster than the unit can respond"
+    ],
+    "checks": [
+      "Test that the switch trips at its actual setting.",
+      "Compare PID settings with the menu defaults and reset if changed.",
+      "Measure shell and BTU sensor resistance at a known water temperature with the Appendix C charts.",
+      "If in Manual mode switch to Auto; confirm the switch is set above the unit setpoint.",
+      "On variable flow systems check flow rate changes."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 93
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "HIGH WATER TEMPERATURE",
+    "meaning": "The unit exceeded its high water temperature limit.",
+    "causes": [
+      "Causes under HIGH WATER TEMP SWITCH OPEN",
+      "Temp HI Limit setting too low"
+    ],
+    "checks": [
+      "See HIGH WATER TEMP SWITCH OPEN.",
+      "Check the Temp HI Limit setting."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 93
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "IGN BOARD COMM FAULT",
+    "meaning": "Communication fault between the PMC board and the IGST board.",
+    "causes": [
+      "Communication fault between the PMC and IGST boards"
+    ],
+    "checks": [
+      "Press CLEAR and restart; if the fault persists contact qualified service personnel."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 93
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "IGN SWTCH CLOSED DURING PURGE",
+    "meaning": "The ignition position switch is closed during purge.",
+    "causes": [
+      "Air/fuel valve not rotating",
+      "Defective or shorted switch, switch wired incorrectly",
+      "Defective power supply board or fuse, or defective IGST board"
+    ],
+    "checks": [
+      "Start the unit; the air/fuel valve should rotate to purge (open). If not, check its calibration, then the valve or control box.",
+      "Check the ignition switch for continuity between N.O. and COM when not on the cam; replace if it shows continuity.",
+      "Check wiring, then the power supply board LEDs DS1 and DS2 and the IGST heartbeat LED DS1."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 93
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "IGN SWTCH OPEN DURING IGNITION",
+    "meaning": "The ignition position switch is open during ignition.",
+    "causes": [
+      "Air/fuel valve not rotating to ignition position",
+      "Defective ignition switch",
+      "Defective power supply board or fuse, or defective IGST board"
+    ],
+    "checks": [
+      "Start the unit; the valve should go to purge then back toward closed. If not, check calibration and refer to qualified service personnel.",
+      "Check ignition switch continuity between N.O. and COM when on the cam.",
+      "Check the power supply board LEDs and the IGST heartbeat LED."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 94
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "INTERLOCK OPEN",
+    "meaning": "The interlock circuit is open.",
+    "causes": [
+      "Interlock jumper not installed or removed",
+      "Energy Management System does not have the unit enabled",
+      "Device proving switch on the interlock is not closed"
+    ],
+    "checks": [
+      "Check a jumper is installed across the interlock terminals in the I/O box.",
+      "If two external wires are on the terminals, check whether an Energy Management system has the unit disabled. A jumper may be temporarily installed to test the circuit; remove it afterwards.",
+      "Check the proving switch for any device on the interlock closes and the device is operational."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 94
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "LINE VOLTAGE OUT OF PHASE",
+    "meaning": "Line voltage is wired out of phase.",
+    "causes": [
+      "Line and neutral switched in the AC power box",
+      "Incorrect power supply transformer wiring"
+    ],
+    "checks": [
+      "Check hot and neutral in the AC power box are not reversed.",
+      "Check transformer wiring against the power box wiring diagram."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 95
+    }
+  },
+  {
+    "manufacturer": "AERCO",
+    "model": "Innovation",
+    "code": "LOW GAS PRESSURE",
+    "meaning": "Gas pressure is low.",
+    "causes": [
+      "Incorrect supply gas pressure",
+      "Defective low pressure gas switch"
+    ],
+    "checks": [
+      "Measure gas pressure upstream of the SSOV actuator(s) with the unit firing; for FM and DBB gas trains it should be between 4.0 and 14 in. W.C.",
+      "Measure at the low gas pressure switch; if above 2.6 in. W.C. check continuity across the switch and replace if necessary."
+    ],
+    "source": {
+      "manufacturer": "AERCO",
+      "doc": "User Manual - Innovation Series - INN600, INN800, INN1060, INN1350 - Applicable to serial numbers G-12-0693 and above.pdf",
+      "page": 95
+    }
+  }
+]

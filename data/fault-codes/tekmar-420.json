@@ -1,0 +1,185 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "ADJUST ERROR",
+    "meaning": "The control failed to read the Adjust menu settings and reloaded the factory default settings. Operation stops until you check the Adjust menu settings.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Advanced and check the settings in the Adjust menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 22
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "MISCELLANEOUS ERROR",
+    "meaning": "The control failed to read the Miscellaneous menu settings and reloaded the factory default settings. Operation stops until you check the Miscellaneous menu settings.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Advanced and check the settings in the Misc menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 22
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "BOILER BUS ERROR",
+    "meaning": "Communication has been lost on the boiler bus.",
+    "causes": [],
+    "checks": [
+      "Check the tN4, C and R wires for each tN4 device.",
+      "Check the polarity of the C and R wires.",
+      "Check for loose or broken wires."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 22
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "BOILER BUS DEVICE LOST",
+    "meaning": "Communication is lost to a tN4 device at address AA on the Boiler bus. The LCD on the lost device displays Bus Boil OPn.",
+    "causes": [],
+    "checks": [
+      "Ensure that there is power to the lost device.",
+      "Trace the wires from the control to the lost device looking for loose or damaged wires.",
+      "If you deliberately remove a tN4 device, hold the Up and Down buttons to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 22
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "MIX MODULE ERROR",
+    "meaning": "A Mixing Module has been connected to the Boiler bus.",
+    "causes": [
+      "Mixing Module connected to the Boiler bus"
+    ],
+    "checks": [
+      "Ensure that there is not a Mixing Module on the Boiler bus."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 22
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "BOILER SENSOR SHORT CIRCUIT",
+    "meaning": "Due to a short circuit, the control failed to read the boiler sensor. When there is a call for heat, the control no longer controls the boiler(s). Instead it provides a boiler enable to the boiler's aquastat or boiler control until the sensor is repaired. The control will not operate the boiler contact if the Boil Minimum setting is less than 100 F (38.0 C).",
+    "causes": [
+      "Short circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the Data Brochure D 070."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 22
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "BOILER SENSOR OPEN CIRCUIT",
+    "meaning": "Due to an open circuit, the control failed to read the boiler sensor. The control no longer controls the boiler. Instead it provides a boiler enable to the boiler's aquastat or boiler control until the sensor is repaired. The control will not operate the boiler contact if the Boil Minimum setting is less than 100 F (38.0 C).",
+    "causes": [
+      "Open circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the Data Brochure D 070.",
+      "If you deliberately remove the boiler sensor, set the Boiler Sensor Return / Supply DIP switch to Return. Power down for 10 seconds then restart the control."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 22
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "OUTDOOR SENSOR SHORT CIRCUIT",
+    "meaning": "Due to a short circuit, the control failed to read the outdoor sensor. The control assumes an outdoor temperature of 32 F (0.0 C) and continues operation.",
+    "causes": [
+      "Short circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the Data Brochure D 070."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 22
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "OUTDOOR SENSOR OPEN CIRCUIT",
+    "meaning": "Due to an open circuit, the control failed to read the outdoor sensor. The control assumes an outdoor temperature of 32 F (0.0 C) and continues operation.",
+    "causes": [
+      "Open circuit"
+    ],
+    "checks": [
+      "Locate and repair the problem as described in the Data Brochure D 070.",
+      "Once the error is corrected, press any button to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "DEV SCHD",
+    "meaning": "The selected system schedule is no longer available.",
+    "causes": [
+      "System schedule master is no longer connected to the network",
+      "System schedule number has been changed on the schedule master"
+    ],
+    "checks": [],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 23
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "420",
+    "code": "DEVICE ERROR AT ADDRESS #:##",
+    "meaning": "#:## is the address of the device with the error. The bus number displays before the colon and the device number displays after. A b:01 to b:24 address indicates a Device Error on the Boiler Bus.",
+    "causes": [],
+    "checks": [
+      "Go to the device with the address displayed.",
+      "When the problem on that device is corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 420.pdf",
+      "page": 23
+    }
+  }
+]

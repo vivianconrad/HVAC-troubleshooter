@@ -1,0 +1,133 @@
+{
+  "id": "mm-lwco-boiler-wont-fire",
+  "generic": true,
+  "title": "Boiler will not fire: low water cut-off circuit open",
+  "manufacturer": "McDONNELL & MILLER",
+  "equipment": "McDonnell & Miller low water cut-offs and water feeders (field-derived draft; probe and float types)",
+  "start": "n1",
+  "nodes": {
+    "n1": {
+      "type": "question",
+      "text": "Is the burner circuit open, or is the boiler locked out with a low-water light?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "n2"
+        },
+        {
+          "label": "No",
+          "next": "r_not"
+        }
+      ]
+    },
+    "r_not": {
+      "type": "result",
+      "cause": "This is not an LWCO problem yet.",
+      "fix": [
+        "Use the general no-heat tree to find why the boiler is not firing."
+      ]
+    },
+    "n2": {
+      "type": "question",
+      "text": "Ask the on-site operator to read the sight glass. Is the water level actually low?",
+      "options": [
+        {
+          "label": "Yes, water is low",
+          "next": "n3"
+        },
+        {
+          "label": "No, level looks normal",
+          "next": "n4"
+        }
+      ]
+    },
+    "n3": {
+      "type": "question",
+      "text": "Is an automatic water feeder installed?",
+      "options": [
+        {
+          "label": "Yes",
+          "next": "r_feeder"
+        },
+        {
+          "label": "No",
+          "next": "r_manual"
+        }
+      ]
+    },
+    "r_feeder": {
+      "type": "result",
+      "cause": "The feeder is not restoring water.",
+      "fix": [
+        "Have the tech check whether the feeder valve is opening and whether the strainer is clogged.",
+        "See the McDonnell & Miller Series 47 and WFE Uni-Match trees for the manual-cited checks.",
+        "Also ask why the level dropped (leak, blow-down, relief valve)."
+      ]
+    },
+    "r_manual": {
+      "type": "result",
+      "cause": "No feeder, so the level has to be restored by hand.",
+      "fix": [
+        "Make sure the boiler is not overheated before adding water; if the level is below the visible glass, shut down and let it cool first.",
+        "Manually feed water to the normal operating level (about halfway up the sight glass). Does the LWCO reset? If it does, find out why the level fell.",
+        "If the level is normal but the LWCO still shows low water, restart this tree and answer that the level looks normal."
+      ]
+    },
+    "n4": {
+      "type": "question",
+      "text": "Level is normal but the control still calls low water. Which type of control is it?",
+      "options": [
+        {
+          "label": "Probe type",
+          "next": "n5"
+        },
+        {
+          "label": "Mechanical float type",
+          "next": "r_float"
+        }
+      ]
+    },
+    "n5": {
+      "type": "question",
+      "text": "Ask the operator to press the Test button. Does the LED change or the control reset?",
+      "options": [
+        {
+          "label": "Yes, it responds",
+          "next": "r_probe"
+        },
+        {
+          "label": "No change",
+          "next": "r_cycle"
+        }
+      ]
+    },
+    "r_cycle": {
+      "type": "result",
+      "cause": "The control is not responding; try a power cycle first.",
+      "fix": [
+        "Power-cycle the control and retest.",
+        "If it still does not respond, continue with the probe inspection below, then suspect the control itself (internal board failure)."
+      ]
+    },
+    "r_probe": {
+      "type": "result",
+      "cause": "The probe is likely fouled with scale, oil or sediment.",
+      "fix": [
+        "Remove power, pull the probe and look for scale, oil or sediment.",
+        "Clean it (the field note uses emery cloth or Scotch-Brite), reinstall and retest.",
+        "Do not use PTFE tape on the probe threads; make sure the probe does not touch the boiler or pipe wall.",
+        "See the Guard Dog RB-122E and FPC-1000 tree for the manual-cited probe checks."
+      ]
+    },
+    "r_float": {
+      "type": "result",
+      "cause": "The float linkage may be sticking or the switch may be failing.",
+      "fix": [
+        "Tap the float chamber gently; sediment can wedge the float linkage.",
+        "With power isolated, raise the float by hand and check the switch contacts for continuity (mercury switch or microswitch). Replace the switch head if the contacts stay open.",
+        "See the Series 63 tree for the manual-cited float chamber and switch checks.",
+        "Never bypass the low water cut-off."
+      ]
+    }
+  }
+}

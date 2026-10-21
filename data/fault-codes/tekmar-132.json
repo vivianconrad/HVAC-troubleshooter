@@ -1,0 +1,124 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "132",
+    "code": "OUTDOOR SENSOR SHORT",
+    "meaning": "Outdoor sensor fault (short circuit) while the WWSD dial is not set to Off. The 132 displays an error message and turns on the Alert A contact. The control operates the pumps based on demands.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press the Clear Alert button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 132.pdf",
+      "page": 9
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "132",
+    "code": "OUTDOOR SENSOR OPEN (WWSD NOT OFF)",
+    "meaning": "Outdoor sensor fault (open circuit) while the WWSD dial is not set to Off. The 132 displays an error message and turns on the Alert A contact. The control operates the pumps based on demands.",
+    "causes": [],
+    "checks": [
+      "Locate and repair the problem as described in Data Brochure D 070. Press the Clear Alert button to clear the error message after the sensor has been repaired."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 132.pdf",
+      "page": 9
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "132",
+    "code": "CONTROL INTERNAL ERROR",
+    "meaning": "Internal control fault. The 132 displays an error message and turns on the Alert A contact. The control continues operation.",
+    "causes": [],
+    "checks": [
+      "Press the Clear Alert button to clear the error message. If the error message remains, the control must be returned for repair."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 132.pdf",
+      "page": 9
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "132",
+    "code": "FLOW PROOF SIGNAL",
+    "meaning": "A flow proof signal is present when both pump contacts have been off for more than 4 minutes. The 132 displays an error message and turns on an alert contact. The control stops operation.",
+    "causes": [
+      "Flow proof device has failed (a flow proof signal should not be present once the pump contacts are turned off)"
+    ],
+    "checks": [
+      "Press the Clear Alert button to clear the error message after the fault is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 132.pdf",
+      "page": 9
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "132",
+    "code": "PUMP 1 FAILED",
+    "meaning": "Pump 1 failed. The appropriate error message and alert signal are displayed. If flow is not established by the first stage pump, the 132 turns off the first stage pump contact and turns on the second stage pump contact.",
+    "causes": [],
+    "checks": [
+      "Press the Clear Alert button to clear the error message after the fault is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 132.pdf",
+      "page": 9
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "132",
+    "code": "PUMP 2 FAILED",
+    "meaning": "Pump 2 failed. The appropriate error message and alert signal are displayed.",
+    "causes": [],
+    "checks": [
+      "Press the Clear Alert button to clear the error message after the fault is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 132.pdf",
+      "page": 9
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "132",
+    "code": "PUMP 1 AND PUMP 2 FAILED",
+    "meaning": "Both pumps failed. The appropriate error message and alert signal are displayed. Failure of both pumps is a critical failure (Alert B in Alert Levels mode); the control is no longer able to operate the pumps and it is not possible to provide flow.",
+    "causes": [],
+    "checks": [
+      "Press the Clear Alert button to clear the error message after the fault is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 132.pdf",
+      "page": 9
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "132",
+    "code": "2 STAGE DEMAND SHORT CYCLING",
+    "meaning": "The 2-stage demand is short cycling. The 132 displays an error message and turns on the Alert A contact. The control continues operation.",
+    "causes": [],
+    "checks": [
+      "Press the Clear Alert button to clear the error message after the fault is corrected."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 132.pdf",
+      "page": 9
+    }
+  }
+]

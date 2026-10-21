@@ -1,0 +1,355 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "CONTROL SETUP FAILURE",
+    "meaning": "The control failed to read the Setup menu settings and reloaded factory default settings. Operation stops until this error message is cleared.",
+    "causes": [],
+    "checks": [
+      "Marquee tips: RESET DEFAULTS, VERIFY ALL SETTINGS.",
+      "To clear, press the CLEAR button while viewing this warning message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 56
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "BOILER SUPPLY SENSOR ERROR",
+    "meaning": "OPEN or SHRT displays on the screen. Due to an open or short circuit, the control failed to read the boiler supply sensor. If available, the control operates using the boiler return sensor. If the boiler return sensor is unavailable, operation stops. The error message self clears once the error condition is corrected.",
+    "causes": [
+      "Open or short circuit in the boiler supply sensor or its wiring"
+    ],
+    "checks": [
+      "Marquee tips: CHECK BOILER SUPPLY SENSOR, CHECK BOILER SUPPLY SENSOR WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 56
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "BOILER RETURN SENSOR ERROR",
+    "meaning": "OPEN or SHRT displays on the screen. Due to an open or short circuit, the control failed to read the boiler return sensor. If the boiler supply sensor is available, the control operates normally. If the boiler supply sensor is unavailable, the control can only operate to satisfy indirect DHW if it is located in the near boiler piping (IDHW Location = Near). The error message self clears once the error condition is corrected.",
+    "causes": [
+      "Open or short circuit in the boiler return sensor or its wiring"
+    ],
+    "checks": [
+      "Marquee tips: CHECK BOILER RETURN SENSOR, CHECK BOILER RETURN SENSOR WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 56
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "DHW SENSOR ERROR",
+    "meaning": "OPEN or SHRT displays on the screen. Due to an open or short circuit, the control failed to read the DHW sensor. The control stops operation for DHW heating (indirect or direct DHW). The error message self clears once the error condition is corrected.",
+    "causes": [
+      "Open or short circuit in the DHW sensor or its wiring"
+    ],
+    "checks": [
+      "Marquee tips: CHECK DHW SENSOR, CHECK DHW SENSOR WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 56
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "OUTDOOR SENSOR ERROR",
+    "meaning": "OPEN or SHRT displays on the screen. Due to an open or short circuit, the control failed to read the outdoor sensor. The control assumes an outdoor temperature of 32 F (0.0 C) and continues operation. The error message self clears once the error condition is corrected.",
+    "causes": [
+      "Open or short circuit in the outdoor sensor or its wiring"
+    ],
+    "checks": [
+      "Marquee tips: CHECK OUTDOOR SENSOR, CHECK OUTDOOR SENSOR WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 56
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "VENT SENSOR ERROR",
+    "meaning": "OPEN or SHRT displays on the screen. Due to an open or short circuit, the control failed to read the vent sensor. If the Vent Maximum is set to a temperature, the control stops operation. If the Vent Maximum is set to Off, the control continues operation. The error message self clears once the error condition is cleared.",
+    "causes": [
+      "Open or short circuit in the vent sensor or its wiring"
+    ],
+    "checks": [
+      "Marquee tips: CHECK VENT SENSOR, CHECK VENT SENSOR WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 56
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "BOILER (#) OUTLET SENSOR ERROR",
+    "meaning": "OPEN or SHRT displays on the screen. Due to an open or short circuit, the control failed to read the boiler (#) outlet sensor. The error message self clears once the error condition is cleared.",
+    "causes": [
+      "Open or short circuit in the boiler (#) outlet sensor or its wiring"
+    ],
+    "checks": [
+      "Marquee tips: CHECK BOILER (#) OUTLET SENSOR, CHECK BOILER (#) OUTLET SENSOR WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 56
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "BOILER (#) OUTLET SENSOR MAXIMUM EXCEEDED",
+    "meaning": "The boiler outlet (#) temperature exceeded the Maximum Outlet temperature. The control stops operation for the associated boiler. The error message self clears once the error condition is cleared.",
+    "causes": [],
+    "checks": [
+      "Marquee tip: BOILER (#) OUTLET TEMP EXCEEDS MAX OUT SETTING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "BOILER INLET SENSOR ERROR",
+    "meaning": "OPEN or SHRT displays on the screen. Due to an open or short circuit, the control failed to read the boiler inlet sensor. The control operates normally while the error message is present. The error message self clears once the error condition is corrected.",
+    "causes": [
+      "Open or short circuit in the boiler inlet sensor or its wiring"
+    ],
+    "checks": [
+      "Marquee tips: CHECK BOILER INLET SENSOR, CHECK BOILER INLET SENSOR WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "PRIMARY PUMP P1 FLOW PROOF FAILURE",
+    "meaning": "The primary pump P1 has failed. Once the primary pump 1 relay closed, a flow proof call was not detected before the flow proof delay time elapsed.",
+    "causes": [],
+    "checks": [
+      "Marquee tips: CHECK FLOW PROVING DEVICE, CHECK FLOW PROVING DEVICE WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "PRIMARY PUMP P2 FLOW PROOF FAILURE",
+    "meaning": "The primary pump P2 has failed. Once the primary pump 2 relay closed, a flow proof call was not detected before the flow proof delay time elapsed.",
+    "causes": [],
+    "checks": [
+      "Marquee tips: CHECK FLOW PROVING DEVICE, CHECK FLOW PROVING DEVICE WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "PRIMARY PUMP P1 & P2 FLOW PROOF FAILURE",
+    "meaning": "Both the primary pump P1 and P2 have failed.",
+    "causes": [],
+    "checks": [
+      "Marquee tips: CHECK FLOW PROVING DEVICE, CHECK FLOW PROVING DEVICE WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "FLOW PROOF CALL ERROR",
+    "meaning": "The primary pump has been turned off but the flow proof call remains detected after 4 minutes.",
+    "causes": [],
+    "checks": [
+      "Marquee tips: CHECK FLOW PROVING DEVICE, CHECK FLOW PROVING DEVICE WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "COMBUSTION AIR PROOF FAILURE",
+    "meaning": "The combustion air damper has failed. The C.A. (Aux) relay closed, but the control did not detect a C.A. proof call before the C.A. proof delay time elapsed.",
+    "causes": [],
+    "checks": [
+      "Marquee tips: CHECK CA PROVING DEVICE, CHECK CA PROVING DEVICE WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "COMBUSTION AIR PROOF CALL ERROR",
+    "meaning": "The combustion air damper has been turned off but the C.A. proof call remains detected after 4 minutes.",
+    "causes": [],
+    "checks": [
+      "Marquee tips: CHECK CA PROVING DEVICE, CHECK CA PROVING DEVICE WIRING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "VENT MAXIMUM EXCEEDED",
+    "meaning": "The Vent Sensor temperature has exceeded the VENT MAX setting. The control stops operation for the entire plant.",
+    "causes": [],
+    "checks": [
+      "Marquee tip: VENT TEMP EXCEEDS MAX SETTING."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "NO HEAT ALERT",
+    "meaning": "The boiler supply temperature did not increase within the boiler alert time. The control operates normally while this Alert is present.",
+    "causes": [],
+    "checks": [
+      "Marquee tip: NO CHANGE IN SUPPLY TEMP WITHIN SPECIFIED PERIOD OF TIME.",
+      "To reset the Alert, press the CLEAR button while viewing this warning message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 57
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "TEKMARNET DEVICE LOST",
+    "meaning": "Communication is lost to a tN4 device on one of the four Boiler Buses (b, 1, 2, 3). The number shown is the address of the lost device. The display on the lost device displays Bus Boil Opn. The error message self clears when the error condition is corrected.",
+    "causes": [],
+    "checks": [
+      "Ensure that there is power to the lost device.",
+      "Trace the wires from the control to the lost device looking for loose or damaged wires.",
+      "If the tN4 device is deliberately removed, press the CLEAR button while viewing this error message.",
+      "Marquee tip: DEVICE MISSING ON TN4 BUS (#)."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 58
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "TEKMARNET DUPLICATE MASTER ERROR",
+    "meaning": "More than one tN4 system control has been detected on the tN4 Boiler Bus. The 284 is a Master Device and no other tekmarNet reset controls can be added to the tN4 Boiler Bus terminals.",
+    "causes": [],
+    "checks": [
+      "If another master control has been added, it must be removed from the system.",
+      "Marquee tip: DUPLICATE MASTER CONTROL DETECTED ON TN4 BUS."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 58
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "TEKMARNET DEVICE ERROR #:##",
+    "meaning": "#:## is the address of the device with the error. The bus number displays before the colon and the device number after. Possible addresses: b:01 to b:24 (Boiler Bus b), 1:01 to 1:24 (Boiler Bus 1), 2:01 to 2:24 (Boiler Bus 2), 3:01 to 3:24 (Boiler Bus 3).",
+    "causes": [],
+    "checks": [
+      "Go to the device with the address displayed.",
+      "Marquee tip: DEVICE ERROR ON TN4 BUS (#)."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 58
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "TEKMARNET DUPLICATE SCHEDULE MASTER ERROR",
+    "meaning": "More than one tN4 device has been assigned the same master number. The control operates using the Occupied settings while this error is present.",
+    "causes": [],
+    "checks": [
+      "To clear this error, select a different Schedule Master number, set a different Schedule Member number, set the Schedule to Control, or set the Schedule to None.",
+      "Marquee tip: DUPLICATE MASTER SCHEDULE DETECTED ON TN4 BUS."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 58
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "284",
+    "code": "TEKMARNET SCHEDULE MEMBER ERROR",
+    "meaning": "The control can no longer detect its schedule master. The control operates using the Occupied settings while this error is present.",
+    "causes": [],
+    "checks": [
+      "To clear this error, select a different Schedule Member number, set the Schedule to Control, or set the Schedule to None.",
+      "Marquee tips: CHECK SCHEDULE MASTER WIRING ON TN4 BUS, CHECK SCHEDULE MASTER ADDRESS ON TN4 BUS."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 284.pdf",
+      "page": 58
+    }
+  }
+]

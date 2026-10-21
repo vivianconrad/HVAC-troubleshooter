@@ -1,0 +1,455 @@
+[
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SETUP MENU SAVE ERROR",
+    "meaning": "The thermostat failed to read the Setup menu settings from memory and has reloaded the factory default settings. The thermostat stops normal operation until all settings in the Setup menu are checked except to provide freeze protection.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Setup menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 37
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SET TEMP MENU SAVE ERROR",
+    "meaning": "The thermostat failed to read the Set Temp menu settings from memory and has reloaded the factory default settings. The thermostat stops normal operation until all settings in the Set Temp menu are checked except to provide freeze protection.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Set Temp menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 37
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "MONITOR MENU SAVE ERROR",
+    "meaning": "The thermostat failed to read the Monitor menu settings from memory and has reloaded the factory default settings. The thermostat continues to operate normally while displaying this error.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Monitor menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 37
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SCHEDULE MENU SAVE ERROR",
+    "meaning": "The thermostat failed to read the Schedule menu settings from memory and has reloaded the factory default settings. The thermostat continues to operate normally while displaying this error.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Schedule menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 37
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "TOOLBOX MENU SAVE ERROR",
+    "meaning": "The thermostat failed to read the Toolbox menu settings from memory and has reloaded the factory default settings. The thermostat continues to operate normally while displaying this error.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Toolbox menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 37
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "TIME MENU SAVE ERROR",
+    "meaning": "The thermostat failed to read the Time menu settings from memory and has reloaded the factory default settings. The thermostat continues to operate normally while displaying this error.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Time menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 37
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SCENES MENU SAVE ERROR",
+    "meaning": "The thermostat failed to read the Scenes menu settings from memory and has reloaded the factory default settings. The thermostat continues to operate normally while displaying this error.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Scenes menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "DISPLAY MENU SAVE ERROR",
+    "meaning": "The thermostat failed to read the Display menu settings from memory and has reloaded the factory default settings. The thermostat continues to operate normally while displaying this error.",
+    "causes": [],
+    "checks": [
+      "To clear the error, set the access level to Installer and check all settings in the Display menu."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "TN2 PORT ERROR",
+    "meaning": "The thermostat has been connected to a tN2 zone already in use by a 2-stage zoning control. A 2-stage device requires two tN2 ports to operate. This device may be connected to one such port.",
+    "causes": [],
+    "checks": [
+      "To clear the error, move the thermostat's tN2 wires to an unused tN2 port on the zoning control."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "TEKMARNET COMMUNICATION ERROR",
+    "meaning": "The tekmarNet communication bus has either an open or a short circuit. The result is that there are no communications.",
+    "causes": [
+      "Open or short circuit on the tekmarNet communication bus"
+    ],
+    "checks": [
+      "Check for loose wires between tN4 and C.",
+      "Check for short circuits between the tN4 and C wires on the House Control, Wiring Center, or Zone Manager.",
+      "Check for correct polarity between the C and R wires.",
+      "The error clears automatically once the wiring fault has been corrected. To force the error to clear while allowing a short or open circuit to continue, touch the Cancel key."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "ADDRESS ERROR",
+    "meaning": "Two thermostats have been manually set to the same address. The thermostat continues to operate with this error but does not communicate with the tekmarNet system.",
+    "causes": [
+      "Two thermostats manually set to the same tekmarNet address"
+    ],
+    "checks": [
+      "To clear this error, select an unused tekmarNet address or select automatic addressing."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "DEVICE LIMIT",
+    "meaning": "More than 24 devices (thermostats or setpoint controls) have been connected to the tekmarNet communication bus.",
+    "causes": [
+      "More than 24 devices on one tekmarNet communication bus"
+    ],
+    "checks": [
+      "To clear the error, remove and relocate devices to other available buses until the device count is 24 or less."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 38
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "ROOM SENSOR SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the thermostat is unable to read the built-in room temperature sensor. If Sensor 1 or 2 is set to Room, or the thermostat is connected to a tekmarNet system control, the thermostat continues to operate, otherwise operation stops.",
+    "causes": [],
+    "checks": [
+      "The error cannot be field repaired. Contact your tekmar sales representative for repair procedures."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "ROOM SENSOR OPEN CIRCUIT ERROR",
+    "meaning": "Due to an open circuit, the thermostat is unable to read the built-in room temperature sensor. If Sensor 1 or 2 is set to Room, or the thermostat is connected to a tekmarNet system control, the thermostat continues to operate, otherwise operation stops.",
+    "causes": [],
+    "checks": [
+      "The error cannot be field repaired. Contact your tekmar sales representative for repair procedures."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SENSOR 1 SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the thermostat is unable to read auxiliary Sensor 1. The thermostat stops normal operation if Sensor 1 is the only active Room or Floor sensor or if a Floor Maximum temperature has been set.",
+    "causes": [],
+    "checks": [
+      "Check the auxiliary sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the auxiliary sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SENSOR 1 OPEN CIRCUIT ERROR",
+    "meaning": "Due to a open circuit, the thermostat is unable to read auxiliary Sensor 1. The thermostat stops normal operation if Sensor 1 is the only active Room or Floor sensor or if a Floor Maximum temperature has been set.",
+    "causes": [],
+    "checks": [
+      "Check the auxiliary sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the auxiliary sensor.",
+      "Once the error has been corrected, the error message automatically clears.",
+      "If the auxiliary sensor 1 has been intentionally removed, set the Sensor 1 setting in the Setup menu to Off."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SENSOR 2 SHORT CIRCUIT ERROR",
+    "meaning": "Due to a short circuit, the thermostat is unable to read auxiliary Sensor 2. The thermostat stops normal operation if Sensor 2 is the only active Room or Floor sensor or if a Floor Maximum temperature has been set.",
+    "causes": [],
+    "checks": [
+      "Check the auxiliary sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the auxiliary sensor.",
+      "Once the error has been corrected, the error message automatically clears."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 39
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SENSOR 2 OPEN CIRCUIT ERROR",
+    "meaning": "Due to a open circuit, the thermostat is unable to read auxiliary Sensor 2. The thermostat stops normal operation if Sensor 2 is the only active Room or Floor sensor or if a Floor Maximum temperature has been set.",
+    "causes": [],
+    "checks": [
+      "Check the auxiliary sensor wire for short circuits according to the sensor installation manual. It may be necessary to replace the auxiliary sensor.",
+      "Once the error has been corrected, the error message automatically clears.",
+      "If the auxiliary sensor 2 has been intentionally removed, set the Sensor 2 setting in the Setup menu to Off."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "NO SENSOR ON ERROR",
+    "meaning": "All of the temperature sensors have been set to Off including the built-in room sensor.",
+    "causes": [
+      "All temperature sensors set to Off"
+    ],
+    "checks": [
+      "To clear the error, the Room Sensor, Sensor 1 or Sensor 2 must be set to measure a temperature."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SYSTEM CONTROL LOST ERROR",
+    "meaning": "The thermostat can no longer communicate to the tekmarNet system control. The error automatically clears once the tekmarNet system control has been detected.",
+    "causes": [],
+    "checks": [
+      "Check for open or short circuits in the tekmarNet communication wiring.",
+      "If the tekmarNet system control was intentionally removed from the system, remove and then re-apply power to the thermostat to clear the error."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "AIR GROUP MEMBER ERROR",
+    "meaning": "The thermostat can no longer detect its air group or cooling group master thermostat through the tekmarNet system.",
+    "causes": [],
+    "checks": [
+      "To clear the error, either select a heat-cool thermostat to be the air group master or set this thermostat's air group member setting in the Setup menu to None."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SCHEDULE MASTER ERROR",
+    "meaning": "Two thermostats on the tekmarNet system have been set to the same Schedule Master number. The thermostat operates at the temperature settings while this error is present.",
+    "causes": [
+      "Two thermostats set to the same Schedule Master number"
+    ],
+    "checks": [
+      "To clear the error, select a different Schedule Master number, set a different Schedule Member number, set the Schedule to Zone, or set the Schedule to None."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "SCHEDULE MEMBER ERROR",
+    "meaning": "The thermostat can no longer detect its schedule master. The thermostat operates at the temperature settings while this error is present.",
+    "causes": [],
+    "checks": [
+      "To clear the error, select a different Schedule Member number, set the Schedule to Zone, or set the Schedule to None."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 40
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "ERROR AT THERMOSTAT (01 TO 24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this thermostat. 01 TO 24 = there is an error on a thermostat or setpoint control with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "ERROR AT THERMOSTAT (B:01 TO B:24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this thermostat. B:01 TO B:24 = there is an error on a thermostat or setpoint control wired to the boiler communication bus with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "ERROR AT THERMOSTAT (1:01 TO 1:24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this thermostat. 1:01 TO 1:24 = there is an error on a thermostat or setpoint control wired to communication bus 1 with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "ERROR AT THERMOSTAT (2:01 TO 2:24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this thermostat. 2:01 TO 2:24 = there is an error on a thermostat or setpoint control wired to communication bus 2 with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "ERROR AT THERMOSTAT (3:01 TO 3:24)",
+    "meaning": "There is an error on a different thermostat or setpoint control connected to the tekmarNet system and not on this thermostat. 3:01 TO 3:24 = there is an error on a thermostat or setpoint control wired to the mix 3 bus with this tekmarNet address.",
+    "causes": [],
+    "checks": [
+      "Go to the thermostat or setpoint control at the displayed tekmarNet address and read its error message."
+    ],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 41
+    }
+  },
+  {
+    "manufacturer": "tekmar",
+    "model": "552",
+    "code": "ERROR AT SYSTEM CONTROL",
+    "meaning": "There is an error on the tekmarNet system control connected to the tekmarNet system and not on this thermostat.",
+    "causes": [],
+    "checks": [],
+    "source": {
+      "manufacturer": "tekmar",
+      "doc": "Tekmar 552.pdf",
+      "page": 41
+    }
+  }
+]
