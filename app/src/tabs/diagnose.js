@@ -1,6 +1,6 @@
 // app/src/tabs/diagnose.js
 import { h, clear } from '../dom.js';
-import { createSession } from '../../../src/lib/tree.js';
+import { createSession, searchTrees } from '../../../src/lib/tree.js';
 import { pdfHref } from '../../../src/lib/search.js';
 
 export function renderDiagnose(root, ctx) {
@@ -12,29 +12,45 @@ export function renderDiagnose(root, ctx) {
 
   const body = h('div');
   const pickerHeading = h('h2', { tabindex: '-1' }, 'Diagnose');
-  const picker = h('div', { class: 'card' }, pickerHeading, h('p', { class: 'empty' }, 'Pick the problem, then answer each question.'));
+  const search = h('input', { type: 'search', placeholder: 'Search by brand, model or symptom, e.g. tekmar 274 or interlock', autocomplete: 'off', 'aria-label': 'Search decision trees' });
+  const list = h('div', { role: 'status', 'aria-live': 'polite' });
+  const picker = h('div', { class: 'card' }, pickerHeading, h('label', { class: 'field' }, h('span', {}, 'Search'), search), list);
+
+  const choice = (tree) =>
+    // h() skips null badges; every value given to native append() below is a single Node.
+    h('button', { type: 'button', class: 'choice', onclick: () => start(tree) },
+      tree.title,
+      tree.generic ? h('span', { class: 'badge' }, 'generic') : null,
+      tree.manufacturer ? h('span', { class: 'badge' }, tree.manufacturer) : null,
+      tree.equipment ? h('span', { class: 'badge' }, tree.equipment) : null,
+    );
+
   // Group by brand (alphabetical); trees with no manufacturer are general guidance and go last.
   const GENERAL = 'General guidance (not brand-specific)';
-  const groups = new Map();
-  for (const tree of trees) {
-    const key = tree.manufacturer || GENERAL;
-    if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(tree);
-  }
-  const keys = [...groups.keys()].sort((a, b) => (a === GENERAL) - (b === GENERAL) || a.localeCompare(b));
-  for (const key of keys) {
-    picker.append(h('h3', {}, key));
-    for (const tree of groups.get(key)) {
-      // h() skips null badges; every value given to native append() below is a single Node.
-      picker.append(
-        h('button', { type: 'button', class: 'choice', onclick: () => start(tree) },
-          tree.title,
-          tree.generic ? h('span', { class: 'badge' }, 'generic') : null,
-          tree.equipment ? h('span', { class: 'badge' }, tree.equipment) : null,
-        ),
-      );
+  const drawList = () => {
+    clear(list);
+    const query = search.value.trim();
+    if (query) {
+      const hits = searchTrees(trees, query);
+      if (hits.length === 0) {
+        list.append(h('p', { class: 'empty' }, 'No matching decision trees. Try fewer words, or search the Manuals or Fault codes tabs.'));
+        return;
+      }
+      list.append(h('p', { class: 'empty' }, `${hits.length} decision tree${hits.length === 1 ? '' : 's'}`), ...hits.map(choice));
+      return;
     }
-  }
+    list.append(h('p', { class: 'empty' }, 'Pick the problem, then answer each question.'));
+    const groups = new Map();
+    for (const tree of trees) {
+      const key = tree.manufacturer || GENERAL;
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(tree);
+    }
+    const keys = [...groups.keys()].sort((a, b) => (a === GENERAL) - (b === GENERAL) || a.localeCompare(b));
+    for (const key of keys) list.append(h('h3', {}, key), ...groups.get(key).map(choice));
+  };
+  search.addEventListener('input', drawList);
+  drawList();
 
   function start(tree) {
     const session = createSession(tree);
@@ -65,7 +81,7 @@ export function renderDiagnose(root, ctx) {
         h('div', {},
           h('button', { type: 'button', class: 'secondary', onclick: () => { session.back(); draw(); } }, 'Back'),
           h('button', { type: 'button', class: 'secondary', onclick: () => { session.restart(); draw(); } }, 'Start over'),
-          h('button', { type: 'button', class: 'secondary', onclick: () => { clear(body); body.append(picker); pickerHeading.focus(); } }, 'Choose another problem'),
+          h('button', { type: 'button', class: 'secondary', onclick: () => { clear(body); body.append(picker); search.focus(); } }, 'Choose another problem'),
         ),
       );
       body.append(card);

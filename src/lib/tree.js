@@ -97,3 +97,25 @@ export function createSession(tree) {
     },
   };
 }
+
+const treeHead = (t) => [t.title, t.manufacturer, t.equipment].filter(Boolean).join(' ').toLowerCase();
+const treeBody = (t) =>
+  Object.values(t.nodes || {})
+    .flatMap((n) => [n.text, n.cause, ...(n.options || []).map((o) => o.label), ...(n.fix || [])])
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+
+// Trees containing every word of the query, in the title, brand or equipment first, then in the steps.
+export function searchTrees(trees, query) {
+  const words = String(query || '').toLowerCase().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return [...trees];
+  const hits = [];
+  trees.forEach((t, i) => {
+    const head = treeHead(t);
+    const inHead = words.every((w) => head.includes(w));
+    if (inHead || words.every((w) => (head + ' ' + treeBody(t)).includes(w))) hits.push({ t, inHead, i });
+  });
+  hits.sort((a, b) => Number(b.inHead) - Number(a.inHead) || a.i - b.i);
+  return hits.map((h) => h.t);
+}

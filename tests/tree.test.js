@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { validateTree, createSession } from '../src/lib/tree.js';
+import { validateTree, createSession, searchTrees } from '../src/lib/tree.js';
 
 const good = () => ({
   id: 't1',
@@ -100,5 +100,37 @@ describe('createSession', () => {
     const t = good();
     t.start = 'nope';
     expect(() => createSession(t)).toThrow(/Invalid tree/);
+  });
+});
+
+describe('searchTrees', () => {
+  const mk = (id, title, extra = {}, text = 'Is it on?') => ({
+    id, title, start: 'n1', ...extra,
+    nodes: { n1: { type: 'question', text, options: [{ label: 'Yes', next: 'r1' }, { label: 'No', next: 'r1' }] }, r1: { type: 'result', cause: 'c', fix: ['Replace the probe'] } },
+  });
+  const trees = [
+    mk('a', 'Feeder too much water', { manufacturer: 'McDonnell & Miller' }),
+    mk('b', 'Sensor open circuit', { manufacturer: 'Tekmar', equipment: 'Tekmar 671' }, 'Is the outdoor sensor wired?'),
+    mk('c', 'Pump will not start'),
+  ];
+  it('returns every tree for an empty query', () => {
+    expect(searchTrees(trees, '  ').map((t) => t.id)).toEqual(['a', 'b', 'c']);
+  });
+  it('matches title, manufacturer and equipment, case-insensitively', () => {
+    expect(searchTrees(trees, 'TEKMAR').map((t) => t.id)).toEqual(['b']);
+    expect(searchTrees(trees, 'feeder').map((t) => t.id)).toEqual(['a']);
+    expect(searchTrees(trees, '671').map((t) => t.id)).toEqual(['b']);
+  });
+  it('requires every word to match', () => {
+    expect(searchTrees(trees, 'tekmar pump')).toEqual([]);
+  });
+  it('searches question and step text, ranking title matches first', () => {
+    expect(searchTrees(trees, 'probe').map((t) => t.id)).toEqual(['a', 'b', 'c']);
+    expect(searchTrees(trees, 'outdoor').map((t) => t.id)).toEqual(['b']);
+    const ranked = searchTrees(trees, 'sensor');
+    expect(ranked[0].id).toBe('b');
+  });
+  it('returns an empty list when nothing matches', () => {
+    expect(searchTrees(trees, 'zzzz')).toEqual([]);
   });
 });
